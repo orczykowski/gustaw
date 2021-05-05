@@ -1,0 +1,105 @@
+<div id="catCalculationParametersFormWrapper">
+  <h1>Oblicz zapotrzebowanie energetyczne dla Twojego kota</h1>
+  <form [formGroup]="calculationForm" (ngSubmit)="onSubmit()">
+    <h2>Informacje o kocie</h2>
+    <p><label for="name">imię:</label><input autocomplete="off" formControlName="name" type="text" id="name"></p>
+    <p><label for="age">wiek (w latach):</label><input autocomplete="off" formControlName="age" type="number" id="age" min="0"></p>
+    <p><label for="weight">waga:</label><input autocomplete="off" formControlName="weight" type="number" id="weight" min="0"></p>
+    <p><label for="sex">płeć:</label>
+      <select formControlName="sex" id="sex">
+        <option [ngValue]="0" [defaultSelected]="0">Kot</option>
+        <option [ngValue]="1">Kotka</option>
+      </select>
+    </p>
+    <p>
+      <label for="bodyStructure">budowa ciała:</label>
+      <select id="bodyStructure" formControlName="bodyStructure">
+        <option [ngValue]="0" [defaultSelected]="0">Chudy</option>
+        <option [ngValue]="1">Normalny</option>
+        <option [ngValue]="2">Otyły</option>
+        <option [ngValue]="3">Poważnie otyły</option>
+      </select>
+    </p>
+    <p class="choiceContainer">
+      <label for="isSterilized-on">Czy kot jest wysterylizowany?</label>
+      <input id="isSterilized-on" class="toggle toggle-left" formControlName="isSterilized" value="true" type="radio" checked>
+      <label for="isSterilized-on" class="btn">Tak</label>
+      <input id="isSterilized-off" class="toggle toggle-right" formControlName="isSterilized" value="false" type="radio">
+      <label for="isSterilized-off" class="btn">Nie</label>
+    </p>
+    <div *ngIf="this.shouldShowReproductiveCyclePart();">
+      <p class="reproductiveCyclePart">
+        <label for="reproductiveFaze">Czy kotka jest w fazie cyklu rozrodczego?</label>
+        <select id="reproductiveFaze" formControlName="reproductiveFaze">
+          <option [ngValue]="0" [defaultSelected]="0">Nie</option>
+          <option [ngValue]="1">Ciąża</option>
+          <option [ngValue]="2">Ruja</option>
+          <option [ngValue]="3">Karmienie młodych</option>
+        </select>
+      </p>
+      <p class="feedingPart" *ngIf="this.shouldShowFeedingPart();">
+        <label for="postPregnantStrategy">Wibierz spsób obliczeń:</label>
+        <select id="postPregnantStrategy" formControlName="postPregnantStrategy">
+          <option [ngValue]="0" [defaultSelected]="0">Tydzień karmienia</option>
+          <option [ngValue]="1">Liczba kociąt</option>
+        </select>
+      </p>
+      <p class="feedingWeekPart" *ngIf="this.isCalculateByNumberOfKittens();">
+        <label for="feedingWeek">liczba kociąt:</label>
+        <input autocomplete="off" type="number" id="numberOfKittens" min="1" max="20" formControlName="numberOfKittens" required="required">
+      </p>
+      <p class="feedingWeekPart" *ngIf="this.isCalculateByFeedingWeek();">
+        <label for="feedingWeek">tydzien karmienia:</label>
+        <input autocomplete="off" type="number" id="feedingWeek" min="1" max="6" formControlName="feedingWeek" required="required">
+      </p>
+    </div>
+    <p class="choiceContainer">
+      <label for="isInConvalescenceProcess-on">Czy kot przechodzi rekonwalescencje?</label>
+      <input id="isInConvalescenceProcess-on" class="toggle toggle-left" formControlName="isInConvalescenceProcess" value="true" type="radio" checked>
+      <label for="isInConvalescenceProcess-on" class="btn">Tak</label>
+      <input id="isInConvalescenceProcess-off" class="toggle toggle-right" formControlName="isInConvalescenceProcess" value="false" type="radio">
+      <label for="isInConvalescenceProcess-off" class="btn">Nie</label>
+    </p>
+    <p class="convalescenceProgressPart" *ngIf="this.shouldShowConvalescencePart()">
+      <label for="convalescenceProgress">postęp w rekonwalescencji:</label>
+      <input autocomplete="off" type="range" id="convalescenceProgress" formControlName="convalescenceProgress" min="1" max="99" class="range_progress">
+    </p>
+    <h2>Paramtry obecnej karmy</h2>
+    <p>
+      <label for="dryKcl">kaloryczność suchej karmy:</label>
+      <input autocomplete="off" type="number" id="dryKcl" min="0" max="9999" maxlength="4" formControlName="dryKcl"><span class="kcl">kcl/100g</span>
+    </p>
+    <p>
+      <label for="wetKcl">kaloryczność mokrej:</label>
+      <input autocomplete="off" type="number" id="wetKcl" min="0" max="9999" maxlength="4" formControlName="wetKcl"><span class="kcl">kcl/100g</span>
+    </p>
+    <div class="buttons-container">
+      <button class="green-button" type="submit">Oblicz</button>
+      <button class="red-button" type="reset">Wyczyść</button>
+    </div>
+  </form>
+</div>
+<div class="overlay" *ngIf="this.reportIsPresent()">
+  <div class="result-view">
+    <p class="close" (click)="reset()">
+      <span>X</span>
+    </p>
+    <h1 class="center">Zapotrzebowanie kaloryczne Twojego kota</h1>
+    <div class="result-container">
+      <div>
+        <p> Spoczynkowe zapotrzebowanie na energię (RER) <span>{{ this?.report?.rer || "brak danych"}}</span></p>
+        <p> Dzienne zapotrzebowanie na energię metaboliczną (DER) <span>{{ this?.report?.der || "brak danych"}}</span></p>
+      </div>
+      <div>
+        <p> Referencyjna ilość wody, którą powinin wypić kot w ciągu doby: <span>{{ this?.report?.weightOfCurrentUseDryFood || "brak danych"}}</span></p>
+        <p> Ilość obecnie stosowanej suchej karmy: <span>{{ this?.report?.weightOfCurrentUseDryFood || "brak danych"}}</span></p>
+        <p> Ilość obecnie stosowanej mokrej karmy: <span>{{ this?.report?.weightOfCurrentUseWetFood || "brak danych"}}</span></p>
+      </div>
+      <div class="buttons-container">
+        <button class="white-button" (click)="generatePdf()">Zapisz w pdf</button>
+        <button class="white-button" (click)="reset()">Przelicz ponownie</button>
+      </div>
+    </div>
+  </div>
+</div>
+

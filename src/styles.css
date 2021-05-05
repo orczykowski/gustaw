@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #131313;
+}
+
+@font-face {
+  font-family: TheBreden;
+  src: url(/assets/TheBredan.woff);
+}
+
+@keyframes shine {
+  10% {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+  }
+}
+
+
+.choiceContainer .btn {
+  cursor: pointer;
+  border: 3px solid var(--mainColor);
+  display: inline-block;
+  padding: 8px;
+  position: relative;
+  bottom: 7px;
+  transition: background 600ms ease, color 600ms ease;
+}
+
+.choiceContainer input[type=radio].toggle {
+  display: none !important;
+}
+
+.choiceContainer input[type=radio].toggle + label {
+  text-align: center !important;
+  min-width: 20px;
+}
+
+.choiceContainer input[type=radio].toggle + label:hover,
+.choiceContainer input[type=radio].toggle:checked + label:after {
+  background: none;
+  color: var(--base-color);
+  border: 3px solid var(--mainColorHover);
+}
+
+.choiceContainer input[type=radio].toggle:checked + label {
+  transition: color 200ms;
+  color: var(--base-color);
+  border: solid 3px var(--base-color);
+}
+
+.buttons-container {
+  display: block;
+  text-align: center;
+  margin: 3em auto;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1em;
+  margin: 1em 3em;
+  cursor: pointer;
+  border: 4px #ff9d2f solid;
+  width: 14em;
+  height: 4em;
+  color: #ff9d2f;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+button.green-button:hover {
+  color: #d4ffa5;
+  border: #9fc181 4px solid;
+}
+
+button.red-button:hover {
+  color: #dd1212;
+  border: #dd1212 4px solid;
+}
+
+button.white-button:hover {
+  color:  #e5e5e5;
+  border: #e5e5e5 4px solid;
+}
+
+.center {
+  text-align: center;
+}

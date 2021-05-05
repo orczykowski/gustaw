@@ -1,0 +1,64 @@
+header {
+  height: 300px;
+}
+
+#logo {
+  display: inline-block;
+  width: 195px;
+  border: 2px solid #b31b1b;
+  text-align: center;
+  background-color: #e5e5e5;
+  text-decoration: none;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  color: #e5e5e5;
+  border-radius: 100vmin;
+  font-family: "TheBreden", serif;
+  padding: 20px;
+  font-size: 2em;
+  text-shadow: 1px 1px 1px #393635;
+  -webkit-box-shadow: 0 0 20px -2px rgba(255, 255, 255, 0.71);
+  box-shadow: 0 0 20px -2px rgba(255, 255, 255, 0.71);
+}
+
+#logo * {
+  padding: 0;
+  margin: 0;
+  line-height: 75%;
+}
+
+#logoHeaders {
+  position: relative;
+  bottom: 14px;
+}
+
+header nav {
+  display: inline-block;
+  width: 600px;
+  vertical-align: top;
+  margin: 7em 5em;
+
+}
+header nav a {
+  border: 1px solid #131313;
+  padding: 6px;
+}
+
+header nav a, header nav a:visited {
+  display: inline-block;
+  color: #e5e5e5;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 0.4em;
+  text-transform: uppercase;
+}
+
+header nav a:hover {
+  color: #ff9d2f;
+}
+
+header nav a.active {
+  color: #e9b078;
+  border: 1px solid #ff9d2f;
+  border-radius: 5px;
+}
+
