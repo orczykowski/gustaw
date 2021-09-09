@@ -8,6 +8,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MediaComponent} from './features/media/media.component';
 import {OrganizationsComponent} from './features/organizations/organizations.component';
 import {BlogComponent} from "./features/blog/blog.component";
+import { PrintResultComponent } from './features/food-calculator/print-result/print-result.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {BlogComponent} from "./features/blog/blog.component";
     BlogComponent,
     MediaComponent,
     OrganizationsComponent,
+    PrintResultComponent,
   ],
   imports: [
     BrowserModule,

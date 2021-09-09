@@ -25,30 +25,45 @@ export class FoodRequirementReport {
   }
 
   get der(): number {
-    return this._calorityCalculationResult.der;
+    return this.nonNullAsInt(this._calorityCalculationResult.der);
   }
 
   get rer(): number {
-    return this._calculationParams.cat.rer();
+    return this.nonNullAsInt(this._calculationParams.cat.rer());
   }
 
   get catName(): string {
-    return "some anme";//this._calculationParams.cat.name();
+    return this._calculationParams.cat.name();
   }
 
-  get weightOfCurrentUseDryFood(): number {
-    return this._currentFoodRequirement.amountOfDryFood;
+  get weightOfCurrentDryFood(): number | null {
+    return this.asInt(this._currentFoodRequirement.amountOfDryFood);
   }
 
-  get weightOfCurrentUseWetFood(): number {
-    return this._currentFoodRequirement.amountOfWetFood;
+  get weightOfCurrentWetFood(): number | null {
+    return this.asInt(this._currentFoodRequirement.amountOfWetFood);
+  }
+
+  get foodUnit(): string {
+    return this._currentFoodRequirement.unit;
   }
 
   get cat(): Cat {
     return this._calculationParams.cat;
   }
 
-  getWaterRequirement(): WaterRequirementResult {
+  get waterRequirement(): WaterRequirementResult {
     return this._waterRequirement;
+  }
+
+  private nonNullAsInt(num: Number): number {
+    return parseInt(num.toString(), 10);
+  }
+
+  private asInt(num: Number | null): number | null {
+    if (num === null) {
+      return null;
+    }
+    return parseInt(num.toString(), 10);
   }
 }

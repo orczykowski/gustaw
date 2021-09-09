@@ -168,17 +168,3 @@
 .result-container div {
   margin: 2em 0;
 }
-
-.result-container div p {
-  margin: 1em;
-  font-style: italic;
-  color: #cbcbcb;
-}
-
-.result-container div span {
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 0 10px;
-  font-style: normal;
-  color: #f5f5f5;
-}

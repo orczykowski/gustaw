@@ -23,7 +23,7 @@ export class CalorityCalculatorService {
   private calculateUsingKFactor(cat: Cat): CalorityCalculationResult {
     const kFactor = this.kFactorStrategy.determineFor(cat);
     const der = kFactor.value * cat.rer()
-    return new CalorityCalculationResult(der, "kFactor");
+    return new CalorityCalculationResult(der, cat.rer(), "kFactor");
   }
 
   private calculationByLactationWeek(cat: Cat): CalorityCalculationResult {
@@ -31,7 +31,7 @@ export class CalorityCalculatorService {
     const rarPercentageCalculateForCatNumbers = this.getRerPercentage(cat.feedingWeek) * rer;
     const der = rer + (cat.numberOfKittens * rarPercentageCalculateForCatNumbers);
 
-    return new CalorityCalculationResult(der, "lactationWeek");
+    return new CalorityCalculationResult(der, cat.rer(), "lactationWeek");
   }
 
   private getRerPercentage(feedingWeek: number): number {

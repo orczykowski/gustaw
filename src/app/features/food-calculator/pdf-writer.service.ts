@@ -53,12 +53,20 @@ export class PdfWriterService {
   }
 
   private foodRequirementInfo(report: FoodRequirementReport): any {
-    const waterRequirement = report.getWaterRequirement();
     return this.asTable([
       ["Spoczynkowe zapotrzebowanie na energię (RER)", this.asInt(report.rer) + " kcl"],
-      ["Dzienne zapotrzebowanie na energię metaboliczną", this.asInt(report.der) + " kcl"],
-      ["Referencyjna ilość wody, którą powinin wypić kot w ciągu doby", this.asInt(waterRequirement.amount) + waterRequirement.unit],
+      ["Dzienne zapotrzebowanie na energię metaboliczną", this.asInt(report.der) + " kcl"]
     ]);
+  }
+
+  private referenceFoodInfo(report: FoodRequirementReport) {
+    const waterRequirement = report.waterRequirement;
+    return this.asTable([
+      ["Łączna ilość płynów, którą powinin wypić kot w ciągu doby", this.asInt(waterRequirement.amount) + waterRequirement.unit],
+      ["Ilość suchej karmy aby spełnić zapotrzebowanie całkowite der", this.asInt(report.weightOfCurrentDryFood) + report.foodUnit],
+      ["Ilość mokrej kary aby spełnić zapotrzebowanie całkowiete der", this.asInt(report.weightOfCurrentWetFood) + report.foodUnit],
+    ]);
+
   }
 
   private addCatInfo(cat: Cat): any {
@@ -180,11 +188,11 @@ export class PdfWriterService {
     }
   }
 
-  private asInt(num: Number): string {
+  private asInt(num: number | null): string {
     if (num === null) {
       return this.NO_DATA_LABEL;
     }
-    return parseInt(num.toString(), 10).toString();
+    return num.toString();
   }
 
   private createStyleForReport() {

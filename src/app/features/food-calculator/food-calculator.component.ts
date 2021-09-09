@@ -78,15 +78,6 @@ export class FoodCalculatorComponent implements OnInit {
     }
   }
 
-  private calculate() {
-    const params = this.createCalculationParams();
-    const calorityRequirement = this.calorityCalculator.calculate(params);
-    const currentFoodRequirement = this.currentFoodRequirementCalculator.calculate(params, calorityRequirement.der);
-    const waterRequirement = this.waterRequirementCalculator.calculate(params.cat);
-
-    this.report = new FoodRequirementReport(calorityRequirement, params, currentFoodRequirement, waterRequirement);
-  }
-
   generatePdf() {
     if (this.report !== null) {
       this.pdfWriter.write(this.report);
@@ -133,7 +124,7 @@ export class FoodCalculatorComponent implements OnInit {
         this.reproductionCycleInfo()
       ),
       this.calculationForm.controls["dryKcl"]?.value,
-      this.calculationForm.controls["dryKcl"]?.value,
+      this.calculationForm.controls["wetKcl"]?.value,
       this.calculationForm.controls["postPregnantStrategy"]?.value
     );
   }
@@ -144,6 +135,20 @@ export class FoodCalculatorComponent implements OnInit {
       return null;
     }
     return new ConvalescenceInfo(progress);
+  }
+
+  private calculate() {
+    if (this.calculationForm.invalid) {
+      console.log(this.calculationForm)
+      return;
+    }
+    const params = this.createCalculationParams();
+    const calorityRequirement = this.calorityCalculator.calculate(params);
+    const currentFoodRequirement = this.currentFoodRequirementCalculator.calculate(params, calorityRequirement.der);
+    const waterRequirement = this.waterRequirementCalculator.calculate(params.cat);
+
+    this.report = new FoodRequirementReport(calorityRequirement, params, currentFoodRequirement, waterRequirement);
+    console.log(this.report);
   }
 
   private reproductionCycleInfo(): ReproductionCycleInfo | null {
