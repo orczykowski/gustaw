@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {FormBuilder} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {CalorityCalculatorService} from "./food-requirement-calculator/calority-calculator.service";
 import {
   Cat,
@@ -14,6 +14,7 @@ import {FoodRequirementReport} from "./food-requirement-report";
 import {CurrentFoodRequirementCalculatorService} from "./current-food-requirement-calculator.service";
 import {PdfWriterService} from "./pdf-writer.service";
 import {WaterRequirementCalculatorService} from "./water-requirement-calculator.service";
+import {CustomValidators} from "./custom.validators";
 
 @Component({
   selector: 'app-food-calorityCalculator',
@@ -21,27 +22,66 @@ import {WaterRequirementCalculatorService} from "./water-requirement-calculator.
   styleUrls: ['./food-calculator.component.css']
 })
 export class FoodCalculatorComponent implements OnInit {
-  report: FoodRequirementReport | null = null;
 
-  calculationForm = this.formBuilder.group({
-    name: null,
-    age: null,
-    weight: null,
-    sex: null,
-    bodyStructure: null,
-    isSterilized: null,
-    numberOfKittens: null,
-    feedingWeek: null,
-    isInConvalescenceProcess: false,
-    convalescenceProgress: null,
-    dryKcl: null,
-    wetKcl: null,
-    reproductiveFaze: null,
-    postPregnantStrategy: null
+  report: FoodRequirementReport | null = null;
+  calculationForm: FormGroup = new FormGroup({
+    name: new FormControl(
+      null,
+      [Validators.required, Validators.minLength(2), Validators.maxLength(25)]
+    ),
+    age: new FormControl(
+      null,
+      [Validators.required, Validators.min(0.1), Validators.max(40)]
+    ),
+    weight: new FormControl(
+      null,
+      [Validators.required, Validators.min(0.1), Validators.max(40)]
+    ),
+    sex: new FormControl(
+      null,
+      [Validators.required]
+    ),
+    bodyStructure: new FormControl(
+      null,
+      [Validators.required]
+    ),
+    isSterilized: new FormControl(
+      null,
+      [Validators.required]
+    ),
+    numberOfKittens: new FormControl(
+      null,
+      []),
+    feedingWeek: new FormControl(
+      null,
+      []
+    ),
+    reproductiveFaze: new FormControl(
+      null,
+      [CustomValidators.reproductiveCycleFazeValidator()]
+    ),
+    postPregnantStrategy: new FormControl(
+      null,
+      [CustomValidators.postPregnantStrategyValidator()]
+    ),
+    isInConvalescenceProcess: new FormControl(
+      false,
+      [Validators.required]),
+    convalescenceProgress: new FormControl(
+      null,
+      []
+    ),
+    dryKcl: new FormControl(
+      null,
+      [Validators.min(1), Validators.max(9999)]
+    ),
+    wetKcl: new FormControl(
+      null,
+      [Validators.min(1), Validators.max(9999)]
+    )
   });
 
-  constructor(private formBuilder: FormBuilder,
-              private calorityCalculator: CalorityCalculatorService,
+  constructor(private calorityCalculator: CalorityCalculatorService,
               private currentFoodRequirementCalculator: CurrentFoodRequirementCalculatorService,
               private waterRequirementCalculator: WaterRequirementCalculatorService,
               private pdfWriter: PdfWriterService) {
@@ -52,6 +92,10 @@ export class FoodCalculatorComponent implements OnInit {
   }
 
   onSubmit(): void {
+    if (this.calculationForm.status === "INVALID") {
+      this.calculationForm.markAllAsTouched();
+      return;
+    }
     this.calculate();
   }
 
@@ -68,7 +112,7 @@ export class FoodCalculatorComponent implements OnInit {
         break;
       }
       case this.report == null && event.key == 'Enter': {
-        this.calculate();
+        this.onSubmit();
         break;
       }
       case this.report != null && event.key == 'Enter': {
@@ -93,8 +137,8 @@ export class FoodCalculatorComponent implements OnInit {
   }
 
   shouldShowReproductiveCyclePart(): boolean {
-    let isFemale: boolean = this.calculationForm.controls['sex']?.value === Sex.FEMALE;
-    let isNotSterilized: boolean = this.calculationForm.controls['isSterilized']?.value === 'false';
+    const isFemale: boolean = this.calculationForm.controls['sex']?.value === Sex.FEMALE;
+    const isNotSterilized: boolean = this.calculationForm.controls['isSterilized']?.value === 'false';
     return isNotSterilized && isFemale;
   }
 
@@ -103,7 +147,9 @@ export class FoodCalculatorComponent implements OnInit {
   }
 
   shouldShowFeedingPart() {
-    return this.calculationForm.controls['reproductiveFaze']?.value !== ReproductiveCycleFaze.NO;
+    return this.calculationForm.controls['reproductiveFaze']?.value !== null
+      && this.calculationForm.controls['reproductiveFaze']?.value !== undefined
+      && this.calculationForm.controls['reproductiveFaze']?.value !== ReproductiveCycleFaze.NO;
   }
 
   reportIsPresent(): boolean {
@@ -138,17 +184,12 @@ export class FoodCalculatorComponent implements OnInit {
   }
 
   private calculate() {
-    if (this.calculationForm.invalid) {
-      console.log(this.calculationForm)
-      return;
-    }
     const params = this.createCalculationParams();
     const calorityRequirement = this.calorityCalculator.calculate(params);
     const currentFoodRequirement = this.currentFoodRequirementCalculator.calculate(params, calorityRequirement.der);
     const waterRequirement = this.waterRequirementCalculator.calculate(params.cat);
 
     this.report = new FoodRequirementReport(calorityRequirement, params, currentFoodRequirement, waterRequirement);
-    console.log(this.report);
   }
 
   private reproductionCycleInfo(): ReproductionCycleInfo | null {

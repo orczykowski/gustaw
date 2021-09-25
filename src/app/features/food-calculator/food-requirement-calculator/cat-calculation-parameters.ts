@@ -1,4 +1,3 @@
-import {Error} from "tslint/lib/error";
 
 export const enum Sex {
   MALE, FEMALE
@@ -41,7 +40,7 @@ export class CatCalculationParameters {
               private _reproductiveCycleCalculationType: PostPregnantFeedingStrategy) {
   }
 
-  isCalculationByLactationCycle() {
+  isCalculationByLactationCycle() : boolean{
     return this._cat.isInReproductiveCycle() && this._reproductiveCycleCalculationType === PostPregnantFeedingStrategy.FEEDING_WEEK;
   }
 
@@ -141,14 +140,14 @@ export class Cat {
 
   get feedingWeek(): number {
     if (!this.isPresent(this._reproductiveCycleInfo)) {
-      throw new Error("Illegal operation");
+      throw new Error('Illegal operation');
     }
     return this._reproductiveCycleInfo!.feedingWeek;
   }
 
   get numberOfKittens(): number {
     if (!this.isPresent(this._reproductiveCycleInfo)) {
-      throw new Error("Illegal operation");
+      throw new Error('Illegal operation');
     }
     return this._reproductiveCycleInfo!.numberOfKittens;
   }
@@ -172,19 +171,19 @@ export class Cat {
     return this._sterilized;
   }
 
-  isInPregnant() {
+  isInPregnant(): boolean {
     return this.isInReproductiveCycle() && this._reproductiveCycleInfo!.cycleFaze === ReproductiveCycleFaze.PREGNANCY;
   }
 
-  isInHeat() {
+  isInHeat(): boolean {
     return this.isInReproductiveCycle() && this._reproductiveCycleInfo!.cycleFaze === ReproductiveCycleFaze.HEAT;
   }
 
-  isFeeding() {
+  isFeeding(): boolean {
     return this.isInReproductiveCycle() && this._reproductiveCycleInfo!.cycleFaze === ReproductiveCycleFaze.FEEDING;
   }
 
-  isInReproductiveCycle() {
+  isInReproductiveCycle(): boolean {
     return this.isPresent(this._reproductiveCycleInfo) && this.isReproductiveCyclePossible() && this._reproductiveCycleInfo!.isReproductive();
   }
 
@@ -198,7 +197,7 @@ export class Cat {
 
   getConvalescenceProgress(): number {
     if (!this.isPresent(this._convalescenceInfo)) {
-      throw new Error("Illegal operation");
+      throw new Error('Illegal operation');
     }
     return this._convalescenceInfo!.progress / 100;
   }
@@ -230,7 +229,7 @@ export class Cat {
     return this._reproductiveCycleInfo.cycleFaze;
   }
 
-  private isReproductiveCyclePossible() {
+  private isReproductiveCyclePossible(): boolean {
     return this._sex === Sex.FEMALE && !this._sterilized && this.isAdult();
   }
 

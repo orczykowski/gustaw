@@ -49,7 +49,7 @@ export class PdfWriterService {
 
     };
 
-    pdfMake.createPdf(pdf).download('pdfmake.pdf');
+    pdfMake.createPdf(pdf).download(this.fileName(report.cat, date));
   }
 
   private foodRequirementInfo(report: FoodRequirementReport): any {
@@ -231,5 +231,9 @@ export class PdfWriterService {
         width: 100
       }
     };
+  }
+
+  private fileName(cat: Cat, date: string | null) {
+    return `zapotrzebowanie_kaloryczne_dla_${cat.name()}_na_dzień_${date}.pdf`;
   }
 }

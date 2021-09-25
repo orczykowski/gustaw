@@ -1,5 +1,5 @@
 header {
-  height: 300px;
+  height: 260px;
 }
 
 #logo {
@@ -36,11 +36,11 @@ header nav {
   width: 600px;
   vertical-align: top;
   margin: 7em 5em;
-
 }
+
 header nav a {
   border: 1px solid #131313;
-  padding: 6px;
+  padding: 7px;
 }
 
 header nav a, header nav a:visited {
@@ -59,6 +59,59 @@ header nav a:hover {
 header nav a.active {
   color: #e9b078;
   border: 1px solid #ff9d2f;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
+#main-content-container {
+  display: block;
+  width: 90%;
+  border: #e5e5e5 1px solid;
+  margin: 20px auto;
+  padding: 25px;
+
+  background: rgb(33, 32, 31);
+  background: -moz-linear-gradient(180deg, rgba(33, 32, 31, 1) 5%, rgba(0, 0, 0, 1) 87%);
+  background: -webkit-linear-gradient(180deg, rgba(33, 32, 31, 1) 5%, rgba(0, 0, 0, 1) 87%);
+  background: linear-gradient(180deg, rgba(33, 32, 31, 1) 5%, rgba(0, 0, 0, 1) 87%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#21201f", endColorstr="#000000", GradientType=1);
+  color: var(--mainColor);
+}
+
+@media (max-width: 1024px) {
+  #main-content-container {
+    width: 99%;
+    padding: 0;
+  }
+
+  header nav {
+    width: 450px;
+    margin: 7em 0.5em;
+  }
+
+}
+
+@media (max-width: 720px) {
+  #logo {
+    width:100px;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  #logo img {
+    width: 90px;
+  }
+
+  header {
+    height: 150px;
+  }
+
+  header nav {
+    width: 200px;
+    margin: 1em 0.2em;
+  }
+
+  header nav span {
+    display: block;
+    width: 180px;
+  }
+}
