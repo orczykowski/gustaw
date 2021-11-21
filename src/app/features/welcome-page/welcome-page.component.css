@@ -1,0 +1,95 @@
+.main-page-menu {
+  width: 100%;
+  display: block;
+  margin: 25px auto 0 auto;
+  text-align: center;
+}
+
+.main-page-menu li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #e5e5e5;
+}
+
+.main-page-menu li:nth-child(2) {
+  position: relative;
+  bottom: 75px;
+}
+
+.main-page-menu li a img {
+  display: block;
+  width: 280px;
+  filter: sepia(0.99);
+  border-radius: 400px;
+}
+
+.main-page-menu li a {
+  color: #c6c4c4;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-page-menu li a:hover img {
+  filter: sepia(0);
+  -webkit-box-shadow: 0px 0px 40px -14px rgba(255, 250, 216, 1);
+  -moz-box-shadow: 0px 0px 40px -14px rgba(255, 250, 216, 1);
+  box-shadow: 0px 0px 40px -14px rgba(255, 250, 216, 1);
+}
+
+.main-page-menu li a:hover {
+  color: #f5f5f5;
+}
+
+.main-page-media {
+  text-align: center;
+}
+
+.main-page-media a img {
+  width: 50px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.main-page-media a:hover img {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+.welcome-header {
+  text-align: center;
+  margin: 10px auto 55px auto;
+}
+
+.welcome-header h1,
+.welcome-header h2 {
+  margin: 0;
+}
+
+.welcome-header h1 {
+  font-family: "TheBreden";
+}
+
+
+@media (max-width: 1024px) {
+  .main-page-menu li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    vertical-align: center;
+  }
+
+  .main-page-menu li a {
+    text-align: center;
+  }
+
+  .main-page-menu li a image {
+    margin: 20px auto;
+    width: 280px;
+  }
+
+  .main-page-menu li:nth-child(2) {
+    bottom: 0;
+  }
+}

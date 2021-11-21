@@ -1,0 +1,17 @@
+<header>
+  <a href="/" id="logo">
+    <img src="assets/logo.png" alt="logo">
+    <div id="logoHeaders">
+      <h1>Gustaw</h1>
+      <h2>kocie rzeczy</h2>
+    </div>
+  </a>
+  <nav>
+    <span><a routerLink="/calculator" routerLinkActive="active">Kalkulator</a></span>
+    <span><a routerLink="/blog" routerLinkActive="active">Fajne rzeczy</a></span>
+    <span><a routerLink="/organizations" routerLinkActive="active">Warto wspierać</a></span>
+  </nav>
+</header>
+<div id="main-content-container">
+  <router-outlet></router-outlet>
+</div>
