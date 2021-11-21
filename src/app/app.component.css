@@ -1,0 +1,117 @@
+header {
+  height: 120px;
+  margin-bottom: 1em;
+}
+
+
+#logo {
+  width: 100px;
+  padding: 12px;
+  font-size: 1em;
+}
+
+#logo * {
+  padding: 0;
+  margin: 0;
+  line-height: 75%;
+}
+
+#logo {
+  display: inline-block;
+  width: 100px;
+  border: 2px solid #b31b1b;
+  text-align: center;
+  background-color: #e5e5e5;
+  text-decoration: none;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  color: #e5e5e5;
+  border-radius: 100vmin;
+  font-family: "TheBreden", serif;
+  padding: 20px;
+  font-size: 1em;
+  text-shadow: 1px 1px 1px #393635;
+  -webkit-box-shadow: 0 0 20px -2px rgba(255, 255, 255, 0.71);
+  box-shadow: 0 0 20px -2px rgba(255, 255, 255, 0.71);
+}
+
+#logo img {
+  width: 90px;
+}
+
+#logo div {
+  position: relative;
+  bottom: 8px;
+}
+
+header nav span a:hover {
+  color: #ff9d2f;
+}
+
+header nav {
+  display: inline-block;
+  width: 200px;
+  margin: 2em 0.1em;
+  vertical-align: top;
+}
+
+header nav a {
+  padding: 2px 7px;
+  font-size: 0.9em;
+}
+
+header nav span {
+  display: block;
+  width: 180px;
+}
+
+header nav a, header nav a:visited {
+  display: inline-block;
+  color: #e5e5e5;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 0.4em;
+  text-transform: uppercase;
+}
+
+header nav a.active {
+  color: #e9b078;
+  border: 1px solid #ff9d2f;
+  border-radius: 6px;
+}
+
+#main-content-container {
+  display: block;
+  width: 75%;
+  margin: 2em auto;
+  border: #888582 2px solid;
+  border-radius: 5px;
+  background: rgb(33, 32, 31);
+  background: -moz-linear-gradient(180deg, rgba(33, 32, 31, 1) 5%, rgba(0, 0, 0, 1) 87%);
+  background: -webkit-linear-gradient(180deg, rgba(33, 32, 31, 1) 5%, rgba(0, 0, 0, 1) 87%);
+  background: linear-gradient(180deg, rgba(33, 32, 31, 1) 5%, rgba(0, 0, 0, 1) 87%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#21201f", endColorstr="#000000", GradientType=1);
+  opacity: 0.6;
+  color: var(--orange);
+  object-fit: cover;
+}
+
+footer {
+  display: block;
+  width: 60%;
+  border-top: 1px #626262 solid;
+  margin: 2em auto;
+  color: #626262;
+  text-align: center;
+}
+
+article {
+  line-height: 1.2em;
+}
+
+@media (max-width: 900px) {
+  #main-content-container {
+    width: 100%;
+    padding: 0;
+  }
+}
+

@@ -1,0 +1,96 @@
+body {
+  --orange: #e9932a;
+  --lightOrange: #ffb700;
+  --yellow: #d4aa48;
+  --white: #ffffff;
+}
+
+@font-face {
+  font-family: TheBreden;
+  src: url(assets/TheBredan.woff);
+}
+
+html {
+  background-color: black;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.88)),
+  url("assets/bg.JPG");
+  background-attachment: fixed;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.4;
+  font-family:  "Arial", serif;
+}
+
+.buttons-container {
+  display: block;
+  text-align: center;
+  margin: 3em auto;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1em;
+  margin: 1em 3em;
+  cursor: pointer;
+  border: 4px solid;
+  border-color: var(--orange);
+  width: 14em;
+  min-height: 4em;
+  color: #ff9d2f;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+button.green-button:hover {
+  color: #d4ffa5;
+  border: #9fc181 4px solid;
+}
+
+button.red-button:hover {
+  color: #dd1212;
+  border: #dd1212 4px solid;
+}
+
+button.white-button:hover {
+  color: #e5e5e5;
+  border: #e5e5e5 4px solid;
+}
+
+.center {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  color: var(--yellow);
+  text-align: center;
+}
+
+article {
+  padding: 1.5em;
+  line-height: 2em;
+  font-size: 1.1em;
+}
+
+article p, article div, article ul, article li, article span {
+  color: var(--white);
+}
+
+article h3 {
+  color: var(--lightOrange);
+}
+
+.first-letter::first-letter {
+  color: var(--yellow);
+  font-weight: bold;
+  margin-right: 0.1em;
+  font-size: 3em;
+  initial-letter: 2;
+}
+
