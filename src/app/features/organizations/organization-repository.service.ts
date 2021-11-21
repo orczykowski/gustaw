@@ -12,16 +12,21 @@ export class OrganizationRepositoryService {
   fetchOrganizations(): Array<Organization> {
     return [
       {
-        name: 'Testowa',
-        description: 'Lorem ipsum',
-        webPage: 'www.boringstuff.pl',
-        logo: 'some-logo.jpeg'
+        name: 'JoKot',
+        description: 'Fundacja pomagająca bezdomnym kotom',
+        webPage: 'http://jokot.pl/',
+        logo: 'jokot.png'
+      }, {
+        name: 'Rasowy kundel',
+        description: 'Fundacja pomagająca bezdomnym psom',
+        webPage: 'https://rasowykundel.org/',
+        logo: 'rasowykundel.jpeg'
       },
       {
-        name: 'Testowa2',
-        description: 'Lorem ipsum',
-        webPage: 'www.boringstuff2.pl',
-        logo: 'some-logo2.jpeg'
+        name: 'Schronisko w celystenowie',
+        description: 'Schornisko dla bezdomnych zwierząt',
+        webPage: 'http://www.celestynow.toz.pl/',
+        logo: 'default.png'
       }
     ];
   }
