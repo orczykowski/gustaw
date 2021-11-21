@@ -8,7 +8,7 @@ import {OrganizationRepositoryService} from './organization-repository.service';
   styleUrls: ['./organizations.component.css']
 })
 export class OrganizationsComponent implements OnInit {
-  organizations: Array<Organization> | null = null;
+  organizations: Array<Organization> = new Array<Organization>();
 
   constructor(private organizationRepository: OrganizationRepositoryService) {
   }

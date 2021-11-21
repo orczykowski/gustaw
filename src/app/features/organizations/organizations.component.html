@@ -1,3 +1,6 @@
-<div *ngFor="let organization in or">
-
+<h1>Orgaznizacje i miejsca, które warto wspierać</h1>
+<div class="organizations-container">
+<app-organization-info *ngFor="let organization of this.organizations;"
+                       [organization]="organization">
+</app-organization-info>
 </div>
