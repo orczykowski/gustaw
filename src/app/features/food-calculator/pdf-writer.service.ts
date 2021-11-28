@@ -41,9 +41,12 @@ export class PdfWriterService {
             {text: date, style: 'bold'}],
           margin: [0, 10, 0, 10]
         },
-        this.foodRequirementInfo(report),
         {text: 'Informacje o kocie', style: 'midHeader'},
-        this.addCatInfo(report.cat)
+        this.addCatInfo(report.cat),
+        {text: 'Raport', style: 'midHeader'},
+        this.foodRequirementInfo(report),
+        this.referenceFoodInfo(report),
+
       ],
       styles: this.createStyleForReport(),
 
@@ -59,7 +62,7 @@ export class PdfWriterService {
     ]);
   }
 
-  private referenceFoodInfo(report: FoodRequirementReport) {
+  private referenceFoodInfo(report: FoodRequirementReport): any {
     const waterRequirement = report.waterRequirement;
     return this.asTable([
       ["Łączna ilość płynów, którą powinin wypić kot w ciągu doby", this.asInt(waterRequirement.amount) + waterRequirement.unit],
