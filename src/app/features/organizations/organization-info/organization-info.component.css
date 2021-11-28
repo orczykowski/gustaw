@@ -1,0 +1,37 @@
+.organization {
+  display: inline-block;
+  width: 230px;
+  margin: 15px;
+  text-align: center;
+  color: var(--base-color);
+  text-transform: uppercase;
+}
+
+.organization, .organization:visited, .organization:active {
+  text-decoration: none;
+  padding: 28px 5px;
+  border: var(--mainColor) 1px solid;
+  border-radius: 5px;
+}
+
+.organization:hover {
+  border: var(--lightMainColorHover) 1px solid;
+  -webkit-box-shadow: 0 0 15px -0px rgba(253, 245, 208, 1);
+  -moz-box-shadow: 0 0 15px -0px rgba(253, 245, 208, 1);
+  box-shadow: 0 0 15px -0px rgba(253, 245, 208, 1);
+  background-color: #161616;;
+}
+
+.organization h2 {
+  margin: auto 15px;
+  font-size: 14px;
+}
+
+.organization p {
+  text-transform: lowercase;
+}
+.organization img {
+  display: block;
+  width: 120px;
+  margin: auto;
+}

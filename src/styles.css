@@ -4,7 +4,6 @@ body {
   --mainColorHover: #ffb700;
   --lightMainColorHover: #d4aa48;
   --base-color: #e5e5e5;
-  min-width: 620px;
 }
 
 @font-face {
@@ -25,7 +24,7 @@ button {
   cursor: pointer;
   border: 4px #ff9d2f solid;
   width: 14em;
-  height: 4em;
+  min-height: 4em;
   color: #ff9d2f;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -50,9 +49,14 @@ button.white-button:hover {
   text-align: center;
 }
 
+h1, h2, h3 {
+  display: block;
+  width: 90%;
+}
+
 h1 {
   color: var(--base-color);
-  margin-bottom: 2em;
+  margin: 1em auto 2em auto;
   text-align: center;
 }
 
