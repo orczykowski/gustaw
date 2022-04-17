@@ -22,7 +22,7 @@ export class CustomValidators {
       if (CustomValidators.isReproductiveCyclePossible(form) && isInReproductiveCycle) {
         const strategy = form.get('postPregnantStrategy')?.value;
         if(strategy === null || strategy === undefined){
-          return {postPregnantStrategy: true}
+          return {postPregnantStrategy: true};
         }
       }
       return null;
