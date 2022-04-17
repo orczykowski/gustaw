@@ -1,0 +1,11 @@
+.gustaw-article-link {
+  display: block;
+  width: 90%;
+  text-decoration: none;
+  border: 1px solid var(--base-color)
+}
+
+.gustaw-article-link img {
+  display: inline-block;
+  width: 100px;
+}

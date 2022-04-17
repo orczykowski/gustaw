@@ -16,6 +16,24 @@ export class ArticleRepositoryService {
         title: 'Kocie terytorium - cz.1 ',
         description: 'Jak bezpiecznie zwiekszyć powierzchnie kociego terytorium ?',
         url: 'kocie-terytorium-01'
+      },
+      {
+        logo: 'default.png',
+        title: 'Kocie terytorium - cz.1 ',
+        description: 'Jak bezpiecznie zwiekszyć powierzchnie kociego terytorium ?',
+        url: 'kocie-terytorium-01'
+      },
+      {
+        logo: 'default.png',
+        title: 'Kocie terytorium - cz.1 ',
+        description: 'Jak bezpiecznie zwiekszyć powierzchnie kociego terytorium ?',
+        url: 'kocie-terytorium-01'
+      },
+      {
+        logo: 'default.png',
+        title: 'Kocie terytorium - cz.1 ',
+        description: 'Jak bezpiecznie zwiekszyć powierzchnie kociego terytorium ?',
+        url: 'kocie-terytorium-01'
       }
     ];
   }
