@@ -146,7 +146,7 @@ export class FoodCalculatorComponent implements OnInit {
     return this.calculationForm.controls['isInConvalescenceProcess']?.value === 'true';
   }
 
-  shouldShowFeedingPart() {
+  shouldShowFeedingPart(): boolean {
     return this.calculationForm.controls['reproductiveFaze']?.value !== null
       && this.calculationForm.controls['reproductiveFaze']?.value !== undefined
       && this.calculationForm.controls['reproductiveFaze']?.value !== ReproductiveCycleFaze.NO;

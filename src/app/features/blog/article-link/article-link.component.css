@@ -1,0 +1,30 @@
+.gustaw-article-link {
+  display: block;
+  width: 95%;
+  height: 120px;
+  text-decoration: none;
+  margin: auto;
+  border-bottom: 1px solid var(--base-color);
+  vertical-align: middle;
+}
+
+.gustaw-article-link img {
+  display: inline-block;
+  width: 100px;
+  margin-right: 15px;
+}
+
+.gustaw-article-link div {
+  display: inline-block;
+}
+
+.gustaw-article-link div span {
+  position: relative;
+  bottom: 15px;
+  color: var(--base-color);
+  font-size: 1.2em;
+}
+
+.gustaw-article-link:hover div span {
+  color: var(--mainColor);
+}

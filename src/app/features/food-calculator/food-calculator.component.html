@@ -9,23 +9,23 @@
              type="text"
              id="name"
              minlength="2" maxlength="25">
-      <app-validation-error [formField]="calculationForm.controls.name"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls.name" [validatorName]="'minlength'" [msg]="'Minimalna długość imienia to 2 znaki'"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls.name" [validatorName]="'maxlength'" [msg]="'Maksymalna długość imienia to 25 znaki'"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['name']"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['name']" [validatorName]="'minlength'" [msg]="'Minimalna długość imienia to 2 znaki'"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['name']" [validatorName]="'maxlength'" [msg]="'Maksymalna długość imienia to 25 znaki'"></app-validation-error>
     </p>
     <p>
       <label for="age">wiek (w latach):</label>
       <input autocomplete="off" formControlName="age" type="number" id="age">
-      <app-validation-error [formField]="calculationForm.controls.age"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls.age" [validatorName]="'min'" [msg]="'Minimalny wiek to 0.1 roku'"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls.age" [validatorName]="'max'" [msg]="'Maksymalny wiek to 40 lat'"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['age']"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['age']" [validatorName]="'min'" [msg]="'Minimalny wiek to 0.1 roku'"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['age']" [validatorName]="'max'" [msg]="'Maksymalny wiek to 40 lat'"></app-validation-error>
     </p>
     <p>
       <label for="weight">waga:</label>
       <input autocomplete="off" formControlName="weight" type="number" id="weight">
-      <app-validation-error [formField]="calculationForm.controls.weight"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls.weight" [validatorName]="'min'" [msg]="'Minimalna waga to 0.1 kg'"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls.weight" [validatorName]="'max'" [msg]="'Maksymalna waga to 40 kg'"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['weight']"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['weight']" [validatorName]="'min'" [msg]="'Minimalna waga to 0.1 kg'"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['weight']" [validatorName]="'max'" [msg]="'Maksymalna waga to 40 kg'"></app-validation-error>
     </p>
     <p>
       <label for="sex">płeć:</label>
@@ -33,7 +33,7 @@
         <option [ngValue]="0">Kot</option>
         <option [ngValue]="1">Kotka</option>
       </select>
-      <app-validation-error [formField]="calculationForm.controls.sex"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['sex']"></app-validation-error>
     </p>
     <p>
       <label for="bodyStructure">budowa ciała:</label>
@@ -43,7 +43,7 @@
         <option [ngValue]="2">Otyły</option>
         <option [ngValue]="3">Poważnie otyły</option>
       </select>
-      <app-validation-error [formField]="calculationForm.controls.bodyStructure"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['bodyStructure']"></app-validation-error>
     </p>
     <p class="choiceContainer">
       <label for="isSterilized-on">Czy kot jest wysterylizowany?</label>
@@ -62,7 +62,7 @@
           <option [ngValue]="2">Ruja</option>
           <option [ngValue]="3">Karmienie młodych</option>
         </select>
-        <app-validation-error [formField]="calculationForm.controls.reproductiveFaze"></app-validation-error>
+        <app-validation-error [formField]="calculationForm.controls['reproductiveFaze']"></app-validation-error>
       </p>
       <div *ngIf="this.shouldShowFeedingPart()">
         <p class="feedingPart">
@@ -88,12 +88,12 @@
       <label for="isInConvalescenceProcess-on" class="btn">Tak</label>
       <input id="isInConvalescenceProcess-off" class="toggle toggle-right" formControlName="isInConvalescenceProcess" value="false" type="radio">
       <label for="isInConvalescenceProcess-off" class="btn">Nie</label>
-      <app-validation-error [formField]="calculationForm.controls.isInConvalescenceProcess"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['isInConvalescenceProcess']"></app-validation-error>
     </p>
     <p class="convalescenceProgressPart" *ngIf="this.shouldShowConvalescencePart()">
       <label for="convalescenceProgress">postęp w rekonwalescencji:</label>
       <input autocomplete="off" type="range" id="convalescenceProgress" formControlName="convalescenceProgress" min="1" max="99" class="range_progress">
-      <app-validation-error [formField]="calculationForm.controls.convalescenceProgress" [validatorName]="'convalescenceProgress'"></app-validation-error>
+      <app-validation-error [formField]="calculationForm.controls['convalescenceProgress']" [validatorName]="'convalescenceProgress'"></app-validation-error>
     </p>
     <h2>Paramtry obecnej karmy</h2>
     <p>

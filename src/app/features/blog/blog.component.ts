@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ArticleLinkModel} from "./article-link/article-link.model";
+import {ArticleRepositoryService} from "./article-repository.service";
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  links: Array<ArticleLinkModel> = new Array<ArticleLinkModel>();
+
+  constructor(private articleRepository: ArticleRepositoryService) {
+  }
 
   ngOnInit(): void {
+    this.links = this.articleRepository.fetchAllLinks();
   }
 
 }

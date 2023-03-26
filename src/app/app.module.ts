@@ -11,6 +11,7 @@ import { ValidationErrorComponent } from './features/food-calculator/validation-
 import { WelcomePageComponent } from './features/welcome-page/welcome-page.component';
 import { OrganizationInfoComponent } from './features/organizations/organization-info/organization-info.component';
 import { SafeBalconyComponent } from './features/blog/safe-balcony/safe-balcony.component';
+import { ArticleLinkComponent } from './features/blog/article-link/article-link.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SafeBalconyComponent } from './features/blog/safe-balcony/safe-balcony.
     WelcomePageComponent,
     OrganizationInfoComponent,
     SafeBalconyComponent,
+    ArticleLinkComponent,
   ],
   imports: [
     BrowserModule,
