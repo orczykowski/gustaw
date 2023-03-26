@@ -11,12 +11,12 @@ export class ArticleRepositoryService {
 
   fetchAllLinks(): Array<ArticleLinkModel> {
     return [
-      {
+/*      {
         logo: 'default.png',
         title: 'Kocie terytorium - cz.1 ',
         description: 'Jak bezpiecznie zwiekszyć powierzchnie kociego terytorium ?',
         url: 'kocie-terytorium-01'
-      }
+      }*/
     ];
   }
 }
