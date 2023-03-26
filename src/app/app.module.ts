@@ -10,6 +10,7 @@ import { PrintResultComponent } from './features/food-calculator/print-result/pr
 import { ValidationErrorComponent } from './features/food-calculator/validation-error/validation-error.component';
 import { WelcomePageComponent } from './features/welcome-page/welcome-page.component';
 import { OrganizationInfoComponent } from './features/organizations/organization-info/organization-info.component';
+import { SafeBalconyComponent } from './features/blog/safe-balcony/safe-balcony.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { OrganizationInfoComponent } from './features/organizations/organization
     ValidationErrorComponent,
     WelcomePageComponent,
     OrganizationInfoComponent,
+    SafeBalconyComponent,
   ],
   imports: [
     BrowserModule,
