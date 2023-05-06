@@ -7,7 +7,7 @@ export class CustomValidators {
       if (CustomValidators.isReproductiveCyclePossible(form)) {
         const faze = form.get('reproductiveFaze')?.value;
         if (faze === null || faze === undefined) {
-          return {reproductiveFaze: true}
+          return {reproductiveFaze: true};
         }
       }
       return null;
@@ -21,7 +21,7 @@ export class CustomValidators {
         && form.get('reproductiveFaze')?.value !== ReproductiveCycleFaze.NO;
       if (CustomValidators.isReproductiveCyclePossible(form) && isInReproductiveCycle) {
         const strategy = form.get('postPregnantStrategy')?.value;
-        if(strategy === null || strategy === undefined){
+        if (strategy === null || strategy === undefined) {
           return {postPregnantStrategy: true};
         }
       }

@@ -12,6 +12,7 @@ import { WelcomePageComponent } from './features/welcome-page/welcome-page.compo
 import { OrganizationInfoComponent } from './features/organizations/organization-info/organization-info.component';
 import { SafeBalconyComponent } from './features/blog/safe-balcony/safe-balcony.component';
 import { ArticleLinkComponent } from './features/blog/article-link/article-link.component';
+import { DateRangeComponent } from './utils/date-range/date-range.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ArticleLinkComponent } from './features/blog/article-link/article-link.
     OrganizationInfoComponent,
     SafeBalconyComponent,
     ArticleLinkComponent,
+    DateRangeComponent,
   ],
   imports: [
     BrowserModule,

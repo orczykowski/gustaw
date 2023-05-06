@@ -107,26 +107,26 @@ export class FoodCalculatorComponent implements OnInit {
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     switch (true) {
-      case event.key == 'Escape': {
+      case event.key === 'Escape': {
         this.reset();
         break;
       }
-      case this.report == null && event.key == 'Enter': {
+      case this.report == null && event.key === 'Enter': {
         this.onSubmit();
         break;
       }
-      case this.report != null && event.key == 'Enter': {
+      case this.report != null && event.key === 'Enter': {
         this.generatePdf();
         break;
       }
     }
   }
 
-  generatePdf() {
+  generatePdf = () => {
     if (this.report !== null) {
       this.pdfWriter.write(this.report);
     }
-  }
+  };
 
   isCalculateByNumberOfKittens(): boolean {
     return this.calculationForm.controls['postPregnantStrategy']?.value === PostPregnantFeedingStrategy.NUMBER_OF_KITTENS;

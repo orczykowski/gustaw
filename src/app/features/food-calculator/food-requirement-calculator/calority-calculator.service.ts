@@ -38,15 +38,15 @@ export class CalorityCalculatorService {
     switch (feedingWeek) {
       case 1:
       case 2:
-        return 0.3
+        return 0.3;
       case 3:
-        return 0.45
+        return 0.45;
       case 4:
-        return 0.55
+        return 0.55;
       case 5:
-        return 0.65
+        return 0.65;
       default:
-        return 0.9
+        return 0.9;
     }
   }
 }
