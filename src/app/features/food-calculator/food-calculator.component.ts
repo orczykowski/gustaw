@@ -1,5 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
 import {CalorityCalculatorService} from "./food-requirement-calculator/calority-calculator.service";
 import {
   Cat,
@@ -24,58 +24,58 @@ import {CustomValidators} from "./custom.validators";
 export class FoodCalculatorComponent implements OnInit {
 
   report: FoodRequirementReport | null = null;
-  calculationForm: FormGroup = new FormGroup({
-    name: new FormControl(
+  calculationForm: UntypedFormGroup = new UntypedFormGroup({
+    name: new UntypedFormControl(
       null,
       [Validators.required, Validators.minLength(2), Validators.maxLength(25)]
     ),
-    age: new FormControl(
+    age: new UntypedFormControl(
       null,
       [Validators.required, Validators.min(0.1), Validators.max(40)]
     ),
-    weight: new FormControl(
+    weight: new UntypedFormControl(
       null,
       [Validators.required, Validators.min(0.1), Validators.max(40)]
     ),
-    sex: new FormControl(
+    sex: new UntypedFormControl(
       null,
       [Validators.required]
     ),
-    bodyStructure: new FormControl(
+    bodyStructure: new UntypedFormControl(
       null,
       [Validators.required]
     ),
-    isSterilized: new FormControl(
+    isSterilized: new UntypedFormControl(
       null,
       [Validators.required]
     ),
-    numberOfKittens: new FormControl(
+    numberOfKittens: new UntypedFormControl(
       null,
       []),
-    feedingWeek: new FormControl(
+    feedingWeek: new UntypedFormControl(
       null,
       []
     ),
-    reproductiveFaze: new FormControl(
+    reproductiveFaze: new UntypedFormControl(
       null,
       [CustomValidators.reproductiveCycleFazeValidator()]
     ),
-    postPregnantStrategy: new FormControl(
+    postPregnantStrategy: new UntypedFormControl(
       null,
       [CustomValidators.postPregnantStrategyValidator()]
     ),
-    isInConvalescenceProcess: new FormControl(
+    isInConvalescenceProcess: new UntypedFormControl(
       false,
       [Validators.required]),
-    convalescenceProgress: new FormControl(
+    convalescenceProgress: new UntypedFormControl(
       null,
       []
     ),
-    dryKcl: new FormControl(
+    dryKcl: new UntypedFormControl(
       null,
       [Validators.min(1), Validators.max(9999)]
     ),
-    wetKcl: new FormControl(
+    wetKcl: new UntypedFormControl(
       null,
       [Validators.min(1), Validators.max(9999)]
     )
