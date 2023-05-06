@@ -56,11 +56,11 @@ export class FoodRequirementReport {
     return this._waterRequirement;
   }
 
-  private nonNullAsInt(num: Number): number {
+  private nonNullAsInt(num: number): number {
     return parseInt(num.toString(), 10);
   }
 
-  private asInt(num: Number | null): number | null {
+  private asInt(num: number | null): number | null {
     if (num === null) {
       return null;
     }

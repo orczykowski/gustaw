@@ -1,29 +1,22 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-validation-error',
-  template: '<span class="validation-error" *ngIf="this.shouldShow()">{{msg}}</span>',
+  template: '<span *ngIf="this.shouldShow()" class="validation-error">{{msg}}</span>',
   styleUrls: ['./validation-error.component.css']
 })
-export class ValidationErrorComponent implements OnInit {
+export class ValidationErrorComponent {
 
   @Input()
   formField: any | null = null;
 
   @Input()
-  validatorName: string = 'required';
+  validatorName = 'required';
 
   @Input()
   msg: string | null = 'Pole jest wymagane';
 
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
-  shouldShow() {
+  shouldShow = () => {
     return this.formField !== null &&
       this.formField?.errors?.[this.validatorName] &&
       (this.formField?.dirty || this.formField?.touched);

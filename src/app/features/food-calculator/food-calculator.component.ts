@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
-import {CalorityCalculatorService} from "./food-requirement-calculator/calority-calculator.service";
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
+import {CalorityCalculatorService} from './food-requirement-calculator/calority-calculator.service';
 import {
   Cat,
   CatCalculationParameters,
@@ -9,15 +9,15 @@ import {
   ReproductionCycleInfo,
   ReproductiveCycleFaze,
   Sex,
-} from "./food-requirement-calculator/cat-calculation-parameters";
-import {FoodRequirementReport} from "./food-requirement-report";
-import {CurrentFoodRequirementCalculatorService} from "./current-food-requirement-calculator.service";
-import {PdfWriterService} from "./pdf-writer.service";
-import {WaterRequirementCalculatorService} from "./water-requirement-calculator.service";
-import {CustomValidators} from "./custom.validators";
+} from './food-requirement-calculator/cat-calculation-parameters';
+import {FoodRequirementReport} from './food-requirement-report';
+import {CurrentFoodRequirementCalculatorService} from './current-food-requirement-calculator.service';
+import {PdfWriterService} from './pdf-writer.service';
+import {WaterRequirementCalculatorService} from './water-requirement-calculator.service';
+import {CustomValidators} from './custom.validators';
 
 @Component({
-  selector: 'app-food-calorityCalculator',
+  selector: 'food-caloric-calculator',
   templateUrl: './food-calculator.component.html',
   styleUrls: ['./food-calculator.component.css']
 })
@@ -92,7 +92,7 @@ export class FoodCalculatorComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.calculationForm.status === "INVALID") {
+    if (this.calculationForm.status === 'INVALID') {
       this.calculationForm.markAllAsTouched();
       return;
     }
@@ -159,24 +159,24 @@ export class FoodCalculatorComponent implements OnInit {
   private createCalculationParams(): CatCalculationParameters {
     return new CatCalculationParameters(
       new Cat(
-        this.calculationForm.controls["name"]?.value,
+        this.calculationForm.controls['name']?.value,
         this.convalescenceInfo(),
-        this.calculationForm.controls["age"]?.value,
-        this.calculationForm.controls["mature"]?.value,
-        this.calculationForm.controls["sex"]?.value,
-        this.calculationForm.controls["weight"]?.value,
-        this.calculationForm.controls["bodyStructure"]?.value,
-        this.calculationForm.controls["isSterilized"]?.value,
+        this.calculationForm.controls['age']?.value,
+        this.calculationForm.controls['mature']?.value,
+        this.calculationForm.controls['sex']?.value,
+        this.calculationForm.controls['weight']?.value,
+        this.calculationForm.controls['bodyStructure']?.value,
+        this.calculationForm.controls['isSterilized']?.value,
         this.reproductionCycleInfo()
       ),
-      this.calculationForm.controls["dryKcl"]?.value,
-      this.calculationForm.controls["wetKcl"]?.value,
-      this.calculationForm.controls["postPregnantStrategy"]?.value
+      this.calculationForm.controls['dryKcl']?.value,
+      this.calculationForm.controls['wetKcl']?.value,
+      this.calculationForm.controls['postPregnantStrategy']?.value
     );
   }
 
   private convalescenceInfo(): ConvalescenceInfo | null {
-    const progress = this.calculationForm.controls["convalescenceProgress"]?.value;
+    const progress = this.calculationForm.controls['convalescenceProgress']?.value;
     if (progress === null || progress === undefined) {
       return null;
     }
@@ -193,14 +193,14 @@ export class FoodCalculatorComponent implements OnInit {
   }
 
   private reproductionCycleInfo(): ReproductionCycleInfo | null {
-    const reproductiveFaze = this.calculationForm.controls["reproductiveFaze"]?.value;
+    const reproductiveFaze = this.calculationForm.controls['reproductiveFaze']?.value;
     if (reproductiveFaze === null || reproductiveFaze === undefined) {
       return null;
     }
     return new ReproductionCycleInfo(
       reproductiveFaze,
-      this.calculationForm.controls["numberOfKittens"]?.value,
-      this.calculationForm.controls["feedingWeek"]?.value,
+      this.calculationForm.controls['numberOfKittens']?.value,
+      this.calculationForm.controls['feedingWeek']?.value,
     );
   }
 }

@@ -6,9 +6,6 @@ import {Organization} from './organization.model';
 })
 export class OrganizationRepositoryService {
 
-  constructor() {
-  }
-
   fetchOrganizations(): Array<Organization> {
     return [
       {

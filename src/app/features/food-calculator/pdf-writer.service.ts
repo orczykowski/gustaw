@@ -1,7 +1,7 @@
 import {Injectable, Input} from '@angular/core';
-import {FoodRequirementReport} from "./food-requirement-report";
-import {DatePipe} from "@angular/common";
-import {BodyStructure, Cat, ReproductiveCycleFaze, Sex} from "./food-requirement-calculator/cat-calculation-parameters";
+import {FoodRequirementReport} from './food-requirement-report';
+import {DatePipe} from '@angular/common';
+import {BodyStructure, Cat, ReproductiveCycleFaze, Sex} from './food-requirement-calculator/cat-calculation-parameters';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
@@ -10,18 +10,18 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 })
 export class PdfWriterService {
 
-  private readonly DATE_PIPE: DatePipe = new DatePipe('en-US')
-  private readonly NO_DATA_LABEL = "brak danych";
+  private readonly DATE_PIPE: DatePipe = new DatePipe('en-US');
+  private readonly NO_DATA_LABEL = 'brak danych';
 
   @Input() pdf: any;
 
   constructor() {
-    (<any>pdfMake).vfs = pdfFonts.pdfMake.vfs;
+    (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
   }
 
-  write(report: FoodRequirementReport) {
+  write = (report: FoodRequirementReport) => {
     const date = this.DATE_PIPE.transform(new Date(), 'dd-MM-YYYY');
-    let pdf: any = {
+    const pdf: any = {
       layout: 'lightHorizontalLines',
       content: [
         {
@@ -31,8 +31,8 @@ export class PdfWriterService {
         },
         {
           style: 'gustawUrl',
-          text: 'gustaw.boringstuff.pl',
-          linkToDestination: 'http://gustaw.boringstuff.pl'
+          text: 'orczykowski',
+          linkToDestination: 'https://github.com/orczykowski'
         },
         {text: 'Zapotrzebowanie kaloryczne', style: 'header'},
         {
@@ -57,61 +57,62 @@ export class PdfWriterService {
 
   private foodRequirementInfo(report: FoodRequirementReport): any {
     return this.asTable([
-      ["Spoczynkowe zapotrzebowanie na energię (RER)", this.asInt(report.rer) + " kcl"],
-      ["Dzienne zapotrzebowanie na energię metaboliczną", this.asInt(report.der) + " kcl"]
+      ['Spoczynkowe zapotrzebowanie na energię (RER)', this.asInt(report.rer) + 'kcl'],
+      ['Dzienne zapotrzebowanie na energię metaboliczną', this.asInt(report.der) + 'kcl']
     ]);
   }
 
   private referenceFoodInfo(report: FoodRequirementReport): any {
     const waterRequirement = report.waterRequirement;
     return this.asTable([
-      ["Łączna ilość płynów, którą powinin wypić kot w ciągu doby", this.asInt(waterRequirement.amount) + waterRequirement.unit],
-      ["Ilość suchej karmy aby spełnić zapotrzebowanie całkowite der", this.asInt(report.weightOfCurrentDryFood) + report.foodUnit],
-      ["Ilość mokrej kary aby spełnić zapotrzebowanie całkowiete der", this.asInt(report.weightOfCurrentWetFood) + report.foodUnit],
+      ['Łączna ilość płynów, którą powinin wypić kot w ciągu doby', this.asInt(waterRequirement.amount) + waterRequirement.unit],
+      ['Ilość suchej karmy aby spełnić zapotrzebowanie całkowite der', this.asInt(report.weightOfCurrentDryFood) + report.foodUnit],
+      ['Ilość mokrej kary aby spełnić zapotrzebowanie całkowiete der', this.asInt(report.weightOfCurrentWetFood) + report.foodUnit],
     ]);
 
   }
 
   private addCatInfo(cat: Cat): any {
-    let rows = [
-      ["imię", this.orNoData(cat.name())],
-      ["wiek", `${this.asInt(cat.age)}`],
-      ["waga", `${this.asInt(cat.weight)}`],
-      ["płeć", this.mapSex(cat.sex)],
-      ["budowa ciała", this.mapBodyStructure(cat.bodyStructure)],
-      ["czy kot jest wysterylizowany?", this.mapBoolean(cat.isNotSterilized())]
+    const rows = [
+      ['imię', this.orNoData(cat.name())],
+      ['wiek', `${this.asInt(cat.age)}`],
+      ['waga', `${this.asInt(cat.weight)}`],
+      ['płeć', this.mapSex(cat.sex)],
+      ['budowa ciała', this.mapBodyStructure(cat.bodyStructure)],
+      ['czy kot jest wysterylizowany?', this.mapBoolean(cat.isNotSterilized())]
     ];
     this.enrichByReproductiveInfoIfPresent(cat, rows);
     this.enrichByConvalescenceInfoIfPresent(cat, rows);
     return this.asTable(rows);
   }
 
-  private enrichByConvalescenceInfoIfPresent(cat: Cat, rows: string[][]) {
+  private enrichByConvalescenceInfoIfPresent = (cat: Cat, rows: string[][]) => {
     if (cat.isInConvalescence()) {
       rows.push(
-        ["czy kot przechodzi rekonwalescencję", this.mapBoolean(cat.isInConvalescence())],
-        ["postęp rekonwalescencji", this.asInt(cat.getConvalescenceProgress()) + "%"]);
+        ['czy kot przechodzi rekonwalescencję', this.mapBoolean(cat.isInConvalescence())],
+        ['postęp rekonwalescencji', this.asInt(cat.getConvalescenceProgress()) + '%']);
     }
   }
 
-  private enrichByReproductiveInfoIfPresent(cat: Cat, rows: string[][]) {
+  private enrichByReproductiveInfoIfPresent = (cat: Cat, rows: string[][]) => {
     if (cat.isInReproductiveCycle()) {
-      let faze = this.mapReproductiveFaze(cat.reproductiveFaze);
+      const faze = this.mapReproductiveFaze(cat.reproductiveFaze);
       rows.push(
-        ["faza cyklu rozrodczego", faze],
-        ["wybrany sposób kalkulacji", "XXXX"]);
+        ['faza cyklu rozrodczego', faze],
+        ['wybrany sposób kalkulacji', 'XXXX']);
     }
   }
 
+  // tslint:disable-next-line:variable-name
   private orNoData(any: any | null): string {
-    return any !== null ? any : this.NO_DATA_LABEL
+    return any !== null ? any : this.NO_DATA_LABEL;
   }
 
-  private mapSex(sex: Sex | null) {
+  private mapSex = (sex: Sex | null) => {
     if (sex === null) {
       return this.NO_DATA_LABEL;
     }
-    return sex === Sex.MALE ? "Kot" : "Kotka";
+    return sex === Sex.MALE ? 'Kot' : 'Kotka';
   }
 
   private mapBodyStructure(bodyStructure: BodyStructure | null): string {
@@ -135,7 +136,7 @@ export class PdfWriterService {
     if (b === null) {
       return this.NO_DATA_LABEL;
     }
-    return b ? "tak" : "nie";
+    return b ? 'tak' : 'nie';
   }
 
   private mapReproductiveFaze(faze: ReproductiveCycleFaze | null): string {
@@ -144,13 +145,13 @@ export class PdfWriterService {
     }
     switch (faze) {
       case ReproductiveCycleFaze.FEEDING:
-        return "Karmienie";
+        return 'Karmienie';
       case ReproductiveCycleFaze.HEAT:
-        return "Ruja";
+        return 'Ruja';
       case ReproductiveCycleFaze.PREGNANCY:
-        return "Ciąża";
+        return 'Ciąża';
       case ReproductiveCycleFaze.NO:
-        return "Nie dotyczy";
+        return 'Nie dotyczy';
 
     }
   }
@@ -188,7 +189,7 @@ export class PdfWriterService {
           return '#f6f6f6';
         },
       }
-    }
+    };
   }
 
   private asInt(num: number | null): string {
@@ -198,7 +199,7 @@ export class PdfWriterService {
     return num.toString();
   }
 
-  private createStyleForReport() {
+  private createStyleForReport = () => {
     return {
       gustawUrl: {
         fontSize: 12,
@@ -236,7 +237,7 @@ export class PdfWriterService {
     };
   }
 
-  private fileName(cat: Cat, date: string | null) {
+  private fileName = (cat: Cat, date: string | null) => {
     return `zapotrzebowanie_kaloryczne_dla_${cat.name()}_na_dzień_${date}.pdf`;
   }
 }

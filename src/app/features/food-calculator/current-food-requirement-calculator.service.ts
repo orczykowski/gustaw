@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {CatCalculationParameters} from "./food-requirement-calculator/cat-calculation-parameters";
+import {CatCalculationParameters} from './food-requirement-calculator/cat-calculation-parameters';
 
 export class CurrentFoodRequirementCalculationResult {
   private readonly _wetCalority: number;
   private readonly _amountOfWetFood: number;
   private readonly _dryCalority: number;
   private readonly _amountOfDryFood: number;
-  private readonly _unit: string = "g";
+  private readonly _unit: string = 'g';
 
   constructor(wetCalority: number, amountOfWetFood: number, dryCalority: number, amountOfDryFood: number) {
     this._wetCalority = wetCalority;
@@ -40,13 +40,10 @@ export class CurrentFoodRequirementCalculationResult {
   providedIn: 'root'
 })
 export class CurrentFoodRequirementCalculatorService {
-  constructor() {
-  }
+  calculate(params: CatCalculationParameters, caloricRequirement: number): CurrentFoodRequirementCalculationResult {
 
-  calculate(params: CatCalculationParameters, calorityRequirement: number): CurrentFoodRequirementCalculationResult {
-
-    let dryFoodAmount = this.calculateFor(params.dryKcl, calorityRequirement);
-    let wetFoodAmount = this.calculateFor(params.wetKcl, calorityRequirement);
+    const dryFoodAmount = this.calculateFor(params.dryKcl, caloricRequirement);
+    const wetFoodAmount = this.calculateFor(params.wetKcl, caloricRequirement);
 
     return new CurrentFoodRequirementCalculationResult(
       params.wetKcl, wetFoodAmount,
@@ -54,7 +51,7 @@ export class CurrentFoodRequirementCalculatorService {
     );
   }
 
-  private calculateFor(foodCalority: number, calorityRequirement: number): number {
-    return (calorityRequirement * 100) / foodCalority;
+  private calculateFor(foodCaloric: number, caloricRequirement: number): number {
+    return (caloricRequirement * 100) / foodCaloric;
   }
 }

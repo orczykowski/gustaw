@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {Cat} from "./food-requirement-calculator/cat-calculation-parameters";
+import {Cat} from './food-requirement-calculator/cat-calculation-parameters';
 
 export class WaterRequirementResult {
   private readonly _amount: number;
-  private readonly _unit: string = "ml";
+  private readonly _unit: string = 'ml';
 
   constructor(amount: number) {
     this._amount = amount;
@@ -22,10 +22,6 @@ export class WaterRequirementResult {
   providedIn: 'root'
 })
 export class WaterRequirementCalculatorService {
-
-  constructor() {
-  }
-
   calculate(cat: Cat): WaterRequirementResult {
     if (cat.weight === 0) {
       return new WaterRequirementResult(0);

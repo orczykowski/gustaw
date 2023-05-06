@@ -7,27 +7,23 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class PrintResultComponent implements OnInit {
 
-  result: string = "brak danych"
+  result = 'brak danych';
 
   @Input()
-  description: string = ""
+  description = '';
 
   @Input()
-  amount: any | null = null
+  amount: any | null = null;
 
   @Input()
-  unit: any | null = ""
-
-  constructor() {
-
-  }
+  unit: any | null = '';
 
   ngOnInit(): void {
     if (this.amount == null) {
-      this.result = "brak danych";
+      this.result = 'brak danych';
 
     } else {
-      this.result = this.amount + " " + this.unit;
+      this.result = this.amount + ' ' + this.unit;
     }
   }
 

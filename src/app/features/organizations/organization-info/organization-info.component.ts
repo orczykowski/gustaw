@@ -6,15 +6,8 @@ import {Organization} from '../organization.model';
   templateUrl: './organization-info.component.html',
   styleUrls: ['./organization-info.component.css']
 })
-export class OrganizationInfoComponent implements OnInit {
+export class OrganizationInfoComponent {
   @Input()
   organization: Organization | null = null;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-
-  }
 
 }

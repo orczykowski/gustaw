@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {ArticleLinkModel} from './article-link.model';
 
 @Component({
@@ -6,14 +6,8 @@ import {ArticleLinkModel} from './article-link.model';
   templateUrl: './article-link.component.html',
   styleUrls: ['./article-link.component.css']
 })
-export class ArticleLinkComponent implements OnInit {
+export class ArticleLinkComponent {
   @Input()
   data: ArticleLinkModel | null = null;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
 }
