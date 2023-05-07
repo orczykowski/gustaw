@@ -17,7 +17,7 @@ import {WaterRequirementCalculatorService} from './water-requirement-calculator.
 import {CustomValidators} from './custom.validators';
 
 @Component({
-  selector: 'food-caloric-calculator',
+  selector: 'app-food-caloric-calculator',
   templateUrl: './food-calculator.component.html',
   styleUrls: ['./food-calculator.component.css']
 })
@@ -99,13 +99,13 @@ export class FoodCalculatorComponent implements OnInit {
     this.calculate();
   }
 
-  reset() {
+  reset = () => {
     this.report = null;
     this.calculationForm.reset();
   }
 
   @HostListener('document:keydown', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) {
+  handleKeyboardEvent = (event: KeyboardEvent) => {
     switch (true) {
       case event.key === 'Escape': {
         this.reset();
@@ -126,7 +126,7 @@ export class FoodCalculatorComponent implements OnInit {
     if (this.report !== null) {
       this.pdfWriter.write(this.report);
     }
-  };
+  }
 
   isCalculateByNumberOfKittens(): boolean {
     return this.calculationForm.controls['postPregnantStrategy']?.value === PostPregnantFeedingStrategy.NUMBER_OF_KITTENS;
@@ -183,13 +183,13 @@ export class FoodCalculatorComponent implements OnInit {
     return new ConvalescenceInfo(progress);
   }
 
-  private calculate() {
+  private calculate = () => {
     const params = this.createCalculationParams();
-    const calorityRequirement = this.calorityCalculator.calculate(params);
-    const currentFoodRequirement = this.currentFoodRequirementCalculator.calculate(params, calorityRequirement.der);
+    const caloricRequirement = this.calorityCalculator.calculate(params);
+    const currentFoodRequirement = this.currentFoodRequirementCalculator.calculate(params, caloricRequirement.der);
     const waterRequirement = this.waterRequirementCalculator.calculate(params.cat);
 
-    this.report = new FoodRequirementReport(calorityRequirement, params, currentFoodRequirement, waterRequirement);
+    this.report = new FoodRequirementReport(caloricRequirement, params, currentFoodRequirement, waterRequirement);
   }
 
   private reproductionCycleInfo(): ReproductionCycleInfo | null {

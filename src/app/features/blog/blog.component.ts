@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ArticleLinkModel} from "./article-link/article-link.model";
-import {ArticleRepositoryService} from "./article-repository.service";
+import {ArticleLinkModel} from './article-link/article-link.model';
+import {ArticleRepositoryService} from './article-repository.service';
 
 @Component({
   selector: 'app-blog',
@@ -8,7 +8,6 @@ import {ArticleRepositoryService} from "./article-repository.service";
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-
   links: Array<ArticleLinkModel> = new Array<ArticleLinkModel>();
 
   constructor(private articleRepository: ArticleRepositoryService) {
