@@ -126,10 +126,9 @@
 </div>
 <div class="overlay" *ngIf="this.reportIsPresent()">
   <div class="result-view">
-
-    <a class="close" (click)="reset()" (keyup)="reset()">
+    <p class="close" (click)="reset()" (keyup)="reset()" role="button" tabIndex={0}>
       <span>X</span>
-    </a>
+    </p>
     <h1 class="center">Zapotrzebowanie kaloryczne Twojego kota</h1>
     <div class="result-container">
       <div>

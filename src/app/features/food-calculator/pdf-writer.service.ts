@@ -31,7 +31,7 @@ export class PdfWriterService {
         },
         {
           style: 'gustawUrl',
-          text: 'orczykowski',
+          text: 'github:orczykowski',
           linkToDestination: 'https://github.com/orczykowski'
         },
         {text: 'Zapotrzebowanie kaloryczne', style: 'header'},
@@ -164,28 +164,28 @@ export class PdfWriterService {
         widths: ['*', 'auto'],
       },
       layout: {
-        vLineWidth: (i: number, obj: any): number => {
+        vLineWidth: (): number => {
           return 0;
         },
-        hLineWidth: (i: number, obj: any): number => {
+        hLineWidth: (): number => {
           return 1;
         },
-        hLineColor: (i: number, obj: any): string => {
+        hLineColor: (): string => {
           return '#cccccc';
         },
-        paddingLeft: (i: number, obj: any): number => {
+        paddingLeft: (): number => {
           return 7;
         },
-        paddingRight: (i: number, obj: any): number => {
+        paddingRight: (): number => {
           return 5;
         },
-        paddingTop: (i: number, obj: any): number => {
+        paddingTop: (): number => {
           return 5;
         },
-        paddingBottom: (i: number, obj: any): number => {
+        paddingBottom: (): number => {
           return 7;
         },
-        fillColor: (i: number, obj: any): string => {
+        fillColor: (): string => {
           return '#f6f6f6';
         },
       }
