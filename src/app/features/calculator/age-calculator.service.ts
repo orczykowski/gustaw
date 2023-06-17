@@ -4,71 +4,40 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class AgeCalculatorService {
-  private static MONTH = 1 / 12;
-
-  constructor() {
-  }
 
   calculate(age: number): Age {
-    if (age <= AgeCalculatorService.MONTH) {
-      return {
-        humanAge: age,
-        catAge: age * 75
-      };
-    }
-
-    if (age <= 3 * AgeCalculatorService.MONTH) {
-      return {
-        humanAge: age,
-        catAge: 0.5
-      };
-    }
-
-    if (age <= 4 * AgeCalculatorService.MONTH) {
-      return {
-        humanAge: age,
-        catAge: 0.5
-      };
-    }
-
-    if (age <= 6 * AgeCalculatorService.MONTH) {
-      return {
-        humanAge: age,
-        catAge: 0.5
-      };
-    }
-
-    if (age <= 7 * AgeCalculatorService.MONTH) {
-      return {
-        humanAge: age,
-        catAge: 0.5
-      };
-    }
-
-    if (age <= 1) {
-      return {
-        humanAge: age,
-        catAge: 0.5
-      };
-    }
-
-    if (age <= 1.5) {
-      return {
-        humanAge: age,
-        catAge: 24
-      };
-    }
-
-    if (age <= 2) {
-      return {
-        humanAge: age,
-        catAge: 24
-      };
-    }
     return {
       humanAge: age,
-      catAge: 24 + ((age - 2) * 4)
+      catAge: this.calculateCateAge(age)
     };
+  }
+
+  private calculateCateAge(age: number): number {
+    const ageInMonths = age * 12;
+    switch (true) {
+      case ageInMonths >= 24:
+        return 24 + ((age - 2) * 4);
+      case ageInMonths >= 18:
+        return this.calculateInRange(ageInMonths, 240, 264);
+      case ageInMonths >= 12:
+        return this.calculateInRange(ageInMonths, 180, 240);
+      case ageInMonths >= 7:
+        return this.calculateInRange(ageInMonths, 144, 180);
+      case ageInMonths >= 6:
+        return this.calculateInRange(ageInMonths, 120, 144);
+      case ageInMonths >= 4:
+        return this.calculateInRange(ageInMonths, 72, 120);
+      case ageInMonths > 1:
+        return this.calculateInRange(ageInMonths, 24, 72);
+      case ageInMonths <= 1:
+        return this.calculateInRange(ageInMonths, 0, 24);
+      default:
+        throw Error('Cannot calculate cat age');
+    }
+  }
+
+  private calculateInRange(ageInMonths: number, beginCatAgeInMonths: number, endCatAgeInMonths: number): number {
+    return 121 / 12;
   }
 }
 
