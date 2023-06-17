@@ -1,5 +1,5 @@
-import {AbstractControl, FormGroup, ValidationErrors, ValidatorFn} from "@angular/forms";
-import {ReproductiveCycleFaze, Sex} from "./food-requirement-calculator/cat-calculation-parameters";
+import {AbstractControl, ValidationErrors, ValidatorFn} from '@angular/forms';
+import {ReproductiveCycleFaze, Sex} from './food-requirement-calculator/cat-calculation-parameters';
 
 export class CustomValidators {
   static reproductiveCycleFazeValidator(): ValidatorFn {
@@ -11,7 +11,7 @@ export class CustomValidators {
         }
       }
       return null;
-    }
+    };
   }
 
   static postPregnantStrategyValidator(): ValidatorFn {
@@ -26,7 +26,7 @@ export class CustomValidators {
         }
       }
       return null;
-    }
+    };
   }
 
   private static isReproductiveCyclePossible(form: AbstractControl): boolean {

@@ -1,7 +1,7 @@
 export class CalorityCalculationResult {
   private readonly _der: number;
   private readonly _rer: number;
-  private readonly _unit: string = "kcl";
+  private readonly _unit: string = 'kcl';
   private readonly calculationMethod: string;
 
   constructor(der: number, rer: number, calculationMethod: string) {

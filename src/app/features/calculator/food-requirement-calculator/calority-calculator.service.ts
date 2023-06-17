@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {CalorityCalculationResult} from "./calority-calculation-result";
-import {KFactorCalculatorService} from "./k-factor-calculator.service";
-import {Cat, CatCalculationParameters} from "./cat-calculation-parameters";
+import {CalorityCalculationResult} from './calority-calculation-result';
+import {KFactorCalculatorService} from './k-factor-calculator.service';
+import {Cat, CatCalculationParameters} from './cat-calculation-parameters';
 
 
 @Injectable({
@@ -22,8 +22,8 @@ export class CalorityCalculatorService {
 
   private calculateUsingKFactor(cat: Cat): CalorityCalculationResult {
     const kFactor = this.kFactorStrategy.determineFor(cat);
-    const der = kFactor.value * cat.rer()
-    return new CalorityCalculationResult(der, cat.rer(), "kFactor");
+    const der = kFactor.value * cat.rer();
+    return new CalorityCalculationResult(der, cat.rer(), 'kFactor');
   }
 
   private calculationByLactationWeek(cat: Cat): CalorityCalculationResult {
@@ -31,7 +31,7 @@ export class CalorityCalculatorService {
     const rarPercentageCalculateForCatNumbers = this.getRerPercentage(cat.feedingWeek) * rer;
     const der = rer + (cat.numberOfKittens * rarPercentageCalculateForCatNumbers);
 
-    return new CalorityCalculationResult(der, cat.rer(), "lactationWeek");
+    return new CalorityCalculationResult(der, cat.rer(), 'lactationWeek');
   }
 
   private getRerPercentage(feedingWeek: number): number {

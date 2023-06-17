@@ -75,7 +75,8 @@ export class PdfWriterService {
   private addCatInfo(cat: Cat): any {
     const rows = [
       ['imię', this.orNoData(cat.name())],
-      ['wiek', `${this.asInt(cat.age)}`],
+      ['wiek', `${this.asInt(cat.age.humanAge)}`],
+      ['wiek w latach kocich', `${this.asInt(cat.age.catAge)}`],
       ['waga', `${this.asInt(cat.weight)}`],
       ['płeć', this.mapSex(cat.sex)],
       ['budowa ciała', this.mapBodyStructure(cat.bodyStructure)],

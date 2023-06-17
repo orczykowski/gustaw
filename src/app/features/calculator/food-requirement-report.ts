@@ -1,13 +1,13 @@
-import {Cat, CatCalculationParameters} from "./food-requirement-calculator/cat-calculation-parameters";
-import {CalorityCalculationResult} from "./food-requirement-calculator/calority-calculation-result";
-import {CurrentFoodRequirementCalculationResult} from "./current-food-requirement-calculator.service";
-import {WaterRequirementResult} from "./water-requirement-calculator.service";
+import {Cat, CatCalculationParameters} from './food-requirement-calculator/cat-calculation-parameters';
+import {CalorityCalculationResult} from './food-requirement-calculator/calority-calculation-result';
+import {CurrentFoodRequirementCalculationResult} from './current-food-requirement-calculator.service';
+import {WaterRequirementResult} from './water-requirement-calculator.service';
 
 export class FoodRequirementReport {
   private readonly _calorityCalculationResult: CalorityCalculationResult;
   private readonly _calculationParams: CatCalculationParameters;
   private readonly _currentFoodRequirement: CurrentFoodRequirementCalculationResult;
-  private readonly _waterRequirement: WaterRequirementResult
+  private readonly _waterRequirement: WaterRequirementResult;
 
 
   constructor(footRequirementCalculationResult: CalorityCalculationResult,

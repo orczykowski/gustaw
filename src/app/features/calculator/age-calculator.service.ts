@@ -5,44 +5,51 @@ import {Injectable} from '@angular/core';
 })
 export class AgeCalculatorService {
 
-  calculate(age: number): Age {
+  calculate(age: number, unit: AGE_UNIT = AGE_UNIT.YEAR): CatAge {
     return {
       humanAge: age,
-      catAge: this.calculateCateAge(age)
+      catAge: this.calculateCateAge(age, unit)
     };
   }
 
-  private calculateCateAge(age: number): number {
-    const ageInMonths = age * 12;
+  private calculateCateAge(age: number, unit: AGE_UNIT): number {
+    const humanAgeInMonths = (unit === AGE_UNIT.YEAR) ? age * 12 : age;
+    const roundedHumanAgeInMonths = Math.round(humanAgeInMonths);
     switch (true) {
-      case ageInMonths >= 24:
-        return 24 + ((age - 2) * 4);
-      case ageInMonths >= 18:
-        return this.calculateInRange(ageInMonths, 240, 264);
-      case ageInMonths >= 12:
-        return this.calculateInRange(ageInMonths, 180, 240);
-      case ageInMonths >= 7:
-        return this.calculateInRange(ageInMonths, 144, 180);
-      case ageInMonths >= 6:
-        return this.calculateInRange(ageInMonths, 120, 144);
-      case ageInMonths >= 4:
-        return this.calculateInRange(ageInMonths, 72, 120);
-      case ageInMonths > 1:
-        return this.calculateInRange(ageInMonths, 24, 72);
-      case ageInMonths <= 1:
-        return this.calculateInRange(ageInMonths, 0, 24);
+      case roundedHumanAgeInMonths >= 24:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 288 + ((x - 24) * 4));
+      case roundedHumanAgeInMonths >= 18:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 8 * x + 96);
+      case roundedHumanAgeInMonths >= 12:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 10 * x + 60);
+      case roundedHumanAgeInMonths >= 7:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 7.2 * x + 93.6);
+      case roundedHumanAgeInMonths >= 6:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 24 * x - 24);
+      case roundedHumanAgeInMonths > 4:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 27 * x - 21);
+      case roundedHumanAgeInMonths === 4:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 72);
+      case roundedHumanAgeInMonths >= 2:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 36 * x - 48);
+      case roundedHumanAgeInMonths > 1:
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 22 * x - 16);
       default:
-        throw Error('Cannot calculate cat age');
+        return this.calculateCatAge(roundedHumanAgeInMonths, (x: number) => 6.024096385542168 * x);
     }
   }
 
-  private calculateInRange(ageInMonths: number, beginCatAgeInMonths: number, endCatAgeInMonths: number): number {
-    return 121 / 12;
+  private calculateCatAge(ageInMonths: number, calculate: (arg: number) => number): number {
+    return Number((calculate(ageInMonths) / 12).toPrecision(2));
   }
 }
 
-interface Age {
+export interface CatAge {
   humanAge: number;
   catAge: number;
+}
+
+export enum AGE_UNIT {
+  YEAR, MONTH
 }
 

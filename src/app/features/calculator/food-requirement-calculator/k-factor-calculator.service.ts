@@ -106,10 +106,10 @@ export class KFactorCalculatorService {
 
   private calculateForOldCat(cat: Cat): KFactor {
     const age = cat.age;
-    if (age >= 10 && age <= 11.5) {
+    if (age.humanAge  >= 10 && age.humanAge  <= 11.5) {
       return new KFactor(1.4, 'Kot starszy');
     }
-    if (age > 11.5 && age <= 13) {
+    if (age.humanAge > 11.5 && age.humanAge  <= 13) {
       return new KFactor(1.5, 'Kot starszy');
     }
     return new KFactor(1.6, 'Kot starszy');

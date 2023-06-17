@@ -15,6 +15,7 @@ import {CurrentFoodRequirementCalculatorService} from './current-food-requiremen
 import {PdfWriterService} from './pdf-writer.service';
 import {WaterRequirementCalculatorService} from './water-requirement-calculator.service';
 import {CustomValidators} from './custom.validators';
+import {AgeCalculatorService} from "./age-calculator.service";
 
 @Component({
   selector: 'app-food-caloric-calculator',
@@ -82,6 +83,7 @@ export class FoodCalculatorComponent implements OnInit {
   });
 
   constructor(private calorityCalculator: CalorityCalculatorService,
+              private catAgeCalculator: AgeCalculatorService,
               private currentFoodRequirementCalculator: CurrentFoodRequirementCalculatorService,
               private waterRequirementCalculator: WaterRequirementCalculatorService,
               private pdfWriter: PdfWriterService) {
@@ -157,11 +159,12 @@ export class FoodCalculatorComponent implements OnInit {
   }
 
   private createCalculationParams(): CatCalculationParameters {
+    const catAge = this.catAgeCalculator.calculate(Number(this.calculationForm.controls['age']?.value));
     return new CatCalculationParameters(
       new Cat(
         this.calculationForm.controls['name']?.value,
         this.convalescenceInfo(),
-        this.calculationForm.controls['age']?.value,
+        catAge,
         this.calculationForm.controls['mature']?.value,
         this.calculationForm.controls['sex']?.value,
         this.calculationForm.controls['weight']?.value,

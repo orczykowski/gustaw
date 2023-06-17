@@ -1,3 +1,4 @@
+import {CatAge} from '../age-calculator.service';
 
 export const enum Sex {
   MALE, FEMALE
@@ -20,15 +21,15 @@ export const enum ReproductiveCycleFaze {
 }
 
 export class KFactor {
-  constructor(private _value: number, private _name: string) {
+  constructor(private readonly kValue: number, private readonly kName: string) {
   }
 
   get value(): number {
-    return this._value;
+    return this.kValue;
   }
 
   get name(): string {
-    return this._name;
+    return this.kName;
   }
 }
 
@@ -40,7 +41,7 @@ export class CatCalculationParameters {
               private _reproductiveCycleCalculationType: PostPregnantFeedingStrategy) {
   }
 
-  isCalculationByLactationCycle() : boolean{
+  isCalculationByLactationCycle(): boolean {
     return this._cat.isInReproductiveCycle() && this._reproductiveCycleCalculationType === PostPregnantFeedingStrategy.FEEDING_WEEK;
   }
 
@@ -105,7 +106,7 @@ export class ReproductionCycleInfo {
 export class Cat {
   private readonly _name: string;
   private readonly _convalescenceInfo: ConvalescenceInfo | null;
-  private readonly _age: number;
+  private readonly _age: CatAge;
   private readonly _mature: Mature;
   private readonly _sex: Sex;
   private readonly _weight: number;
@@ -116,7 +117,7 @@ export class Cat {
 
   constructor(name: string,
               convalescenceInfo: ConvalescenceInfo | null,
-              age: number,
+              age: CatAge,
               mature: Mature,
               sex: Sex,
               weight: number,
@@ -134,7 +135,7 @@ export class Cat {
     this._name = name;
   }
 
-  get age(): number {
+  get age(): CatAge {
     return this._age;
   }
 
@@ -203,7 +204,7 @@ export class Cat {
   }
 
   isAdult(): boolean {
-    return this._mature === Mature.ADULT || this._age >= 4;
+    return this._mature === Mature.ADULT || this._age.humanAge >= 4;
   }
 
   isKitten(): boolean {
@@ -211,7 +212,7 @@ export class Cat {
   }
 
   isOld(): boolean {
-    return this._age >= 10;
+    return this._age.humanAge >= 10;
   }
 
   name(): string {
