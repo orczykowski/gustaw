@@ -14,6 +14,7 @@ import {ArticleLinkComponent} from './features/blog/article-link/article-link.co
 import {SafeBalconyComponent} from './features/blog/articles/safe-balcony/safe-balcony.component';
 import {DietComponent} from './features/blog/articles/diet/diet.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { CatAtHomePositivesComponent } from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     SafeBalconyComponent,
     ArticleLinkComponent,
     DietComponent,
+    CatAtHomePositivesComponent,
   ],
   imports: [
     BrowserModule,
