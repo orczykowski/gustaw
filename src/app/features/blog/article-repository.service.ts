@@ -5,7 +5,7 @@ import {ArticleLinkModel} from './article-link/article-link.model';
   providedIn: 'root'
 })
 export class ArticleRepositoryService {
-  private static DEFAULT_ICON = 'default-article-icon-72x72.png';
+  private static DEFAULT_ICON = 'default-article-icon.jpeg';
 
   fetchAllLinks(): Array<ArticleLinkModel> {
 
@@ -21,7 +21,13 @@ export class ArticleRepositoryService {
         title: 'Kocia dieta',
         description: 'Kilka słów o kociej diecie',
         url: 'dieta'
-      }
+      },
+      {
+        icon: ArticleRepositoryService.DEFAULT_ICON,
+        title: 'Kot idealny współokator',
+        description: 'Pozytywny wpływ posiadania kota w domu',
+        url: 'kot-idealny-wspolokator'
+      },
     ];
   }
 }

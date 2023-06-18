@@ -94,3 +94,8 @@ article h3 {
   initial-letter: 2;
 }
 
+.article-title {
+  display: block;
+  width: 100%;
+}
+

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1687112614431,
+  "timestamp": 1726437675848,
   "index": "/gustaw/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/gustaw/favicon.ico",
         "/gustaw/index.html",
-        "/gustaw/main.224e6a258d1a90f3.js",
+        "/gustaw/main.929e5a9982081088.js",
         "/gustaw/manifest.webmanifest",
         "/gustaw/polyfills.445b409bcebec51b.js",
         "/gustaw/runtime.ba45991a070f1046.js",
-        "/gustaw/styles.04b48a1a41c1a880.css"
+        "/gustaw/styles.279e3c80e0dc6dd8.css"
       ],
       "patterns": []
     },
@@ -34,8 +34,11 @@
         "/gustaw/assets/3.jpeg",
         "/gustaw/assets/4.jpeg",
         "/gustaw/assets/TheBredan.woff",
+        "/gustaw/assets/articles/kocia-dieta-header.jpeg",
+        "/gustaw/assets/articles/kocie-terytoritum-header.jpeg",
+        "/gustaw/assets/articles/kot-w-domu-header.jpeg",
         "/gustaw/assets/bg.jpg",
-        "/gustaw/assets/default-article-icon.png",
+        "/gustaw/assets/default-article-icon.jpeg",
         "/gustaw/assets/icons/icon-72x72.png",
         "/gustaw/assets/logo.png",
         "/gustaw/assets/organizations/logos/default.png",
@@ -53,8 +56,11 @@
     "/gustaw/assets/3.jpeg": "e77ff66d9eb2d6193c8a2b66f8442cf1b6621b3d",
     "/gustaw/assets/4.jpeg": "9d9b50d3c481a917ed65ac1c1f49097f11b87a82",
     "/gustaw/assets/TheBredan.woff": "00eb9bb9ed3d60453cd82b732ffcdc8c50303e33",
+    "/gustaw/assets/articles/kocia-dieta-header.jpeg": "50dd8efef7a799db178f0cfa6a5d8e22fe514cd9",
+    "/gustaw/assets/articles/kocie-terytoritum-header.jpeg": "35a7732bd13e82f5e0b2385ff3ea7a26858d8eb6",
+    "/gustaw/assets/articles/kot-w-domu-header.jpeg": "38b70db284db9f26c947d8b204ee0906dd310cfd",
     "/gustaw/assets/bg.jpg": "0fccdae2f1fad7f21a9b725efe070d20b58185b7",
-    "/gustaw/assets/default-article-icon.png": "93daada530654fbf12178f69c1d77dc937e5238b",
+    "/gustaw/assets/default-article-icon.jpeg": "21e2dd3a49e3bd635661efb642dadc0f20ba2011",
     "/gustaw/assets/icons/icon-72x72.png": "b13bdc647a0ec7135e21d31b1632187376da2773",
     "/gustaw/assets/logo.png": "b13bdc647a0ec7135e21d31b1632187376da2773",
     "/gustaw/assets/organizations/logos/default.png": "b13bdc647a0ec7135e21d31b1632187376da2773",
@@ -62,12 +68,12 @@
     "/gustaw/assets/organizations/logos/rasowykundel.jpeg": "b735a5c3c5f4ccc10b88e9bdc2adcf2acde065a0",
     "/gustaw/bg.e54c60e8b17ab68c.jpg": "0fccdae2f1fad7f21a9b725efe070d20b58185b7",
     "/gustaw/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/gustaw/index.html": "3167f45a16e9e8e3c027f908404d37d2d7c4cf5e",
-    "/gustaw/main.224e6a258d1a90f3.js": "d32a3fec6505a10dd7fdcbaa4031558a46e12427",
+    "/gustaw/index.html": "246d005e791086256167ab33574f799b7e724e3f",
+    "/gustaw/main.929e5a9982081088.js": "3ec60960e9fe4eb78a474bd88a6155b12ba0c6a0",
     "/gustaw/manifest.webmanifest": "b31af9bb91434a96990f2a32deca8f85d0885439",
     "/gustaw/polyfills.445b409bcebec51b.js": "3317724959ee98cbb318064cf6359a73ddcb8a96",
     "/gustaw/runtime.ba45991a070f1046.js": "e31e8d44501482abf529b8f5143a87c66f2a6858",
-    "/gustaw/styles.04b48a1a41c1a880.css": "a0af902ba81e54f315590561ba6832310f7349a7"
+    "/gustaw/styles.279e3c80e0dc6dd8.css": "eb10cef79ae22c73b5bfd1c535a2d9958407bbb4"
   },
   "navigationUrls": [
     {

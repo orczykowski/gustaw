@@ -11,9 +11,9 @@
 
 .gustaw-article-link img {
   display: inline-block;
-  width: 100px;
+  width: 120px;
   margin-right: 15px;
-  background-image: radial-gradient(circle at center, rgba(236, 231, 231, 0.8) 0%, rgba(0, 0, 0, 0.0) 75%);
+  filter: grayscale(1);
 }
 
 .gustaw-article-link div {
@@ -29,6 +29,10 @@
 
 .gustaw-article-link:hover {
   background: linear-gradient(0.25turn, rgba(0, 0, 0, 0.0) 0%, rgb(82, 82, 82) 50%, rgba(0, 0, 0, 0.0) 100%);
+}
+
+.gustaw-article-link:hover img {
+  filter: none;
 }
 
 .gustaw-article-link:hover div span {
