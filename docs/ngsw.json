@@ -1,0 +1,91 @@
+{
+  "configVersion": 1,
+  "timestamp": 1687112614431,
+  "index": "/gustaw/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/gustaw/favicon.ico",
+        "/gustaw/index.html",
+        "/gustaw/main.224e6a258d1a90f3.js",
+        "/gustaw/manifest.webmanifest",
+        "/gustaw/polyfills.445b409bcebec51b.js",
+        "/gustaw/runtime.ba45991a070f1046.js",
+        "/gustaw/styles.04b48a1a41c1a880.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/gustaw/TheBredan.417985b36ae59aff.woff",
+        "/gustaw/assets/2.jpeg",
+        "/gustaw/assets/3.jpeg",
+        "/gustaw/assets/4.jpeg",
+        "/gustaw/assets/TheBredan.woff",
+        "/gustaw/assets/bg.jpg",
+        "/gustaw/assets/default-article-icon.png",
+        "/gustaw/assets/icons/icon-72x72.png",
+        "/gustaw/assets/logo.png",
+        "/gustaw/assets/organizations/logos/default.png",
+        "/gustaw/assets/organizations/logos/jokot.png",
+        "/gustaw/assets/organizations/logos/rasowykundel.jpeg",
+        "/gustaw/bg.e54c60e8b17ab68c.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/gustaw/TheBredan.417985b36ae59aff.woff": "00eb9bb9ed3d60453cd82b732ffcdc8c50303e33",
+    "/gustaw/assets/2.jpeg": "77d2ce01800d8c5f78a22c885808b9349c1b3175",
+    "/gustaw/assets/3.jpeg": "e77ff66d9eb2d6193c8a2b66f8442cf1b6621b3d",
+    "/gustaw/assets/4.jpeg": "9d9b50d3c481a917ed65ac1c1f49097f11b87a82",
+    "/gustaw/assets/TheBredan.woff": "00eb9bb9ed3d60453cd82b732ffcdc8c50303e33",
+    "/gustaw/assets/bg.jpg": "0fccdae2f1fad7f21a9b725efe070d20b58185b7",
+    "/gustaw/assets/default-article-icon.png": "93daada530654fbf12178f69c1d77dc937e5238b",
+    "/gustaw/assets/icons/icon-72x72.png": "b13bdc647a0ec7135e21d31b1632187376da2773",
+    "/gustaw/assets/logo.png": "b13bdc647a0ec7135e21d31b1632187376da2773",
+    "/gustaw/assets/organizations/logos/default.png": "b13bdc647a0ec7135e21d31b1632187376da2773",
+    "/gustaw/assets/organizations/logos/jokot.png": "e4c03c4089b7ffa0496db45d0c4e37eb8d45498b",
+    "/gustaw/assets/organizations/logos/rasowykundel.jpeg": "b735a5c3c5f4ccc10b88e9bdc2adcf2acde065a0",
+    "/gustaw/bg.e54c60e8b17ab68c.jpg": "0fccdae2f1fad7f21a9b725efe070d20b58185b7",
+    "/gustaw/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/gustaw/index.html": "3167f45a16e9e8e3c027f908404d37d2d7c4cf5e",
+    "/gustaw/main.224e6a258d1a90f3.js": "d32a3fec6505a10dd7fdcbaa4031558a46e12427",
+    "/gustaw/manifest.webmanifest": "b31af9bb91434a96990f2a32deca8f85d0885439",
+    "/gustaw/polyfills.445b409bcebec51b.js": "3317724959ee98cbb318064cf6359a73ddcb8a96",
+    "/gustaw/runtime.ba45991a070f1046.js": "e31e8d44501482abf529b8f5143a87c66f2a6858",
+    "/gustaw/styles.04b48a1a41c1a880.css": "a0af902ba81e54f315590561ba6832310f7349a7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

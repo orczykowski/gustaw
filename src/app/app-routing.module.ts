@@ -6,6 +6,8 @@ import {OrganizationsComponent} from './features/organizations/organizations.com
 import {WelcomePageComponent} from './features/welcome-page/welcome-page.component';
 import {SafeBalconyComponent} from './features/blog/articles/safe-balcony/safe-balcony.component';
 import {DietComponent} from './features/blog/articles/diet/diet.component';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment.prod';
 
 const routes: Routes = [
   {path: '', component: WelcomePageComponent},
@@ -18,7 +20,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

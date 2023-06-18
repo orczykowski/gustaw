@@ -5,7 +5,7 @@ import {ArticleLinkModel} from './article-link/article-link.model';
   providedIn: 'root'
 })
 export class ArticleRepositoryService {
-  private static DEFAULT_ICON = 'default-article-icon.png';
+  private static DEFAULT_ICON = 'default-article-icon-72x72.png';
 
   fetchAllLinks(): Array<ArticleLinkModel> {
 
