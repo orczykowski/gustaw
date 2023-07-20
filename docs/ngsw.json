@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1689436554145,
+  "timestamp": 1689862994045,
   "index": "/gustaw/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/gustaw/favicon.ico",
         "/gustaw/index.html",
-        "/gustaw/main.e4cc6137a9e55b68.js",
+        "/gustaw/main.315b87aad2abb802.js",
         "/gustaw/manifest.webmanifest",
         "/gustaw/polyfills.445b409bcebec51b.js",
         "/gustaw/runtime.ba45991a070f1046.js",
@@ -62,8 +62,8 @@
     "/gustaw/assets/organizations/logos/rasowykundel.jpeg": "b735a5c3c5f4ccc10b88e9bdc2adcf2acde065a0",
     "/gustaw/bg.e54c60e8b17ab68c.jpg": "0fccdae2f1fad7f21a9b725efe070d20b58185b7",
     "/gustaw/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/gustaw/index.html": "a36493c5d1ba418a446307b7a95e1fb14299792b",
-    "/gustaw/main.e4cc6137a9e55b68.js": "b2b131c5d2c3bc2f119d286c9df8f4b2f9e6ae6b",
+    "/gustaw/index.html": "17b9470641b3908c216146a6eb2494381a6114d1",
+    "/gustaw/main.315b87aad2abb802.js": "2b59e4b8099428097ddf21f6da32f5f0a400e988",
     "/gustaw/manifest.webmanifest": "b31af9bb91434a96990f2a32deca8f85d0885439",
     "/gustaw/polyfills.445b409bcebec51b.js": "3317724959ee98cbb318064cf6359a73ddcb8a96",
     "/gustaw/runtime.ba45991a070f1046.js": "e31e8d44501482abf529b8f5143a87c66f2a6858",
