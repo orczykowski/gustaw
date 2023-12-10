@@ -21,7 +21,13 @@ export class ArticleRepositoryService {
         title: 'Kocia dieta',
         description: 'Kilka słów o kociej diecie',
         url: 'dieta'
-      }
+      },
+      {
+        icon: ArticleRepositoryService.DEFAULT_ICON,
+        title: 'Kot idealny współokator',
+        description: 'Pozytywny wpływ posiadania kota w domu',
+        url: 'kot-idealny-wspolokator'
+      },
     ];
   }
 }
