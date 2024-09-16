@@ -28,6 +28,12 @@ export class ArticleRepositoryService {
         description: 'Pozytywny wpływ posiadania kota w domu',
         url: 'kot-idealny-wspolokator'
       },
+      {
+        icon: ArticleRepositoryService.DEFAULT_ICON,
+        title: 'Dlaczego koty mruczą?',
+        description: 'mrrrrrr ...',
+        url: 'dlaczego-koty-mrucza'
+      },
     ];
   }
 }
