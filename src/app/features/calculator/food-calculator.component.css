@@ -1,68 +1,137 @@
 .calculator form {
   width: 80%;
   margin: auto;
+  max-width: 900px;
 }
 
 .calculator *:focus {
-  outline: none;
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.calculator h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.calculator h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 2.5rem 0 1.5rem;
+  color: var(--lightOrange);
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 0.5rem;
 }
 
 .calculator p {
   width: 80%;
-  margin: auto;
+  margin: 1.5rem auto;
   text-decoration: none;
   text-transform: uppercase;
-  overflow: hidden;
-  min-height: 4em;
+  overflow: visible;
+  min-height: auto;
   vertical-align: middle;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .calculator label {
   display: inline-block;
   width: 200px;
   text-align: right;
-  margin-right: 3em;
+  margin-right: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .calculator input, .calculator select,
 .calculator input:valid, .calculator select:valid {
-  padding: 7px 12px;
-  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--orange);
   font-size: 16px;
-  border: none;
-  border-bottom: 1px solid var(--orange);
+  border: 2px solid rgba(255, 157, 47, 0.3);
+  border-radius: 8px;
   margin-right: 1em;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.calculator input:hover, .calculator select:hover {
+  border-color: var(--orange);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.calculator input:focus, .calculator select:focus {
+  border-color: var(--lightOrange);
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 157, 47, 0.2);
 }
 
 .calculator .range_progress {
-  background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%) !important;
-  border: solid 1px #ffffff;
+  background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);
+  border: none;
   border-radius: 50vmin;
-  height: 2px;
-  width: 10em;
+  height: 6px;
+  width: 100%;
+  max-width: 300px;
   outline: none;
-  transition: background 450ms ease-in;
+  transition: all 0.3s ease;
   -webkit-appearance: none;
-  color: #c6c4c4 !important;
+  cursor: pointer;
+}
+
+.calculator .range_progress:hover {
+  box-shadow: 0 2px 8px rgba(255, 157, 47, 0.4);
 }
 
 .calculator .range_progress::-webkit-slider-runnable-track {
   width: 100%;
-  height: 0.2em;
+  height: 6px;
   cursor: pointer;
-  border-radius: 1px;
+  border-radius: 50vmin;
+  background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);
 }
 
 .calculator .range_progress::-webkit-slider-thumb {
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  border: 3px solid var(--orange);
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -16px;
+  margin-top: -9px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.calculator .range_progress::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 3px 10px rgba(255, 157, 47, 0.5);
+}
+
+.calculator .range_progress::-moz-range-thumb {
+  border: 3px solid var(--orange);
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.calculator .range_progress::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 3px 10px rgba(255, 157, 47, 0.5);
 }
 
 .calculator .toggle {
@@ -75,7 +144,8 @@
 }
 
 .overlay {
-  background-color: rgba(59, 59, 59, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,16 +155,46 @@
   width: 100%;
   height: 100%;
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .result-view {
   width: 70%;
-  margin: 5% auto;
-  padding: 2em 4em;
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 4rem;
   color: #e5e5e5;
-  background: #131313;
-  border: 1px #9f9a9a solid;
-  border-radius: 10px;
+  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 2px solid rgba(255, 157, 47, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  animation: slideUp 0.4s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .close {
@@ -103,48 +203,68 @@
 
 .close span {
   color: #ff9d2f;
-  font-size: 1.2em;
-  display: block;
-  width: 1.2em;
-  height: 1.2em;
-  padding: 3px;
-  border-radius: 15px;
-  border: 2px solid #ff9d2f;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 157, 47, 0.5);
   font-family: Arial, serif;
   text-align: center;
   position: absolute;
-  right: -20px;
-  top: -20px;
+  right: -10px;
+  top: -10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  background: rgba(19, 19, 19, 0.9);
 }
 
 .close span:hover {
-  background: rgb(240, 240, 240);
+  background: var(--orange);
   cursor: pointer;
-  font-weight: bold;
-  color: #b31b1b;
-  border: 2px solid #b31b1b;
+  color: #ffffff;
+  border: 2px solid var(--orange);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 157, 47, 0.4);
 }
 
 .result-container {
-  margin: 3.5em 0;
+  margin: 3rem 0 2rem;
 }
 
 .result-container div {
-  margin: 1em 0;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.result-container div:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .choiceContainer {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .choiceContainer .btn {
   cursor: pointer;
-  border: 3px solid var(--orange);
+  border: 2px solid rgba(255, 157, 47, 0.4);
   display: inline-block;
-  padding: 0.8em 0;
+  padding: 12px 32px;
   position: relative;
-  bottom: 0.4em;
-  transition: background 600ms ease, color 600ms ease;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.03);
+  min-width: 100px;
+  text-align: center;
 }
 
 .choiceContainer input[type=radio].toggle {
@@ -153,20 +273,24 @@
 
 .choiceContainer input[type=radio].toggle + label {
   text-align: center !important;
-  min-width: 20px;
+  min-width: 100px;
 }
 
-.choiceContainer input[type=radio].toggle + label:hover,
-.choiceContainer input[type=radio].toggle:checked + label:after {
-  background: none;
-  color: var(--white);
-  border: 3px solid var(--lightOrange);
+.choiceContainer input[type=radio].toggle + label:hover {
+  background: rgba(255, 157, 47, 0.1);
+  color: var(--lightOrange);
+  border: 2px solid var(--orange);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 157, 47, 0.2);
 }
 
 .choiceContainer input[type=radio].toggle:checked + label {
-  transition: color 200ms;
-  color: var(--white);
-  border: solid 3px var(--white);
+  transition: all 0.3s ease;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--lightOrange) 100%);
+  border: 2px solid var(--lightOrange);
+  box-shadow: 0 4px 16px rgba(255, 157, 47, 0.3);
+  transform: translateY(-2px);
 }
 
 .calculator label {
@@ -177,7 +301,43 @@
 
 .calculator form {
   width: 100%;
-  padding: 1em;
+  padding: 2rem 1rem;
+}
+
+.calculator .kcl {
+  color: var(--lightOrange);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: -0.5rem;
+}
+
+.result-view h1 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--lightOrange);
+}
+
+.result-view h1.center {
+  text-align: center;
+}
+
+/* Scrollbar styling for result view */
+.result-view::-webkit-scrollbar {
+  width: 8px;
+}
+
+.result-view::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.result-view::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+.result-view::-webkit-scrollbar-thumb:hover {
+  background: var(--lightOrange);
 }
 
 @media (max-width: 650px) {
@@ -185,14 +345,49 @@
     display: block;
     text-align: left;
     margin: 10px 0 10px 0;
+    width: 100%;
   }
 
   .calculator form p {
     display: block;
+    width: 100%;
+  }
+
+  .calculator input, .calculator select {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .choiceContainer {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .choiceContainer label {
-    margin: 20px 0 20px 0;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .choiceContainer .btn {
+    width: 100%;
+  }
+
+  .result-view {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .close span {
+    right: 5px;
+    top: 5px;
+  }
+
+  .calculator h1 {
+    font-size: 1.5rem;
+  }
+
+  .calculator h2 {
+    font-size: 1.2rem;
   }
 }
 
