@@ -1,16 +1,25 @@
 <header>
-  <a href="/gustaw" id="logo">
-    <img src="assets/logo.png" alt="logo">
-    <div>
-      <h1>Gustaw</h1>
-      <h2>kocie rzeczy</h2>
-    </div>
-  </a>
-  <nav>
-    <span><a routerLink="/kalkulator" routerLinkActive="active">Kalkulator</a></span>
-    <span><a routerLink="/blog" routerLinkActive="active">Do poczytania</a></span>
-    <span><a routerLink="/warto-wspierac" routerLinkActive="active">Warto wspierać</a></span>
-  </nav>
+  <div class="header-container">
+    <a routerLink="/" id="logo">
+      <img src="assets/logo.png" alt="logo">
+      <div class="logo-text">
+        <h1>Gustaw</h1>
+        <h2>kocie rzeczy</h2>
+      </div>
+    </a>
+    <nav>
+      <a routerLink="/kalkulator" routerLinkActive="active" class="nav-link">
+        <span class="nav-text">Kalkulator</span>
+      </a>
+      <a routerLink="/blog" routerLinkActive="active" class="nav-link">
+        <span class="nav-text">Do poczytania</span>
+      </a>
+      <a routerLink="/warto-wspierac" routerLinkActive="active" class="nav-link">
+        <span class="nav-icon">❤️</span>
+        <span class="nav-text">Warto wspierać</span>
+      </a>
+    </nav>
+  </div>
 </header>
 <div id="main-content-container">
   <router-outlet></router-outlet>

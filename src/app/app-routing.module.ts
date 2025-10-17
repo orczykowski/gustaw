@@ -8,14 +8,15 @@ import {SafeBalconyComponent} from './features/blog/articles/safe-balcony/safe-b
 import {DietComponent} from './features/blog/articles/diet/diet.component';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment.prod';
-import {CatAtHomePositivesComponent} from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
-import {CatSoundsComponent} from "./features/blog/articles/cat-sounds/cat-sounds.component";
+import {
+  CatAtHomePositivesComponent
+} from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
+import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds.component';
 
 const routes: Routes = [
   {path: '', component: WelcomePageComponent},
   {path: 'kalkulator', component: FoodCalculatorComponent},
   {path: 'warto-wspierac', component: OrganizationsComponent},
-
   {path: 'blog/kocie-terytorium', component: SafeBalconyComponent},
   {path: 'blog/dieta', component: DietComponent},
   {path: 'blog/kot-idealny-wspolokator', component: CatAtHomePositivesComponent},

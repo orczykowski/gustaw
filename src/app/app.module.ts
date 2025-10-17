@@ -15,7 +15,7 @@ import {SafeBalconyComponent} from './features/blog/articles/safe-balcony/safe-b
 import {DietComponent} from './features/blog/articles/diet/diet.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { CatAtHomePositivesComponent } from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
-import {CatSoundsComponent} from "./features/blog/articles/cat-sounds/cat-sounds.component";
+import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds.component';
 
 @NgModule({
   declarations: [

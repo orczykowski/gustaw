@@ -3,4 +3,7 @@ export type Organization = {
   logo: string;
   description: string;
   webPage: string;
+  tagline?: string;
+  location?: string;
+  focus?: string[];
 };

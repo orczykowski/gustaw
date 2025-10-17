@@ -10,20 +10,29 @@ export class OrganizationRepositoryService {
     return [
       {
         name: 'JoKot',
-        description: 'Fundacja pomagająca bezdomnym kotom',
+        tagline: 'Fundacja na rzecz kotów',
+        description: 'Zajmujemy się zapewnieniem bezdomnym kotom bezpiecznego miejsca, opieki weterynaryjnej i znalezieniem nowych domów',
         webPage: 'http://jokot.pl/',
-        logo: 'jokot.png'
+        logo: 'jokot.png',
+        location: 'Polska',
+        focus: ['koty', 'adopcje', 'leczenie']
       }, {
         name: 'Rasowy kundel',
-        description: 'Fundacja pomagająca bezdomnym psom',
-        webPage: 'https://rasowykundel.org/',
-        logo: 'rasowykundel.jpeg'
+        tagline: 'Pomagamy psom znaleźć dom',
+        description: 'Fundacja ratująca bezdomne i porzucone psy, zapewniająca im opiekę i szukająca odpowiedzialnych opiekunów',
+        webPage: 'https://rasowykundel.pl/',
+        logo: 'rasowykundel.jpeg',
+        location: 'Warszawa',
+        focus: ['psy', 'adopcje', 'edukacja']
       },
       {
-        name: 'Schronisko w celystenowie',
-        description: 'Schornisko dla bezdomnych zwierząt',
-        webPage: 'http://www.celestynow.toz.pl/',
-        logo: 'default.png'
+        name: 'Schronisko w Celestynowie',
+        tagline: 'TOZ Schronisko',
+        description: 'Schronisko dla bezdomnych zwierząt prowadzone przez Towarzystwo Opieki nad Zwierzętami',
+        webPage: 'https://celestyniaki.pl/',
+        logo: 'default.png',
+        location: 'Celestynów',
+        focus: ['psy', 'koty', 'schronisko']
       }
     ];
   }
