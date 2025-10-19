@@ -11,6 +11,7 @@
   position: relative;
   overflow: hidden;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .organization::before {
@@ -174,8 +175,13 @@
 
 @media only screen and (max-width: 768px) {
   .organization {
-    padding: 1.25rem;
+    padding: 1.5rem;
     margin-bottom: 0;
+    min-height: auto;
+  }
+
+  .organization-logo-wrapper {
+    margin-bottom: 1.25rem;
   }
 
   .organization img {
@@ -185,15 +191,22 @@
 
   .organization h3 {
     font-size: 1.25rem;
+    margin-bottom: 0.75rem;
   }
 
   .tagline {
     font-size: 0.85rem;
+    margin-bottom: 0.85rem;
   }
 
   .description {
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .organization-meta {
+    margin-bottom: 0.85rem;
   }
 
   .tag {
@@ -204,7 +217,8 @@
 
 @media only screen and (max-width: 480px) {
   .organization {
-    padding: 1rem;
+    padding: 1.25rem;
+    min-height: auto;
   }
 
   .organization-logo-wrapper {
@@ -219,6 +233,7 @@
 
   .organization h3 {
     font-size: 1.15rem;
+    margin-bottom: 0.6rem;
   }
 
   .tagline {
@@ -229,5 +244,14 @@
   .description {
     font-size: 0.85rem;
     line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .organization-meta {
+    margin-bottom: 0.75rem;
+  }
+
+  .focus-tags {
+    gap: 0.4rem;
   }
 }
