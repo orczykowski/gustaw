@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-print-result',
-  template: '<p class="result-row">{{ this.description }} <span> {{ this.result}}</span></p>',
-  styleUrls: ['./print-result.component.css']
+    selector: 'app-print-result',
+    template: '<p class="result-row">{{ this.description }} <span> {{ this.result}}</span></p>',
+    styleUrls: ['./print-result.component.css'],
+    standalone: false
 })
 export class PrintResultComponent implements OnInit {
 

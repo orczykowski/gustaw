@@ -1,9 +1,10 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-validation-error',
-  template: '<span *ngIf="this.shouldShow()" class="validation-error">{{msg}}</span>',
-  styleUrls: ['./validation-error.component.css']
+    selector: 'app-validation-error',
+    template: '@if (this.shouldShow()) {<span class="validation-error">{{msg}}</span>}',
+    styleUrls: ['./validation-error.component.css'],
+    standalone: false
 })
 export class ValidationErrorComponent {
 

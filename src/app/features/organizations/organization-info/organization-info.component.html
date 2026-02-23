@@ -4,19 +4,27 @@
   </div>
   <div class="organization-content">
     <h3>{{organization?.name}}</h3>
-    <p class="tagline" *ngIf="organization?.tagline">{{organization?.tagline}}</p>
+    @if (organization?.tagline) {
+      <p class="tagline">{{organization?.tagline}}</p>
+    }
     <p class="description">{{organization?.description}}</p>
     <div class="organization-meta">
-      <span class="location" *ngIf="organization?.location">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-          <circle cx="12" cy="10" r="3"></circle>
-        </svg>
-        {{organization?.location}}
-      </span>
+      @if (organization?.location) {
+        <span class="location">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          {{organization?.location}}
+        </span>
+      }
     </div>
-    <div class="focus-tags" *ngIf="organization?.focus && organization?.focus?.length">
-      <span class="tag" *ngFor="let tag of organization?.focus">{{tag}}</span>
-    </div>
+    @if (organization?.focus && organization?.focus?.length) {
+      <div class="focus-tags">
+        @for (tag of organization?.focus; track tag) {
+          <span class="tag">{{tag}}</span>
+        }
+      </div>
+    }
   </div>
 </a>

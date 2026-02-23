@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {FoodCalculatorComponent} from './features/calculator/food-calculator.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {OrganizationsComponent} from './features/organizations/organizations.component';
 import {BlogComponent} from './features/blog/blog.component';
 import {PrintResultComponent} from './features/calculator/print-result/print-result.component';
@@ -36,6 +36,7 @@ import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),

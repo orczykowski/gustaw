@@ -3,9 +3,10 @@ import {Organization} from './organization.model';
 import {OrganizationRepositoryService} from './organization-repository.service';
 
 @Component({
-  selector: 'app-organizations',
-  templateUrl: './organizations.component.html',
-  styleUrls: ['./organizations.component.css']
+    selector: 'app-organizations',
+    templateUrl: './organizations.component.html',
+    styleUrls: ['./organizations.component.css'],
+    standalone: false
 })
 export class OrganizationsComponent implements OnInit {
   organizations: Array<Organization> = new Array<Organization>();

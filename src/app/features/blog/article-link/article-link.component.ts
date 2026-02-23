@@ -2,9 +2,10 @@ import {Component, Input} from '@angular/core';
 import {ArticleLinkModel} from './article-link.model';
 
 @Component({
-  selector: 'app-article-link',
-  templateUrl: './article-link.component.html',
-  styleUrls: ['./article-link.component.css']
+    selector: 'app-article-link',
+    templateUrl: './article-link.component.html',
+    styleUrls: ['./article-link.component.css'],
+    standalone: false
 })
 export class ArticleLinkComponent {
   @Input()

@@ -18,9 +18,10 @@ import {CustomValidators} from './custom.validators';
 import {AgeCalculatorService} from "./age-calculator.service";
 
 @Component({
-  selector: 'app-food-caloric-calculator',
-  templateUrl: './food-calculator.component.html',
-  styleUrls: ['./food-calculator.component.css']
+    selector: 'app-food-caloric-calculator',
+    templateUrl: './food-calculator.component.html',
+    styleUrls: ['./food-calculator.component.css'],
+    standalone: false
 })
 export class FoodCalculatorComponent implements OnInit {
 

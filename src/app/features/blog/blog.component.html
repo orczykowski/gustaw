@@ -1,6 +1,19 @@
 <div class="article-wrapper">
   <h1>Artykuły</h1>
-  <app-article-link *ngFor="let link of this.links;"
-                    [data]="link">
-  </app-article-link>
+  <div class="search-wrapper">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Szukaj artykułów..."
+      [(ngModel)]="searchQuery"
+    />
+  </div>
+  @for (link of filteredLinks; track link) {
+    <app-article-link
+      [data]="link">
+    </app-article-link>
+  }
+  @if (filteredLinks.length === 0) {
+    <p class="no-results">Nie znaleziono artykułów pasujących do "{{ searchQuery }}"</p>
+  }
 </div>
