@@ -2,6 +2,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
   background: rgba(12, 12, 12, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -119,6 +120,16 @@ footer {
   color: rgba(255, 255, 255, 0.3);
   font-size: 0.75rem;
   letter-spacing: 0.3px;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-dot {
