@@ -65,6 +65,31 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
+.gustaw-article-link.placeholder {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.gustaw-article-link.placeholder:hover {
+  transform: none;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.gustaw-article-link.placeholder:hover img {
+  filter: grayscale(1);
+  transform: none;
+}
+
+.gustaw-article-link.placeholder:hover div h2 {
+  color: var(--white);
+}
+
+.gustaw-article-link.placeholder:hover div span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 @media only screen and (max-width: 1024px) {
   .gustaw-article-link {
     padding: 1.25rem;

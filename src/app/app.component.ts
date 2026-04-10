@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ArticleRepositoryService} from './features/blog/article-repository.service';
 
 @Component({
     selector: 'app-root',
@@ -7,4 +8,9 @@ import {Component} from '@angular/core';
     standalone: false
 })
 export class AppComponent {
+  articleCount: number;
+
+  constructor(private articleRepository: ArticleRepositoryService) {
+    this.articleCount = this.articleRepository.fetchAllLinks().length;
+  }
 }

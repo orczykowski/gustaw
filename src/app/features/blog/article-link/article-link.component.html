@@ -1,7 +1,17 @@
-<a class="gustaw-article-link" routerLink="{{data?.url}}">
-  <img src="assets/{{ data?.icon }}" alt="NO IMAGE">
-  <div>
-    <h2>{{data?.title}}</h2>
-    <span>{{data?.description}}</span>
+@if (data?.url) {
+  <a class="gustaw-article-link" routerLink="{{data?.url}}">
+    <img src="assets/{{ data?.icon }}" alt="NO IMAGE">
+    <div>
+      <h2>{{data?.title}}</h2>
+      <span>{{data?.description}}</span>
+    </div>
+  </a>
+} @else {
+  <div class="gustaw-article-link placeholder">
+    <img src="assets/{{ data?.icon }}" alt="NO IMAGE">
+    <div>
+      <h2>{{data?.title}}</h2>
+      <span>{{data?.description}}</span>
+    </div>
   </div>
-</a>
+}

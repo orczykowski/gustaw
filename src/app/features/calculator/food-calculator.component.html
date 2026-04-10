@@ -1,5 +1,9 @@
 <div class="calculator">
-  <h1>Oblicz zapotrzebowanie kaloryczne dla Twojego kota</h1>
+  <div class="calc-hero">
+    <div class="calc-hero-icon">🐾</div>
+    <h1>Oblicz zapotrzebowanie kaloryczne dla Twojego kota</h1>
+    <p class="calc-hero-sub">Podaj dane swojego pupila, a my obliczymy ile kalorii potrzebuje każdego dnia</p>
+  </div>
   <form [formGroup]="calculationForm" (ngSubmit)="onSubmit()">
     <h2>Informacje o kocie</h2>
     <p>

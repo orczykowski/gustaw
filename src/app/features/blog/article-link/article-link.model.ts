@@ -3,4 +3,5 @@ export type ArticleLinkModel = {
   icon: string;
   title: string,
   description: string;
+  content: string;
 };

@@ -1,6 +1,6 @@
 :host {
   display: block;
-  padding: 2rem 0;
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -12,16 +12,61 @@
   box-sizing: border-box;
 }
 
-.article-wrapper h1 {
+.blog-hero {
+  text-align: center;
+  padding: 2rem 2rem 1.5rem;
+  margin: 0 -1.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 157, 47, 0.1);
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 157, 47, 0.08) 0%, transparent 70%);
+  animation: heroFadeIn 0.6s ease-out;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blog-hero-icon {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
+  animation: iconFloat 2s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.article-wrapper h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin: 0 0 0.75rem;
   font-weight: 600;
-  letter-spacing: -0.5px;
-  color: var(--yellow);
+  background: linear-gradient(135deg, #ff9d2f 0%, #ffb700 50%, #d4aa48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.blog-hero-sub {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  margin: 0;
+  letter-spacing: 0.3px;
 }
 
 .search-wrapper {
-  margin-bottom: 2rem;
+  max-width: 500px;
+  margin: 1.25rem auto 0;
 }
 
 .search-input {
@@ -63,16 +108,25 @@
 }
 
 @media only screen and (max-width: 768px) {
-  :host {
-    padding: 1.5rem 0;
-  }
-
   .article-wrapper {
     padding: 0 1rem 2rem;
   }
 
   .article-wrapper h1 {
     font-size: 2rem;
+  }
+
+  .blog-hero {
+    padding: 1.5rem 1rem 1.25rem;
+    margin: 0 -1rem 1rem;
+  }
+
+  .blog-hero-icon {
+    font-size: 2rem;
+  }
+
+  .blog-hero-sub {
+    font-size: 0.85rem;
   }
 }
 
@@ -83,6 +137,10 @@
 
   .article-wrapper h1 {
     font-size: 1.75rem;
-    padding: 0 0.5rem;
+  }
+
+  .blog-hero {
+    padding: 1.5rem 0.75rem 1.25rem;
+    margin: 0 -0.75rem 1rem;
   }
 }

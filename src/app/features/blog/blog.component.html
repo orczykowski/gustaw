@@ -1,12 +1,17 @@
 <div class="article-wrapper">
-  <h1>Artykuły</h1>
-  <div class="search-wrapper">
-    <input
-      type="text"
-      class="search-input"
-      placeholder="Szukaj artykułów..."
-      [(ngModel)]="searchQuery"
-    />
+  <div class="blog-hero">
+    <div class="blog-hero-icon">🐾</div>
+    <h1>Artykuły</h1>
+    <p class="blog-hero-sub">Przydatna wiedza o kocim świecie</p>
+    <div class="search-wrapper">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Szukaj artykułów..."
+        [(ngModel)]="searchQuery"
+        (ngModelChange)="onSearch()"
+      />
+    </div>
   </div>
   @for (link of filteredLinks; track link) {
     <app-article-link

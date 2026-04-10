@@ -25,9 +25,11 @@
   <router-outlet></router-outlet>
 </div>
 <footer>
-  <a routerLink="/kalkulator" class="footer-link">Kalkulator kalorii</a>
-  <span class="footer-dot"></span>
-  <a routerLink="/blog" class="footer-link">4 artykuły</a>
-  <span class="footer-dot"></span>
-  <a routerLink="/warto-wspierac" class="footer-link">Warto wspierać</a>
+  <div class="footer-links">
+    <a routerLink="/kalkulator" class="footer-link">Kalkulator kalorii</a>
+    <span class="footer-dot"></span>
+    <a routerLink="/blog" class="footer-link">{{ articleCount }} artykułów</a>
+    <span class="footer-dot"></span>
+    <a routerLink="/warto-wspierac" class="footer-link">Warto wspierać</a>
+  </div>
 </footer>
