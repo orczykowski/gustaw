@@ -35,7 +35,7 @@ Montaż siatki przyklejając do elewacji specjalne haczyki wkręcając specjalne
       {
         icon: ArticleRepositoryService.DEFAULT_ICON,
         title: 'Kocia dieta',
-        description: 'Kilka słów o kociej diecie',
+        description: 'Sucha karma, mokra karma, BARF czy dieta weterynaryjna – jak wybrać najlepsze żywienie dla swojego kota?',
         url: 'dieta',
         content: `Wpływ i różnorodność diet na zdrowie i rozwój kota
 Dieta ma bezpośredni wpływ na zdrowie każdego żywego organizmu w tym oczywiście naszych kotów. Odpowiednio dobrane składniki odżywcze są niezbędne do utrzymania prawidłowej masy ciała zdrowych zębów sierści mocnych kości oraz dobrego funkcjonowania układu trawiennego.
@@ -65,7 +65,7 @@ Kot to też obowiązki. Regularnie karmić kota dostarczając odpowiednią i zr�
       {
         icon: ArticleRepositoryService.DEFAULT_ICON,
         title: 'Dlaczego koty mruczą?',
-        description: 'mrrrrrr ...',
+        description: 'Poznaj mechanizm mruczenia kota – skąd pochodzi ten dźwięk i co oznacza dla właściciela.',
         url: 'dlaczego-koty-mrucza',
         content: `Dlaczego koty mruczą? To dźwięk który kojarzy się z przyjemnością i spokojem. Mruczenie to znacznie bardziej złożone zjawisko które może wpływać na zdrowie zarówno kotów jak i ich opiekunów.
 Mruczenie czyli dokładnie co? Mruczenie kotów powstaje przez rytmiczne napinanie i rozluźnianie mięśni krtani co powoduje drgania strun głosowych podczas przepływu powietrza. To wibracje mięśni a nie same struny głosowe są odpowiedzialne za charakterystyczny dźwięk. Mruczenie może pojawiać się zarówno na wdechu jak i wydechu. Mechanizm ten jest kontrolowany przez sygnały nerwowe wysyłane z mózgu kota szczególnie z regionu zwanego ośrodkiem rezonansu krtaniowego. Koty potrafią mruczeć niezależnie od swojego stanu emocjonalnego mogą to robić zarówno z zadowolenia jak i w sytuacjach stresowych.

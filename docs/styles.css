@@ -1,0 +1,155 @@
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[2]!./src/styles.css?ngGlobalStyle ***!
+  \**********************************************************************************************************************************************************************************************************************/
+body {
+  --orange: #e9932a;
+  --lightOrange: #ffb700;
+  --yellow: #d4aa48;
+  --white: #e8e8e8;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-hover: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 157, 47, 0.35);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+}
+
+@font-face {
+  font-family: TheBreden;
+  src: url('TheBredan.woff');
+}
+
+html {
+  background-color: #0c0c0c;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.92)),
+  url('bg.jpg');
+  background-attachment: fixed;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2.5em auto;
+}
+
+button {
+  background: var(--surface);
+  padding: 0.85em 2em;
+  cursor: pointer;
+  border: 1.5px solid var(--border-hover);
+  min-width: 12em;
+  min-height: 3.2em;
+  color: #ff9d2f;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: rgba(255, 157, 47, 0.1);
+  border-color: var(--orange);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+button.green-button {
+  border-color: rgba(140, 190, 100, 0.4);
+  color: #a8d87e;
+}
+
+button.green-button:hover {
+  color: #c4f0a0;
+  border-color: #9fc181;
+  background: rgba(140, 190, 100, 0.1);
+}
+
+button.red-button {
+  border-color: rgba(200, 80, 80, 0.4);
+  color: #d08080;
+}
+
+button.red-button:hover {
+  color: #e85555;
+  border-color: #c85050;
+  background: rgba(200, 80, 80, 0.1);
+}
+
+button.white-button {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #c8c8c8;
+}
+
+button.white-button:hover {
+  color: #f0f0f0;
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.center {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  display: block;
+  width: 100%;
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  color: var(--yellow);
+  text-align: center;
+}
+
+article {
+  padding: 1.5em;
+  line-height: 2em;
+  font-size: 1.1em;
+}
+
+article p, article div, article ul, article li, article span {
+  color: var(--white);
+}
+
+article h3 {
+  color: var(--lightOrange);
+}
+
+.first-letter::first-letter {
+  color: var(--yellow);
+  font-weight: bold;
+  margin-right: 0.1em;
+  font-size: 3em;
+  initial-letter: 2;
+}
+
+.article-title {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+
+/*# sourceMappingURL=styles.css.map*/

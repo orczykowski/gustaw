@@ -25,7 +25,9 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              { "glob": "robots.txt", "input": "src/", "output": "/" },
+              { "glob": "sitemap.xml", "input": "src/", "output": "/" }
             ],
             "styles": [
               "src/styles.css"
@@ -58,7 +60,9 @@
               "assets": [
                 "src/favicon.ico",
                 "src/assets",
-                "src/manifest.webmanifest"
+                "src/manifest.webmanifest",
+                { "glob": "robots.txt", "input": "src/", "output": "/" },
+                { "glob": "sitemap.xml", "input": "src/", "output": "/" }
               ],
               "styles": [
                 "src/styles.css"
@@ -80,6 +84,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 4205
+          },
           "configurations": {
             "production": {
               "buildTarget": "gustaw-app:build:production"

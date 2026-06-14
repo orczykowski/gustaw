@@ -16,6 +16,7 @@ import {PdfWriterService} from './pdf-writer.service';
 import {WaterRequirementCalculatorService} from './water-requirement-calculator.service';
 import {CustomValidators} from './custom.validators';
 import {AgeCalculatorService} from "./age-calculator.service";
+import {SeoService} from '../../core/seo.service';
 
 @Component({
     selector: 'app-food-caloric-calculator',
@@ -87,11 +88,16 @@ export class FoodCalculatorComponent implements OnInit {
               private catAgeCalculator: AgeCalculatorService,
               private currentFoodRequirementCalculator: CurrentFoodRequirementCalculatorService,
               private waterRequirementCalculator: WaterRequirementCalculatorService,
-              private pdfWriter: PdfWriterService) {
+              private pdfWriter: PdfWriterService,
+              private seo: SeoService) {
   }
 
   ngOnInit(): void {
     this.reset();
+    this.seo.update({
+      title: 'Kalkulator Karmienia Kota – Kalorie i Porcje',
+      description: 'Oblicz dzienne zapotrzebowanie kaloryczne i porcje jedzenia dla swojego kota. Szybki kalkulator uwzględniający wagę, wiek i tryb życia.',
+    });
   }
 
   onSubmit(): void {

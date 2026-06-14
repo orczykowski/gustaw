@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/0.5/sitemaps">
+  <url><loc>https://gorczykowski.github.io/gustaw/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://gorczykowski.github.io/gustaw/kalkulator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gorczykowski.github.io/gustaw/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gorczykowski.github.io/gustaw/blog/dieta</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gorczykowski.github.io/gustaw/blog/kocie-terytorium</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gorczykowski.github.io/gustaw/blog/kot-idealny-wspolokator</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gorczykowski.github.io/gustaw/blog/dlaczego-koty-mrucza</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gorczykowski.github.io/gustaw/warto-wspierac</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

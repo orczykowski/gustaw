@@ -1,9 +1,9 @@
 <a href="{{organization?.webPage}}" class="organization" target="_blank">
   <div class="organization-logo-wrapper">
-    <img src="assets/organizations/logos/{{organization?.logo}}" alt="{{organization?.name}}"/>
+    <img src="assets/organizations/logos/{{organization?.logo}}" alt="{{organization?.name}}" loading="lazy"/>
   </div>
   <div class="organization-content">
-    <h3>{{organization?.name}}</h3>
+    <h2>{{organization?.name}}</h2>
     @if (organization?.tagline) {
       <p class="tagline">{{organization?.tagline}}</p>
     }
