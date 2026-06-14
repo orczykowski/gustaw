@@ -1,19 +1,17 @@
-.calculator form {
-  width: 80%;
-  margin: auto;
-  max-width: 900px;
+.calculator {
+  width: 100%;
 }
 
 .calculator *:focus {
   outline: 2px solid var(--orange);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
+/* ── Hero ─────────────────────────────────────────── */
 .calc-hero {
   text-align: center;
-  padding: 3rem 2rem 2rem;
-  margin: 0 -1rem 1rem;
+  padding: 3rem 2rem 2.5rem;
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 157, 47, 0.1);
@@ -46,10 +44,10 @@
 
 .calculator h1 {
   font-family: "Playfair Display", serif;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 600;
-  margin: 0 auto 0.75rem;
-  max-width: 600px;
+  margin: 0 auto 0.6rem;
+  max-width: 580px;
   line-height: 1.3;
   background: linear-gradient(135deg, #ff9d2f 0%, #ffb700 50%, #d4aa48 100%);
   -webkit-background-clip: text;
@@ -65,174 +63,298 @@
 }
 
 .calc-hero-sub {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.9rem;
   margin: 0;
+  letter-spacing: 0.2px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* ── Form shell ───────────────────────────────────── */
+.calculator form {
+  padding: 2rem 2.5rem 3rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Section card ─────────────────────────────────── */
+.form-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.form-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-section-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  border: none;
+  padding: 0;
   letter-spacing: 0.3px;
 }
 
-.calculator h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 2.5rem 0 1.5rem;
-  color: var(--lightOrange);
-  border-bottom: 2px solid var(--orange);
-  padding-bottom: 0.5rem;
+.section-num {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 1.5px;
+  opacity: 0.65;
+  padding-top: 1px;
 }
 
-.calculator p {
-  width: 80%;
-  margin: 1.5rem auto;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: visible;
-  min-height: auto;
-  vertical-align: middle;
+/* ── Field grid ───────────────────────────────────── */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 1.1rem;
+}
+
+/* ── Individual field ─────────────────────────────── */
+.form-field {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.calculator label {
-  display: inline-block;
-  width: 200px;
-  text-align: right;
-  margin-right: 1.5rem;
-  font-size: 0.9rem;
+.form-field label {
+  font-size: 0.78rem;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.2px;
+  text-transform: none;
 }
 
-.calculator input, .calculator select,
-.calculator input:valid, .calculator select:valid {
-  padding: 10px 14px;
-  background-color: rgba(255, 255, 255, 0.04);
-  color: var(--white);
-  font-size: 15px;
+.field-unit {
+  color: rgba(255, 157, 47, 0.55);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
-  margin-right: 1em;
-  transition: all 0.2s ease;
-  min-width: 180px;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
 }
 
-.calculator input:hover, .calculator select:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.06);
+.form-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='rgba(255,255,255,0.3)' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+  cursor: pointer;
 }
 
-.calculator input:focus, .calculator select:focus {
+.form-field select option {
+  background: #1c1b1a;
+  color: var(--white);
+}
+
+.form-field input:hover,
+.form-field select:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.form-field input:focus,
+.form-field select:focus {
   border-color: var(--orange);
-  background-color: rgba(255, 255, 255, 0.07);
-  box-shadow: 0 0 0 3px rgba(255, 157, 47, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(255, 157, 47, 0.09);
+  outline: none;
 }
 
-.calculator .range_progress {
+.form-field input::placeholder {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+/* ── Toggle row ───────────────────────────────────── */
+.form-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.form-toggle-row:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.toggle-question {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+}
+
+.toggle-group {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.toggle-group input[type=radio] {
+  display: none !important;
+}
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.42rem 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+  min-width: 56px;
+  text-align: center;
+}
+
+.toggle-btn:first-of-type {
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+
+.toggle-btn:last-of-type {
+  border-radius: 0 3px 3px 0;
+}
+
+.toggle-group input[type=radio]:checked + .toggle-btn {
+  background: rgba(255, 157, 47, 0.12);
+  border-color: rgba(255, 157, 47, 0.5);
+  color: #ffb044;
+}
+
+/* ── Conditional fields ───────────────────────────── */
+.conditional-fields {
+  margin-top: 1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* ── Range slider ─────────────────────────────────── */
+.range-field {
+  padding: 0.9rem 0 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  margin-top: 0.5rem;
+}
+
+.range_progress {
   background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);
   border: none;
   border-radius: 50vmin;
-  height: 6px;
+  height: 5px;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   outline: none;
   transition: all 0.3s ease;
   -webkit-appearance: none;
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 
-.calculator .range_progress:hover {
-  box-shadow: 0 2px 8px rgba(255, 157, 47, 0.4);
+.range_progress:hover {
+  box-shadow: 0 2px 8px rgba(255, 157, 47, 0.35);
 }
 
-.calculator .range_progress::-webkit-slider-runnable-track {
+.range_progress::-webkit-slider-runnable-track {
   width: 100%;
-  height: 6px;
+  height: 5px;
   cursor: pointer;
   border-radius: 50vmin;
   background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);
 }
 
-.calculator .range_progress::-webkit-slider-thumb {
-  border: 3px solid var(--orange);
-  height: 24px;
-  width: 24px;
+.range_progress::-webkit-slider-thumb {
+  border: 2px solid var(--orange);
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
-  background: #ffffff;
+  background: #1c1b1a;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -9px;
+  margin-top: -7px;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-.calculator .range_progress::-webkit-slider-thumb:hover {
+.range_progress::-webkit-slider-thumb:hover {
   transform: scale(1.2);
   box-shadow: 0 3px 10px rgba(255, 157, 47, 0.5);
 }
 
-.calculator .range_progress::-moz-range-thumb {
-  border: 3px solid var(--orange);
-  height: 24px;
-  width: 24px;
+.range_progress::-moz-range-thumb {
+  border: 2px solid var(--orange);
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
-  background: #ffffff;
+  background: #1c1b1a;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-.calculator .range_progress::-moz-range-thumb:hover {
-  transform: scale(1.2);
-  box-shadow: 0 3px 10px rgba(255, 157, 47, 0.5);
+/* ── Submit buttons ───────────────────────────────── */
+.calculator .buttons-container {
+  margin-top: 1.75rem;
 }
 
-.calculator .toggle {
-  display: inline-block;
-  background-color: #ff9d2f !important;
-}
-
-.calculator .toggle:active {
-  background-color: #ff9d2f !important;
-}
-
+/* ── Overlay & modal ──────────────────────────────── */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(4px);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.25s ease;
+  padding: 1rem;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .result-view {
-  width: 70%;
-  max-width: 900px;
-  margin: auto;
-  padding: 2.5rem 3rem;
-  color: #e5e5e5;
-  background: linear-gradient(180deg, #1c1b1a 0%, #111111 100%);
+  width: 100%;
+  max-width: 720px;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(180deg, #1e1d1b 0%, #121212 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
   position: relative;
   animation: slideUp 0.3s ease;
   max-height: 90vh;
@@ -240,218 +362,219 @@
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 .close {
   position: absolute;
   right: 1rem;
   top: 1rem;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  margin: 0;
   min-width: auto;
   min-height: auto;
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
   transition: all 0.2s ease;
 }
 
-.close span {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1rem;
-  font-family: Arial, serif;
-  font-weight: 600;
-  line-height: 1;
-}
-
 .close:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
   border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
   transform: none;
   box-shadow: none;
 }
 
-.close:hover span {
-  color: rgba(255, 255, 255, 0.8);
+/* ── Result header ────────────────────────────────── */
+.result-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.result-container {
-  margin: 3rem 0 2rem;
+.result-cat-name {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 0 0 0.5rem;
 }
 
-.result-container div {
-  margin: 1rem 0;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+.result-cat-name strong {
+  color: var(--orange);
+  font-weight: 600;
 }
 
-.choiceContainer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.choiceContainer .btn {
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: inline-block;
-  padding: 10px 28px;
-  position: relative;
-  transition: all 0.2s ease;
-  border-radius: 3px;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.03);
-  min-width: 100px;
-  text-align: center;
-}
-
-.choiceContainer input[type=radio].toggle {
-  display: none !important;
-}
-
-.choiceContainer input[type=radio].toggle + label {
-  text-align: center !important;
-  min-width: 100px;
-}
-
-.choiceContainer input[type=radio].toggle + label:hover {
-  background: rgba(255, 255, 255, 0.06);
+.result-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 0 0.35rem;
+  -webkit-text-fill-color: var(--white);
 }
 
-.choiceContainer input[type=radio].toggle:checked + label {
-  transition: all 0.2s ease;
-  color: #ffffff;
-  background: rgba(255, 157, 47, 0.15);
-  border: 1px solid var(--orange);
-  box-shadow: 0 0 0 1px rgba(255, 157, 47, 0.1);
+.result-subtitle {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
 }
 
-.calculator label {
-  margin-right: 0.9em;
-  width: 140px;
-  font-size: 13px;
+/* ── Result grid ──────────────────────────────────── */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-.calculator form {
-  width: 100%;
-  padding: 2rem 1rem;
+.result-card {
+  padding: 1.1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.calculator .kcl {
-  color: var(--lightOrange);
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-left: -0.5rem;
+.result-card.highlighted {
+  background: rgba(255, 157, 47, 0.07);
+  border-color: rgba(255, 157, 47, 0.2);
 }
 
-.result-view h1 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  color: var(--lightOrange);
+.result-card.water-card {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.result-view h1.center {
-  text-align: center;
+.result-card-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  color: rgba(255, 255, 255, 0.35);
 }
 
-/* Scrollbar styling for result view */
+.result-card.highlighted .result-card-label {
+  color: rgba(255, 157, 47, 0.65);
+}
+
+.result-card-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.result-card.highlighted .result-card-value {
+  color: #ffb044;
+}
+
+.result-card-unit {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0;
+}
+
+.result-card-desc {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 0.15rem;
+  line-height: 1.4;
+}
+
+.water-card .result-card-desc {
+  margin-top: 0;
+  flex: 1;
+}
+
+/* ── Result actions ───────────────────────────────── */
+.result-actions {
+  display: flex;
+  gap: 0.875rem;
+  justify-content: center;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .result-view::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 .result-view::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
+  background: transparent;
 }
 
 .result-view::-webkit-scrollbar-thumb {
-  background: var(--orange);
+  background: rgba(255, 157, 47, 0.3);
   border-radius: 3px;
 }
 
-.result-view::-webkit-scrollbar-thumb:hover {
-  background: var(--lightOrange);
-}
-
+/* ── Responsive ───────────────────────────────────── */
 @media (max-width: 650px) {
-  .calculator label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 10px 0;
-    width: 100%;
+  .calculator form {
+    padding: 1.25rem 1rem 2rem;
   }
 
-  .calculator form p {
-    display: block;
-    width: 100%;
+  .form-section {
+    padding: 1.25rem;
   }
 
-  .calculator input, .calculator select {
-    width: 100%;
-    min-width: auto;
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 
-  .choiceContainer {
+  .form-toggle-row {
     flex-direction: column;
-    align-items: stretch;
-  }
-
-  .choiceContainer label {
-    margin: 10px 0;
-    width: 100%;
-  }
-
-  .choiceContainer .btn {
-    width: 100%;
+    align-items: flex-start;
+    gap: 0.6rem;
   }
 
   .result-view {
-    width: 90%;
-    padding: 2rem 1.5rem;
+    padding: 1.75rem 1.25rem;
   }
 
-  .close {
-    right: 0.75rem;
-    top: 0.75rem;
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card.water-card {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
   }
 
   .calculator h1 {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
   }
 
   .calc-hero {
-    padding: 2rem 1rem 1.5rem;
-  }
-
-  .calc-hero-icon {
-    font-size: 2rem;
-  }
-
-  .calc-hero-sub {
-    font-size: 0.85rem;
-  }
-
-  .calculator h2 {
-    font-size: 1.2rem;
+    padding: 2rem 1rem 1.75rem;
   }
 }
 
+@media (max-width: 480px) {
+  .result-actions {
+    flex-direction: column;
+  }
+
+  .result-actions button {
+    width: 100%;
+  }
+}

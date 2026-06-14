@@ -1,174 +1,213 @@
 <div class="calculator">
   <div class="calc-hero">
     <div class="calc-hero-icon">🐾</div>
-    <h1>Oblicz zapotrzebowanie kaloryczne dla Twojego kota</h1>
-    <p class="calc-hero-sub">Podaj dane swojego pupila, a my obliczymy ile kalorii potrzebuje każdego dnia</p>
+    <h1>Kalkulator kalorii dla kota</h1>
+    <p class="calc-hero-sub">Podaj dane swojego pupila — obliczymy ile kalorii, karmy i wody potrzebuje każdego dnia</p>
   </div>
+
   <form [formGroup]="calculationForm" (ngSubmit)="onSubmit()">
-    <h2>Informacje o kocie</h2>
-    <p>
-      <label for="name">imię:</label>
-      <input autocomplete="off"
-        formControlName="name"
-        type="text"
-        id="name"
-        minlength="2" maxlength="25">
-      <app-validation-error [formField]="calculationForm.controls['name']"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls['name']" [validatorName]="'minlength'"
-      [msg]="'Minimalna długość imienia to 2 znaki'"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls['name']" [validatorName]="'maxlength'"
-      [msg]="'Maksymalna długość imienia to 25 znaki'"></app-validation-error>
-    </p>
-    <p>
-      <label for="age">wiek (w latach):</label>
-      <input autocomplete="off" formControlName="age" type="number" id="age">
-      <app-validation-error [formField]="calculationForm.controls['age']"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls['age']" [validatorName]="'min'"
-      [msg]="'Minimalny wiek to 0.1 roku'"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls['age']" [validatorName]="'max'"
-      [msg]="'Maksymalny wiek to 40 lat'"></app-validation-error>
-    </p>
-    <p>
-      <label for="weight">waga:</label>
-      <input autocomplete="off" formControlName="weight" type="number" id="weight">
-      <app-validation-error [formField]="calculationForm.controls['weight']"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls['weight']" [validatorName]="'min'"
-      [msg]="'Minimalna waga to 0.1 kg'"></app-validation-error>
-      <app-validation-error [formField]="calculationForm.controls['weight']" [validatorName]="'max'"
-      [msg]="'Maksymalna waga to 40 kg'"></app-validation-error>
-    </p>
-    <p>
-      <label for="sex">płeć:</label>
-      <select formControlName="sex" id="sex">
-        <option [ngValue]="0">Kot</option>
-        <option [ngValue]="1">Kotka</option>
-      </select>
-      <app-validation-error [formField]="calculationForm.controls['sex']"></app-validation-error>
-    </p>
-    <p>
-      <label for="bodyStructure">budowa ciała:</label>
-      <select id="bodyStructure" formControlName="bodyStructure">
-        <option [ngValue]="0">Chudy</option>
-        <option [ngValue]="1">Normalny</option>
-        <option [ngValue]="2">Otyły</option>
-        <option [ngValue]="3">Poważnie otyły</option>
-      </select>
-      <app-validation-error [formField]="calculationForm.controls['bodyStructure']"></app-validation-error>
-    </p>
-    <p class="choiceContainer">
-      <label for="isSterilized-on">Czy kot jest wysterylizowany?</label>
-      <input id="isSterilized-on" class="toggle toggle-left" formControlName="isSterilized" value="true" type="radio"
-        checked>
-      <label for="isSterilized-on" class="btn">Tak</label>
-      <input id="isSterilized-off" class="toggle toggle-right" formControlName="isSterilized" value="false"
-        type="radio">
-      <label for="isSterilized-off" class="btn">Nie</label>
-      <!--      <app-validation-error [formField]="calculationForm.controls.isSterilized"></app-validation-error>-->
-    </p>
-    @if (this.shouldShowReproductiveCyclePart();) {
-      <div>
-        <p class="reproductiveCyclePart">
-          <label for="reproductiveFaze">Czy kotka jest w fazie cyklu rozrodczego?</label>
-          <select id="reproductiveFaze" formControlName="reproductiveFaze">
-            <option [ngValue]="0">Nie</option>
-            <option [ngValue]="1">Ciąża</option>
-            <option [ngValue]="2">Ruja</option>
-            <option [ngValue]="3">Karmienie młodych</option>
+
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-num">01</span>
+        <h2>Informacje o kocie</h2>
+      </div>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="name">Imię</label>
+          <input autocomplete="off" formControlName="name" type="text" id="name"
+            minlength="2" maxlength="25" placeholder="np. Gustaw">
+          <app-validation-error [formField]="calculationForm.controls['name']"></app-validation-error>
+          <app-validation-error [formField]="calculationForm.controls['name']" [validatorName]="'minlength'"
+            [msg]="'Minimalna długość imienia to 2 znaki'"></app-validation-error>
+          <app-validation-error [formField]="calculationForm.controls['name']" [validatorName]="'maxlength'"
+            [msg]="'Maksymalna długość imienia to 25 znaków'"></app-validation-error>
+        </div>
+        <div class="form-field">
+          <label for="age">Wiek <span class="field-unit">lata</span></label>
+          <input autocomplete="off" formControlName="age" type="number" id="age" placeholder="np. 3">
+          <app-validation-error [formField]="calculationForm.controls['age']"></app-validation-error>
+          <app-validation-error [formField]="calculationForm.controls['age']" [validatorName]="'min'"
+            [msg]="'Minimalny wiek to 0.1 roku'"></app-validation-error>
+          <app-validation-error [formField]="calculationForm.controls['age']" [validatorName]="'max'"
+            [msg]="'Maksymalny wiek to 40 lat'"></app-validation-error>
+        </div>
+        <div class="form-field">
+          <label for="weight">Waga <span class="field-unit">kg</span></label>
+          <input autocomplete="off" formControlName="weight" type="number" id="weight" placeholder="np. 4.5">
+          <app-validation-error [formField]="calculationForm.controls['weight']"></app-validation-error>
+          <app-validation-error [formField]="calculationForm.controls['weight']" [validatorName]="'min'"
+            [msg]="'Minimalna waga to 0.1 kg'"></app-validation-error>
+          <app-validation-error [formField]="calculationForm.controls['weight']" [validatorName]="'max'"
+            [msg]="'Maksymalna waga to 40 kg'"></app-validation-error>
+        </div>
+        <div class="form-field">
+          <label for="sex">Płeć</label>
+          <select formControlName="sex" id="sex">
+            <option [ngValue]="0">Kot</option>
+            <option [ngValue]="1">Kotka</option>
           </select>
-          <app-validation-error [formField]="calculationForm.controls['reproductiveFaze']"></app-validation-error>
-        </p>
-        @if (this.shouldShowFeedingPart()) {
-          <div>
-            <p class="feedingPart">
-              <label for="postPregnantStrategy">Wibierz spsób obliczeń:</label>
+          <app-validation-error [formField]="calculationForm.controls['sex']"></app-validation-error>
+        </div>
+        <div class="form-field">
+          <label for="bodyStructure">Budowa ciała</label>
+          <select id="bodyStructure" formControlName="bodyStructure">
+            <option [ngValue]="0">Chudy</option>
+            <option [ngValue]="1">Normalny</option>
+            <option [ngValue]="2">Otyły</option>
+            <option [ngValue]="3">Poważnie otyły</option>
+          </select>
+          <app-validation-error [formField]="calculationForm.controls['bodyStructure']"></app-validation-error>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-num">02</span>
+        <h2>Stan zdrowia</h2>
+      </div>
+
+      <div class="form-toggle-row">
+        <span class="toggle-question">Sterylizacja / kastracja</span>
+        <div class="toggle-group">
+          <input id="isSterilized-on" class="toggle toggle-left" formControlName="isSterilized" value="true" type="radio" checked>
+          <label for="isSterilized-on" class="toggle-btn">Tak</label>
+          <input id="isSterilized-off" class="toggle toggle-right" formControlName="isSterilized" value="false" type="radio">
+          <label for="isSterilized-off" class="toggle-btn">Nie</label>
+        </div>
+      </div>
+
+      @if (this.shouldShowReproductiveCyclePart()) {
+        <div class="form-grid conditional-fields">
+          <div class="form-field">
+            <label for="reproductiveFaze">Faza cyklu rozrodczego</label>
+            <select id="reproductiveFaze" formControlName="reproductiveFaze">
+              <option [ngValue]="0">Brak / Nie dotyczy</option>
+              <option [ngValue]="1">Ciąża</option>
+              <option [ngValue]="2">Ruja</option>
+              <option [ngValue]="3">Karmienie młodych</option>
+            </select>
+            <app-validation-error [formField]="calculationForm.controls['reproductiveFaze']"></app-validation-error>
+          </div>
+          @if (this.shouldShowFeedingPart()) {
+            <div class="form-field">
+              <label for="postPregnantStrategy">Sposób obliczeń</label>
               <select id="postPregnantStrategy" formControlName="postPregnantStrategy">
                 <option [ngValue]="0">Tydzień karmienia</option>
                 <option [ngValue]="1">Liczba kociąt</option>
               </select>
-            </p>
-            @if (this.isCalculateByNumberOfKittens();) {
-              <p class="feedingWeekPart">
-                <label for="feedingWeek">liczba kociąt:</label>
+            </div>
+            @if (this.isCalculateByNumberOfKittens()) {
+              <div class="form-field">
+                <label for="numberOfKittens">Liczba kociąt</label>
                 <input autocomplete="off" type="number" id="numberOfKittens" formControlName="numberOfKittens">
-              </p>
+              </div>
             }
-            @if (this.isCalculateByFeedingWeek();) {
-              <p class="feedingWeekPart">
-                <label for="feedingWeek">tydzien karmienia:</label>
+            @if (this.isCalculateByFeedingWeek()) {
+              <div class="form-field">
+                <label for="feedingWeek">Tydzień karmienia</label>
                 <input autocomplete="off" type="number" id="feedingWeek" formControlName="feedingWeek">
-              </p>
+              </div>
             }
-          </div>
-        }
-      </div>
-    }
-    <p class="choiceContainer">
-      <label for="isInConvalescenceProcess-on">Czy kot przechodzi rekonwalescencje?</label>
-      <input id="isInConvalescenceProcess-on" class="toggle toggle-left" formControlName="isInConvalescenceProcess"
-        value="true" type="radio" checked>
-      <label for="isInConvalescenceProcess-on" class="btn">Tak</label>
-      <input id="isInConvalescenceProcess-off" class="toggle toggle-right" formControlName="isInConvalescenceProcess"
-        value="false" type="radio">
-      <label for="isInConvalescenceProcess-off" class="btn">Nie</label>
-      <app-validation-error [formField]="calculationForm.controls['isInConvalescenceProcess']"></app-validation-error>
-    </p>
-    @if (this.shouldShowConvalescencePart()) {
-      <p class="convalescenceProgressPart">
-        <label for="convalescenceProgress">postęp w rekonwalescencji:</label>
-        <input autocomplete="off" type="range" id="convalescenceProgress" formControlName="convalescenceProgress" min="1"
-          max="99" class="range_progress">
-        <app-validation-error [formField]="calculationForm.controls['convalescenceProgress']"
-        [validatorName]="'convalescenceProgress'"></app-validation-error>
-      </p>
-    }
-    <h2>Parametry obecnej karmy</h2>
-    <p>
-      <label for="dryKcl">kaloryczność suchej karmy:</label>
-      <input autocomplete="off" type="number" id="dryKcl" min="0" max="9999" maxlength="4"
-        formControlName="dryKcl"><span class="kcl">kcl/100g</span>
-      </p>
-      <p>
-        <label for="wetKcl">kaloryczność mokrej:</label>
-        <input autocomplete="off" type="number" id="wetKcl" min="0" max="9999" maxlength="4"
-          formControlName="wetKcl"><span class="kcl">kcl/100g</span>
-        </p>
-        <div class="buttons-container">
-          <button class="green-button" type="submit">Oblicz</button>
-          <button class="red-button" type="reset">Wyczyść</button>
+          }
         </div>
-      </form>
-    </div>
-    @if (this.reportIsPresent()) {
-      <div class="overlay">
-        <div class="result-view">
-          <button class="close" (click)="reset()" type="button">
-            <span>X</span>
-          </button>
-          <h2 class="center">Zapotrzebowanie kaloryczne Twojego kota</h2>
-          <div class="result-container">
-            <div>
-              <app-print-result [description]="'Spoczynkowe zapotrzebowanie na energię (RER)'" [unit]="'kcl'"
-              [amount]=this?.report?.rer></app-print-result>
-              <app-print-result [description]="'Spoczynkowe zapotrzebowanie na energię (RER)'" [unit]="'kcl'"
-              [amount]=this?.report?.der></app-print-result>
-            </div>
-            <div>
-              <app-print-result [description]="'Ilość mokrej karmy aby spełnić zapotrzebowanie całkowite der:'"
-                [amount]=this?.report?.weightOfCurrentWetFood
-              [unit]=this?.report?.foodUnit></app-print-result>
-              <app-print-result [description]="'Ilość suchej karmy aby spełnić zapotrzebowanie całkowite der:'"
-                [amount]=this?.report?.weightOfCurrentDryFood
-              [unit]=this?.report?.foodUnit></app-print-result>
-              <app-print-result [description]="'Łączna ilość płynów, którą powinin wypić kot w ciągu doby:'"
-                [amount]=this?.report?.waterRequirement?.amount
-              [unit]=this.report?.waterRequirement?.unit></app-print-result>
-            </div>
-            <div class="buttons-container">
-              <button class="white-button" (click)="generatePdf()">Zapisz w pdf</button>
-              <button class="white-button" (click)="reset()">Przelicz ponownie</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    }
+      }
 
+      <div class="form-toggle-row">
+        <span class="toggle-question">Rekonwalescencja</span>
+        <div class="toggle-group">
+          <input id="isInConvalescenceProcess-on" class="toggle toggle-left" formControlName="isInConvalescenceProcess"
+            value="true" type="radio" checked>
+          <label for="isInConvalescenceProcess-on" class="toggle-btn">Tak</label>
+          <input id="isInConvalescenceProcess-off" class="toggle toggle-right" formControlName="isInConvalescenceProcess"
+            value="false" type="radio">
+          <label for="isInConvalescenceProcess-off" class="toggle-btn">Nie</label>
+          <app-validation-error [formField]="calculationForm.controls['isInConvalescenceProcess']"></app-validation-error>
+        </div>
+      </div>
+
+      @if (this.shouldShowConvalescencePart()) {
+        <div class="form-field range-field">
+          <label for="convalescenceProgress">Postęp w rekonwalescencji</label>
+          <input autocomplete="off" type="range" id="convalescenceProgress" formControlName="convalescenceProgress"
+            min="1" max="99" class="range_progress">
+          <app-validation-error [formField]="calculationForm.controls['convalescenceProgress']"
+            [validatorName]="'convalescenceProgress'"></app-validation-error>
+        </div>
+      }
+    </div>
+
+    <div class="form-section">
+      <div class="form-section-header">
+        <span class="section-num">03</span>
+        <h2>Parametry karmy</h2>
+      </div>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="dryKcl">Sucha karma <span class="field-unit">kcal / 100g</span></label>
+          <input autocomplete="off" type="number" id="dryKcl" min="0" max="9999"
+            formControlName="dryKcl" placeholder="np. 350">
+        </div>
+        <div class="form-field">
+          <label for="wetKcl">Mokra karma <span class="field-unit">kcal / 100g</span></label>
+          <input autocomplete="off" type="number" id="wetKcl" min="0" max="9999"
+            formControlName="wetKcl" placeholder="np. 80">
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons-container">
+      <button class="green-button" type="submit">Oblicz zapotrzebowanie</button>
+      <button class="red-button" type="reset">Wyczyść formularz</button>
+    </div>
+
+  </form>
+</div>
+
+@if (this.reportIsPresent()) {
+  <div class="overlay">
+    <div class="result-view">
+      <button class="close" (click)="reset()" type="button" aria-label="Zamknij">✕</button>
+
+      <div class="result-header">
+        <p class="result-cat-name">Wyniki dla: <strong>{{ this.report?.catName }}</strong></p>
+        <h2>Zapotrzebowanie kaloryczne</h2>
+        <p class="result-subtitle">Dzienne normy żywieniowe obliczone na podstawie podanych danych</p>
+      </div>
+
+      <div class="result-grid">
+        <div class="result-card">
+          <span class="result-card-label">RER — spoczynek</span>
+          <span class="result-card-value">{{ this?.report?.rer }}<span class="result-card-unit"> kcal</span></span>
+          <span class="result-card-desc">Podstawowe zapotrzebowanie energetyczne w spoczynku</span>
+        </div>
+        <div class="result-card highlighted">
+          <span class="result-card-label">DER — całkowite</span>
+          <span class="result-card-value">{{ this?.report?.der }}<span class="result-card-unit"> kcal</span></span>
+          <span class="result-card-desc">Dzienne zapotrzebowanie z uwzględnieniem aktywności</span>
+        </div>
+        <div class="result-card">
+          <span class="result-card-label">Mokra karma</span>
+          <span class="result-card-value">{{ this?.report?.weightOfCurrentWetFood }}<span class="result-card-unit"> {{ this?.report?.foodUnit }}</span></span>
+          <span class="result-card-desc">Aby pokryć całkowite zapotrzebowanie DER</span>
+        </div>
+        <div class="result-card">
+          <span class="result-card-label">Sucha karma</span>
+          <span class="result-card-value">{{ this?.report?.weightOfCurrentDryFood }}<span class="result-card-unit"> {{ this?.report?.foodUnit }}</span></span>
+          <span class="result-card-desc">Aby pokryć całkowite zapotrzebowanie DER</span>
+        </div>
+        <div class="result-card water-card">
+          <span class="result-card-label">Woda</span>
+          <span class="result-card-value">{{ this?.report?.waterRequirement?.amount }}<span class="result-card-unit"> {{ this.report?.waterRequirement?.unit }}</span></span>
+          <span class="result-card-desc">Łączne dzienne nawodnienie — woda + płyny z karmy</span>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="white-button" (click)="generatePdf()">Zapisz PDF</button>
+        <button class="white-button" (click)="reset()">Przelicz ponownie</button>
+      </div>
+    </div>
+  </div>
+}
