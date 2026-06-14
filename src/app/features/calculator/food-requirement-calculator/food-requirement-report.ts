@@ -1,5 +1,5 @@
-import {Cat, CatCalculationParameters} from './food-requirement-calculator/cat-calculation-parameters';
-import {CalorityCalculationResult} from './food-requirement-calculator/calority-calculation-result';
+import {Cat, CatCalculationParameters} from './cat-calculation-parameters';
+import {CalorityCalculationResult} from './calority-calculation-result';
 import {CurrentFoodRequirementCalculationResult} from './current-food-requirement-calculator.service';
 import {WaterRequirementResult} from './water-requirement-calculator.service';
 

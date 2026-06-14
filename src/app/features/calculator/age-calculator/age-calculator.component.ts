@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AbstractControl, UntypedFormControl, UntypedFormGroup, ValidationErrors, Validators} from '@angular/forms';
-import {AGE_UNIT, AgeCalculatorService} from '../age-calculator.service';
+import {AGE_UNIT, AgeCalculatorService} from './age-calculator.service';
 import {SeoService} from '../../../core/seo.service';
 
 export interface CatAgeResult {

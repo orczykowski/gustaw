@@ -1,5 +1,5 @@
 import {AbstractControl, ValidationErrors, ValidatorFn} from '@angular/forms';
-import {ReproductiveCycleFaze, Sex} from './food-requirement-calculator/cat-calculation-parameters';
+import {ReproductiveCycleFaze, Sex} from './cat-calculation-parameters';
 
 export class CustomValidators {
   static reproductiveCycleFazeValidator(): ValidatorFn {

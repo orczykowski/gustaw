@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Cat} from './food-requirement-calculator/cat-calculation-parameters';
+import {Cat} from './cat-calculation-parameters';
 
 export class WaterRequirementResult {
   private readonly _amount: number;

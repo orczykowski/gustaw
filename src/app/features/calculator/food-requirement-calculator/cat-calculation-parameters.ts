@@ -1,4 +1,4 @@
-import {CatAge} from '../age-calculator.service';
+import {CatAge} from '../age-calculator/age-calculator.service';
 
 export const enum Sex {
   MALE, FEMALE

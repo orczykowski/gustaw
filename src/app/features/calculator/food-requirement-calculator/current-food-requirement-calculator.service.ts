@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {CatCalculationParameters} from './food-requirement-calculator/cat-calculation-parameters';
+import {CatCalculationParameters} from './cat-calculation-parameters';
 
 export class CurrentFoodRequirementCalculationResult {
   private readonly _wetCalority: number;

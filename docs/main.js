@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ 6264);
 /* harmony import */ var _features_blog_blog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features/blog/blog.component */ 5940);
-/* harmony import */ var _features_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./features/calculator/food-calculator.component */ 6763);
+/* harmony import */ var _features_calculator_food_requirement_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./features/calculator/food-requirement-calculator/food-calculator.component */ 2229);
 /* harmony import */ var _features_calculator_age_calculator_age_calculator_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./features/calculator/age-calculator/age-calculator.component */ 4729);
 /* harmony import */ var _features_organizations_organizations_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./features/organizations/organizations.component */ 6778);
 /* harmony import */ var _features_welcome_page_welcome_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./features/welcome-page/welcome-page.component */ 540);
@@ -45,7 +45,7 @@ const routes = [{
   component: _features_welcome_page_welcome_page_component__WEBPACK_IMPORTED_MODULE_5__.WelcomePageComponent
 }, {
   path: 'kalkulator',
-  component: _features_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_2__.FoodCalculatorComponent
+  component: _features_calculator_food_requirement_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_2__.FoodCalculatorComponent
 }, {
   path: 'kalkulator/wiek',
   component: _features_calculator_age_calculator_age_calculator_component__WEBPACK_IMPORTED_MODULE_3__.AgeCalculatorComponent
@@ -263,13 +263,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ 4967);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app-routing.module */ 4114);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ 92);
-/* harmony import */ var _features_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./features/calculator/food-calculator.component */ 6763);
+/* harmony import */ var _features_calculator_food_requirement_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./features/calculator/food-requirement-calculator/food-calculator.component */ 2229);
 /* harmony import */ var _features_calculator_age_calculator_age_calculator_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./features/calculator/age-calculator/age-calculator.component */ 4729);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ 4456);
 /* harmony import */ var _features_organizations_organizations_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./features/organizations/organizations.component */ 6778);
 /* harmony import */ var _features_blog_blog_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./features/blog/blog.component */ 5940);
-/* harmony import */ var _features_calculator_print_result_print_result_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./features/calculator/print-result/print-result.component */ 3063);
-/* harmony import */ var _features_calculator_validation_error_validation_error_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./features/calculator/validation-error/validation-error.component */ 85);
+/* harmony import */ var _features_calculator_food_requirement_calculator_print_result_print_result_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./features/calculator/food-requirement-calculator/print-result/print-result.component */ 3833);
+/* harmony import */ var _features_calculator_food_requirement_calculator_validation_error_validation_error_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./features/calculator/food-requirement-calculator/validation-error/validation-error.component */ 5871);
 /* harmony import */ var _features_welcome_page_welcome_page_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./features/welcome-page/welcome-page.component */ 540);
 /* harmony import */ var _features_organizations_organization_info_organization_info_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./features/organizations/organization-info/organization-info.component */ 4961);
 /* harmony import */ var _features_blog_article_link_article_link_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./features/blog/article-link/article-link.component */ 723);
@@ -326,7 +326,7 @@ class AppModule {
 }
 (function () {
   (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_19__["ɵɵsetNgModuleScope"](AppModule, {
-    declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__.AppComponent, _features_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_4__.FoodCalculatorComponent, _features_calculator_age_calculator_age_calculator_component__WEBPACK_IMPORTED_MODULE_5__.AgeCalculatorComponent, _features_blog_blog_component__WEBPACK_IMPORTED_MODULE_8__.BlogComponent, _features_organizations_organizations_component__WEBPACK_IMPORTED_MODULE_7__.OrganizationsComponent, _features_calculator_print_result_print_result_component__WEBPACK_IMPORTED_MODULE_9__.PrintResultComponent, _features_calculator_validation_error_validation_error_component__WEBPACK_IMPORTED_MODULE_10__.ValidationErrorComponent, _features_welcome_page_welcome_page_component__WEBPACK_IMPORTED_MODULE_11__.WelcomePageComponent, _features_organizations_organization_info_organization_info_component__WEBPACK_IMPORTED_MODULE_12__.OrganizationInfoComponent, _features_blog_articles_safe_balcony_safe_balcony_component__WEBPACK_IMPORTED_MODULE_14__.SafeBalconyComponent, _features_blog_article_link_article_link_component__WEBPACK_IMPORTED_MODULE_13__.ArticleLinkComponent, _features_blog_articles_diet_diet_component__WEBPACK_IMPORTED_MODULE_15__.DietComponent, _features_blog_articles_cat_at_home_positives_cat_at_home_positives_component__WEBPACK_IMPORTED_MODULE_17__.CatAtHomePositivesComponent, _features_blog_articles_cat_sounds_cat_sounds_component__WEBPACK_IMPORTED_MODULE_18__.CatSoundsComponent],
+    declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__.AppComponent, _features_calculator_food_requirement_calculator_food_calculator_component__WEBPACK_IMPORTED_MODULE_4__.FoodCalculatorComponent, _features_calculator_age_calculator_age_calculator_component__WEBPACK_IMPORTED_MODULE_5__.AgeCalculatorComponent, _features_blog_blog_component__WEBPACK_IMPORTED_MODULE_8__.BlogComponent, _features_organizations_organizations_component__WEBPACK_IMPORTED_MODULE_7__.OrganizationsComponent, _features_calculator_food_requirement_calculator_print_result_print_result_component__WEBPACK_IMPORTED_MODULE_9__.PrintResultComponent, _features_calculator_food_requirement_calculator_validation_error_validation_error_component__WEBPACK_IMPORTED_MODULE_10__.ValidationErrorComponent, _features_welcome_page_welcome_page_component__WEBPACK_IMPORTED_MODULE_11__.WelcomePageComponent, _features_organizations_organization_info_organization_info_component__WEBPACK_IMPORTED_MODULE_12__.OrganizationInfoComponent, _features_blog_articles_safe_balcony_safe_balcony_component__WEBPACK_IMPORTED_MODULE_14__.SafeBalconyComponent, _features_blog_article_link_article_link_component__WEBPACK_IMPORTED_MODULE_13__.ArticleLinkComponent, _features_blog_articles_diet_diet_component__WEBPACK_IMPORTED_MODULE_15__.DietComponent, _features_blog_articles_cat_at_home_positives_cat_at_home_positives_component__WEBPACK_IMPORTED_MODULE_17__.CatAtHomePositivesComponent, _features_blog_articles_cat_sounds_cat_sounds_component__WEBPACK_IMPORTED_MODULE_18__.CatSoundsComponent],
     imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_2__.AppRoutingModule, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.FormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_6__.ReactiveFormsModule, _angular_service_worker__WEBPACK_IMPORTED_MODULE_16__.ServiceWorkerModule]
   });
 })();
@@ -1384,76 +1384,6 @@ class BlogComponent {
 
 /***/ },
 
-/***/ 8550
-/*!***************************************************************!*\
-  !*** ./src/app/features/calculator/age-calculator.service.ts ***!
-  \***************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   AGE_UNIT: () => (/* binding */ AGE_UNIT),
-/* harmony export */   AgeCalculatorService: () => (/* binding */ AgeCalculatorService)
-/* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 4363);
-
-class AgeCalculatorService {
-  calculate(age, unit = AGE_UNIT.YEAR) {
-    return {
-      humanAge: age,
-      catAge: this.calculateCateAge(age, unit)
-    };
-  }
-  calculateCateAge(age, unit) {
-    const humanAgeInMonths = unit === AGE_UNIT.YEAR ? age * 12 : age;
-    const roundedHumanAgeInMonths = Math.round(humanAgeInMonths);
-    switch (true) {
-      case roundedHumanAgeInMonths >= 24:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 288 + (x - 24) * 4);
-      case roundedHumanAgeInMonths >= 18:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 8 * x + 96);
-      case roundedHumanAgeInMonths >= 12:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 10 * x + 60);
-      case roundedHumanAgeInMonths >= 7:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 7.2 * x + 93.6);
-      case roundedHumanAgeInMonths >= 6:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 24 * x - 24);
-      case roundedHumanAgeInMonths > 4:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 27 * x - 21);
-      case roundedHumanAgeInMonths === 4:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 72);
-      case roundedHumanAgeInMonths >= 2:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 36 * x - 48);
-      case roundedHumanAgeInMonths > 1:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 22 * x - 16);
-      default:
-        return this.calculateCatAge(roundedHumanAgeInMonths, x => 6.024096385542168 * x);
-    }
-  }
-  calculateCatAge(ageInMonths, calculate) {
-    return Number((calculate(ageInMonths) / 12).toPrecision(2));
-  }
-  static {
-    this.ɵfac = function AgeCalculatorService_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || AgeCalculatorService)();
-    };
-  }
-  static {
-    this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
-      token: AgeCalculatorService,
-      factory: AgeCalculatorService.ɵfac,
-      providedIn: 'root'
-    });
-  }
-}
-var AGE_UNIT;
-(function (AGE_UNIT) {
-  AGE_UNIT[AGE_UNIT["YEAR"] = 0] = "YEAR";
-  AGE_UNIT[AGE_UNIT["MONTH"] = 1] = "MONTH";
-})(AGE_UNIT || (AGE_UNIT = {}));
-
-/***/ },
-
 /***/ 4729
 /*!********************************************************************************!*\
   !*** ./src/app/features/calculator/age-calculator/age-calculator.component.ts ***!
@@ -1465,7 +1395,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AgeCalculatorComponent: () => (/* binding */ AgeCalculatorComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ 4456);
-/* harmony import */ var _age_calculator_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../age-calculator.service */ 8550);
+/* harmony import */ var _age_calculator_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./age-calculator.service */ 6301);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 6124);
 /* harmony import */ var _core_seo_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../core/seo.service */ 2296);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 9748);
@@ -1646,10 +1576,358 @@ class AgeCalculatorComponent {
 
 /***/ },
 
-/***/ 7541
-/*!************************************************************************************!*\
-  !*** ./src/app/features/calculator/current-food-requirement-calculator.service.ts ***!
-  \************************************************************************************/
+/***/ 6301
+/*!******************************************************************************!*\
+  !*** ./src/app/features/calculator/age-calculator/age-calculator.service.ts ***!
+  \******************************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AGE_UNIT: () => (/* binding */ AGE_UNIT),
+/* harmony export */   AgeCalculatorService: () => (/* binding */ AgeCalculatorService)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 4363);
+
+class AgeCalculatorService {
+  calculate(age, unit = AGE_UNIT.YEAR) {
+    return {
+      humanAge: age,
+      catAge: this.calculateCateAge(age, unit)
+    };
+  }
+  calculateCateAge(age, unit) {
+    const humanAgeInMonths = unit === AGE_UNIT.YEAR ? age * 12 : age;
+    const roundedHumanAgeInMonths = Math.round(humanAgeInMonths);
+    switch (true) {
+      case roundedHumanAgeInMonths >= 24:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 288 + (x - 24) * 4);
+      case roundedHumanAgeInMonths >= 18:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 8 * x + 96);
+      case roundedHumanAgeInMonths >= 12:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 10 * x + 60);
+      case roundedHumanAgeInMonths >= 7:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 7.2 * x + 93.6);
+      case roundedHumanAgeInMonths >= 6:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 24 * x - 24);
+      case roundedHumanAgeInMonths > 4:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 27 * x - 21);
+      case roundedHumanAgeInMonths === 4:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 72);
+      case roundedHumanAgeInMonths >= 2:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 36 * x - 48);
+      case roundedHumanAgeInMonths > 1:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 22 * x - 16);
+      default:
+        return this.calculateCatAge(roundedHumanAgeInMonths, x => 6.024096385542168 * x);
+    }
+  }
+  calculateCatAge(ageInMonths, calculate) {
+    return Number((calculate(ageInMonths) / 12).toPrecision(2));
+  }
+  static {
+    this.ɵfac = function AgeCalculatorService_Factory(__ngFactoryType__) {
+      return new (__ngFactoryType__ || AgeCalculatorService)();
+    };
+  }
+  static {
+    this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: AgeCalculatorService,
+      factory: AgeCalculatorService.ɵfac,
+      providedIn: 'root'
+    });
+  }
+}
+var AGE_UNIT;
+(function (AGE_UNIT) {
+  AGE_UNIT[AGE_UNIT["YEAR"] = 0] = "YEAR";
+  AGE_UNIT[AGE_UNIT["MONTH"] = 1] = "MONTH";
+})(AGE_UNIT || (AGE_UNIT = {}));
+
+/***/ },
+
+/***/ 7660
+/*!************************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/calority-calculation-result.ts ***!
+  \************************************************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CalorityCalculationResult: () => (/* binding */ CalorityCalculationResult)
+/* harmony export */ });
+class CalorityCalculationResult {
+  constructor(der, rer, calculationMethod) {
+    this._unit = 'kcl';
+    this._der = der;
+    this._rer = rer;
+    this.calculationMethod = calculationMethod;
+  }
+  get rer() {
+    return this._rer;
+  }
+  get der() {
+    return this._der;
+  }
+  get unit() {
+    return this._unit;
+  }
+}
+
+/***/ },
+
+/***/ 2232
+/*!************************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/calority-calculator.service.ts ***!
+  \************************************************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CalorityCalculatorService: () => (/* binding */ CalorityCalculatorService)
+/* harmony export */ });
+/* harmony import */ var _calority_calculation_result__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calority-calculation-result */ 7660);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 4363);
+/* harmony import */ var _k_factor_calculator_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./k-factor-calculator.service */ 4536);
+
+
+
+class CalorityCalculatorService {
+  constructor(kFactorStrategy) {
+    this.kFactorStrategy = kFactorStrategy;
+  }
+  calculate(params) {
+    const cat = params.cat;
+    if (params.isCalculationByLactationCycle()) {
+      return this.calculationByLactationWeek(cat);
+    }
+    return this.calculateUsingKFactor(cat);
+  }
+  calculateUsingKFactor(cat) {
+    const kFactor = this.kFactorStrategy.determineFor(cat);
+    const der = kFactor.value * cat.rer();
+    return new _calority_calculation_result__WEBPACK_IMPORTED_MODULE_0__.CalorityCalculationResult(der, cat.rer(), 'kFactor');
+  }
+  calculationByLactationWeek(cat) {
+    const rer = cat.rer();
+    const rarPercentageCalculateForCatNumbers = this.getRerPercentage(cat.feedingWeek) * rer;
+    const der = rer + cat.numberOfKittens * rarPercentageCalculateForCatNumbers;
+    return new _calority_calculation_result__WEBPACK_IMPORTED_MODULE_0__.CalorityCalculationResult(der, cat.rer(), 'lactationWeek');
+  }
+  getRerPercentage(feedingWeek) {
+    switch (feedingWeek) {
+      case 1:
+      case 2:
+        return 0.3;
+      case 3:
+        return 0.45;
+      case 4:
+        return 0.55;
+      case 5:
+        return 0.65;
+      default:
+        return 0.9;
+    }
+  }
+  static {
+    this.ɵfac = function CalorityCalculatorService_Factory(__ngFactoryType__) {
+      return new (__ngFactoryType__ || CalorityCalculatorService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_k_factor_calculator_service__WEBPACK_IMPORTED_MODULE_2__.KFactorCalculatorService));
+    };
+  }
+  static {
+    this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+      token: CalorityCalculatorService,
+      factory: CalorityCalculatorService.ɵfac,
+      providedIn: 'root'
+    });
+  }
+}
+
+/***/ },
+
+/***/ 9640
+/*!***********************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/cat-calculation-parameters.ts ***!
+  \***********************************************************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Cat: () => (/* binding */ Cat),
+/* harmony export */   CatCalculationParameters: () => (/* binding */ CatCalculationParameters),
+/* harmony export */   ConvalescenceInfo: () => (/* binding */ ConvalescenceInfo),
+/* harmony export */   KFactor: () => (/* binding */ KFactor),
+/* harmony export */   ReproductionCycleInfo: () => (/* binding */ ReproductionCycleInfo)
+/* harmony export */ });
+class KFactor {
+  constructor(kValue, kName) {
+    this.kValue = kValue;
+    this.kName = kName;
+  }
+  get value() {
+    return this.kValue;
+  }
+  get name() {
+    return this.kName;
+  }
+}
+class CatCalculationParameters {
+  constructor(_cat, _dryKcl, _wetKcl, _reproductiveCycleCalculationType) {
+    this._cat = _cat;
+    this._dryKcl = _dryKcl;
+    this._wetKcl = _wetKcl;
+    this._reproductiveCycleCalculationType = _reproductiveCycleCalculationType;
+  }
+  isCalculationByLactationCycle() {
+    return this._cat.isInReproductiveCycle() && this._reproductiveCycleCalculationType === 0 /* PostPregnantFeedingStrategy.FEEDING_WEEK */;
+  }
+  get cat() {
+    return this._cat;
+  }
+  get dryKcl() {
+    if (this._dryKcl == null) {
+      return 0;
+    }
+    return this._dryKcl;
+  }
+  get wetKcl() {
+    if (this._wetKcl == null) {
+      return 0;
+    }
+    return this._wetKcl;
+  }
+}
+class ConvalescenceInfo {
+  constructor(_progress) {
+    this._progress = _progress;
+  }
+  get isInProcess() {
+    return this._progress > 0;
+  }
+  get progress() {
+    return this._progress;
+  }
+}
+class ReproductionCycleInfo {
+  constructor(_cycleFaze, _numberOfKittens, _feedingWeek) {
+    this._cycleFaze = _cycleFaze;
+    this._numberOfKittens = _numberOfKittens;
+    this._feedingWeek = _feedingWeek;
+  }
+  get cycleFaze() {
+    return this._cycleFaze;
+  }
+  get numberOfKittens() {
+    return this._numberOfKittens;
+  }
+  get feedingWeek() {
+    return this._feedingWeek;
+  }
+  isReproductive() {
+    return this.cycleFaze != null && this.cycleFaze !== 0 /* ReproductiveCycleFaze.NO */;
+  }
+}
+class Cat {
+  constructor(name, convalescenceInfo, age, mature, sex, weight, bodyStructure, sterilized, reproductiveCycleInfo) {
+    this._convalescenceInfo = convalescenceInfo;
+    this._age = age;
+    this._mature = mature;
+    this._sex = sex;
+    this._weight = weight;
+    this._bodyStructure = bodyStructure;
+    this._sterilized = sterilized;
+    this._reproductiveCycleInfo = reproductiveCycleInfo;
+    this._name = name;
+  }
+  get age() {
+    return this._age;
+  }
+  get feedingWeek() {
+    if (!this.isPresent(this._reproductiveCycleInfo)) {
+      throw new Error('Illegal operation');
+    }
+    return this._reproductiveCycleInfo.feedingWeek;
+  }
+  get numberOfKittens() {
+    if (!this.isPresent(this._reproductiveCycleInfo)) {
+      throw new Error('Illegal operation');
+    }
+    return this._reproductiveCycleInfo.numberOfKittens;
+  }
+  get weight() {
+    if (this._weight == null) {
+      return 0;
+    }
+    return this._weight;
+  }
+  get bodyStructure() {
+    return this._bodyStructure;
+  }
+  isSterilized() {
+    return this._sterilized;
+  }
+  isNotSterilized() {
+    return this._sterilized;
+  }
+  isInPregnant() {
+    return this.isInReproductiveCycle() && this._reproductiveCycleInfo.cycleFaze === 1 /* ReproductiveCycleFaze.PREGNANCY */;
+  }
+  isInHeat() {
+    return this.isInReproductiveCycle() && this._reproductiveCycleInfo.cycleFaze === 2 /* ReproductiveCycleFaze.HEAT */;
+  }
+  isFeeding() {
+    return this.isInReproductiveCycle() && this._reproductiveCycleInfo.cycleFaze === 3 /* ReproductiveCycleFaze.FEEDING */;
+  }
+  isInReproductiveCycle() {
+    return this.isPresent(this._reproductiveCycleInfo) && this.isReproductiveCyclePossible() && this._reproductiveCycleInfo.isReproductive();
+  }
+  rer() {
+    return 70 * Math.pow(this._weight, 0.67);
+  }
+  isInConvalescence() {
+    return this.isPresent(this._convalescenceInfo) && this._convalescenceInfo.isInProcess;
+  }
+  getConvalescenceProgress() {
+    if (!this.isPresent(this._convalescenceInfo)) {
+      throw new Error('Illegal operation');
+    }
+    return this._convalescenceInfo.progress / 100;
+  }
+  isAdult() {
+    return this._mature === 0 /* Mature.ADULT */ || this._age.humanAge >= 4;
+  }
+  isKitten() {
+    return !this.isAdult();
+  }
+  isOld() {
+    return this._age.humanAge >= 10;
+  }
+  name() {
+    return this._name;
+  }
+  get sex() {
+    return this._sex;
+  }
+  get reproductiveFaze() {
+    if (this._reproductiveCycleInfo === null) {
+      return null;
+    }
+    return this._reproductiveCycleInfo.cycleFaze;
+  }
+  isReproductiveCyclePossible() {
+    return this._sex === 1 /* Sex.FEMALE */ && !this._sterilized && this.isAdult();
+  }
+  isPresent(obj) {
+    return obj !== null && obj !== undefined;
+  }
+}
+
+/***/ },
+
+/***/ 1911
+/*!****************************************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/current-food-requirement-calculator.service.ts ***!
+  \****************************************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1708,10 +1986,10 @@ class CurrentFoodRequirementCalculatorService {
 
 /***/ },
 
-/***/ 7377
-/*!**********************************************************!*\
-  !*** ./src/app/features/calculator/custom.validators.ts ***!
-  \**********************************************************/
+/***/ 3543
+/*!**************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/custom.validators.ts ***!
+  \**************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1755,10 +2033,10 @@ class CustomValidators {
 
 /***/ },
 
-/***/ 6763
-/*!******************************************************************!*\
-  !*** ./src/app/features/calculator/food-calculator.component.ts ***!
-  \******************************************************************/
+/***/ 2229
+/*!**********************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/food-calculator.component.ts ***!
+  \**********************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1766,18 +2044,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   FoodCalculatorComponent: () => (/* binding */ FoodCalculatorComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ 4456);
-/* harmony import */ var _food_requirement_calculator_cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./food-requirement-calculator/cat-calculation-parameters */ 9640);
-/* harmony import */ var _food_requirement_report__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./food-requirement-report */ 1398);
-/* harmony import */ var _custom_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./custom.validators */ 7377);
+/* harmony import */ var _cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cat-calculation-parameters */ 9640);
+/* harmony import */ var _food_requirement_report__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./food-requirement-report */ 2424);
+/* harmony import */ var _custom_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./custom.validators */ 3543);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 6124);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 4363);
-/* harmony import */ var _food_requirement_calculator_calority_calculator_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./food-requirement-calculator/calority-calculator.service */ 2232);
-/* harmony import */ var _age_calculator_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./age-calculator.service */ 8550);
-/* harmony import */ var _current_food_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./current-food-requirement-calculator.service */ 7541);
-/* harmony import */ var _water_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./water-requirement-calculator.service */ 7020);
-/* harmony import */ var _pdf_writer_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pdf-writer.service */ 2354);
-/* harmony import */ var _core_seo_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../core/seo.service */ 2296);
-/* harmony import */ var _validation_error_validation_error_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./validation-error/validation-error.component */ 85);
+/* harmony import */ var _calority_calculator_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./calority-calculator.service */ 2232);
+/* harmony import */ var _age_calculator_age_calculator_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../age-calculator/age-calculator.service */ 6301);
+/* harmony import */ var _current_food_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./current-food-requirement-calculator.service */ 1911);
+/* harmony import */ var _water_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./water-requirement-calculator.service */ 8526);
+/* harmony import */ var _pdf_writer_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./pdf-writer.service */ 4712);
+/* harmony import */ var _core_seo_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../core/seo.service */ 2296);
+/* harmony import */ var _validation_error_validation_error_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./validation-error/validation-error.component */ 5871);
 
 
 
@@ -2104,25 +2382,25 @@ class FoodCalculatorComponent {
   }
   createCalculationParams() {
     const catAge = this.catAgeCalculator.calculate(Number(this.calculationForm.controls['age']?.value));
-    return new _food_requirement_calculator_cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.CatCalculationParameters(new _food_requirement_calculator_cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.Cat(this.calculationForm.controls['name']?.value, this.convalescenceInfo(), catAge, this.calculationForm.controls['mature']?.value, this.calculationForm.controls['sex']?.value, this.calculationForm.controls['weight']?.value, this.calculationForm.controls['bodyStructure']?.value, this.calculationForm.controls['isSterilized']?.value, this.reproductionCycleInfo()), this.calculationForm.controls['dryKcl']?.value, this.calculationForm.controls['wetKcl']?.value, this.calculationForm.controls['postPregnantStrategy']?.value);
+    return new _cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.CatCalculationParameters(new _cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.Cat(this.calculationForm.controls['name']?.value, this.convalescenceInfo(), catAge, this.calculationForm.controls['mature']?.value, this.calculationForm.controls['sex']?.value, this.calculationForm.controls['weight']?.value, this.calculationForm.controls['bodyStructure']?.value, this.calculationForm.controls['isSterilized']?.value, this.reproductionCycleInfo()), this.calculationForm.controls['dryKcl']?.value, this.calculationForm.controls['wetKcl']?.value, this.calculationForm.controls['postPregnantStrategy']?.value);
   }
   convalescenceInfo() {
     const progress = this.calculationForm.controls['convalescenceProgress']?.value;
     if (progress === null || progress === undefined) {
       return null;
     }
-    return new _food_requirement_calculator_cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.ConvalescenceInfo(progress);
+    return new _cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.ConvalescenceInfo(progress);
   }
   reproductionCycleInfo() {
     const reproductiveFaze = this.calculationForm.controls['reproductiveFaze']?.value;
     if (reproductiveFaze === null || reproductiveFaze === undefined) {
       return null;
     }
-    return new _food_requirement_calculator_cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.ReproductionCycleInfo(reproductiveFaze, this.calculationForm.controls['numberOfKittens']?.value, this.calculationForm.controls['feedingWeek']?.value);
+    return new _cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__.ReproductionCycleInfo(reproductiveFaze, this.calculationForm.controls['numberOfKittens']?.value, this.calculationForm.controls['feedingWeek']?.value);
   }
   static {
     this.ɵfac = function FoodCalculatorComponent_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || FoodCalculatorComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_food_requirement_calculator_calority_calculator_service__WEBPACK_IMPORTED_MODULE_6__.CalorityCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_age_calculator_service__WEBPACK_IMPORTED_MODULE_7__.AgeCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_current_food_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_8__.CurrentFoodRequirementCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_water_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_9__.WaterRequirementCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_pdf_writer_service__WEBPACK_IMPORTED_MODULE_10__.PdfWriterService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_core_seo_service__WEBPACK_IMPORTED_MODULE_11__.SeoService));
+      return new (__ngFactoryType__ || FoodCalculatorComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_calority_calculator_service__WEBPACK_IMPORTED_MODULE_6__.CalorityCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_age_calculator_age_calculator_service__WEBPACK_IMPORTED_MODULE_7__.AgeCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_current_food_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_8__.CurrentFoodRequirementCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_water_requirement_calculator_service__WEBPACK_IMPORTED_MODULE_9__.WaterRequirementCalculatorService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_pdf_writer_service__WEBPACK_IMPORTED_MODULE_10__.PdfWriterService), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_core_seo_service__WEBPACK_IMPORTED_MODULE_11__.SeoService));
     };
   }
   static {
@@ -2349,286 +2627,65 @@ class FoodCalculatorComponent {
         }
       },
       dependencies: [_angular_forms__WEBPACK_IMPORTED_MODULE_0__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_0__["ɵNgSelectMultipleOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.NumberValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.RangeValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.SelectControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.RadioControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.MinLengthValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.MaxLengthValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.MinValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.MaxValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.FormControlName, _validation_error_validation_error_component__WEBPACK_IMPORTED_MODULE_12__.ValidationErrorComponent],
-      styles: [".calculator[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.calculator[_ngcontent-%COMP%]   *[_ngcontent-%COMP%]:focus {\n  outline: 2px solid var(--orange);\n  outline-offset: 2px;\n  border-radius: 2px;\n}\n\n\n.calc-hero[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3rem 2rem 2.5rem;\n  position: relative;\n  overflow: hidden;\n  border-bottom: 1px solid rgba(255, 157, 47, 0.1);\n  background: radial-gradient(ellipse at 50% 0%, rgba(255, 157, 47, 0.08) 0%, transparent 70%);\n  animation: _ngcontent-%COMP%_heroFadeIn 0.6s ease-out;\n}\n\n@keyframes _ngcontent-%COMP%_heroFadeIn {\n  from { opacity: 0; transform: translateY(-10px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n\n.calc-hero-icon[_ngcontent-%COMP%] {\n  font-size: 2.5rem;\n  margin-bottom: 0.75rem;\n  display: inline-block;\n  animation: _ngcontent-%COMP%_iconFloatGlow 2.8s ease-in-out infinite;\n}\n\n@keyframes _ngcontent-%COMP%_iconFloatGlow {\n  0%, 100% {\n    transform: translateY(0) scale(1);\n    filter: drop-shadow(0 0 0px rgba(255, 157, 47, 0));\n  }\n  50% {\n    transform: translateY(-8px) scale(1.08);\n    filter: drop-shadow(0 0 14px rgba(255, 157, 47, 0.7));\n  }\n}\n\n.calculator[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: \"Playfair Display\", serif;\n  font-size: 2rem;\n  font-weight: 600;\n  margin: 0 auto 0.6rem;\n  max-width: 580px;\n  line-height: 1.3;\n  background: linear-gradient(135deg, #ff9d2f 0%, #ffb700 50%, #d4aa48 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  background-size: 200% auto;\n  animation: _ngcontent-%COMP%_shimmer 3s ease-in-out infinite;\n}\n\n@keyframes _ngcontent-%COMP%_shimmer {\n  0%, 100% { background-position: 0% center; }\n  50% { background-position: 100% center; }\n}\n\n.calc-hero-sub[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.9rem;\n  margin: 0;\n  letter-spacing: 0.2px;\n  max-width: 500px;\n  margin-inline: auto;\n}\n\n\n.calculator[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  padding: 2rem 2.5rem 3rem;\n  max-width: 860px;\n  margin: 0 auto;\n}\n\n\n.form-section[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.02);\n  border: 1px solid rgba(255, 255, 255, 0.07);\n  border-radius: 4px;\n  padding: 1.5rem 1.75rem;\n  margin-bottom: 1rem;\n}\n\n.form-section-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n  padding-bottom: 0.875rem;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.05);\n}\n\n.form-section-header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: \"Playfair Display\", serif;\n  font-size: 1rem;\n  font-weight: 600;\n  color: rgba(255, 255, 255, 0.8);\n  margin: 0;\n  border: none;\n  padding: 0;\n  letter-spacing: 0.3px;\n}\n\n.section-num[_ngcontent-%COMP%] {\n  font-family: \"Inter\", sans-serif;\n  font-size: 0.65rem;\n  font-weight: 700;\n  color: var(--orange);\n  letter-spacing: 1.5px;\n  opacity: 0.65;\n  padding-top: 1px;\n}\n\n\n.form-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));\n  gap: 1.1rem;\n}\n\n\n.form-field[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 0.35rem;\n}\n\n.form-field[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 0.78rem;\n  font-weight: 500;\n  color: rgba(255, 255, 255, 0.45);\n  letter-spacing: 0.2px;\n  text-transform: none;\n}\n\n.field-unit[_ngcontent-%COMP%] {\n  color: rgba(255, 157, 47, 0.55);\n  font-size: 0.7rem;\n  font-weight: 400;\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: 0.6rem 0.8rem;\n  background: rgba(255, 255, 255, 0.04);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 3px;\n  color: var(--white);\n  font-size: 0.9rem;\n  font-family: \"Inter\", sans-serif;\n  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;\n  -webkit-appearance: none;\n}\n\n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%] {\n  appearance: none;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='rgba(255,255,255,0.3)' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: right 0.75rem center;\n  padding-right: 2rem;\n  cursor: pointer;\n}\n\n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]   option[_ngcontent-%COMP%] {\n  background: #1c1b1a;\n  color: var(--white);\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:hover, \n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]:hover {\n  border-color: rgba(255, 255, 255, 0.18);\n  background: rgba(255, 255, 255, 0.055);\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:focus, \n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]:focus {\n  border-color: var(--orange);\n  background: rgba(255, 255, 255, 0.06);\n  box-shadow: 0 0 0 3px rgba(255, 157, 47, 0.09);\n  outline: none;\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::placeholder {\n  color: rgba(255, 255, 255, 0.18);\n}\n\n\n.form-toggle-row[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n  padding: 0.9rem 0;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.04);\n}\n\n.form-toggle-row[_ngcontent-%COMP%]:last-of-type {\n  border-bottom: none;\n  padding-bottom: 0;\n}\n\n.toggle-question[_ngcontent-%COMP%] {\n  font-size: 0.88rem;\n  color: rgba(255, 255, 255, 0.65);\n  font-weight: 400;\n}\n\n.toggle-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-shrink: 0;\n}\n\n.toggle-group[_ngcontent-%COMP%]   input[type=radio][_ngcontent-%COMP%] {\n  display: none !important;\n}\n\n.toggle-btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0.42rem 1.1rem;\n  font-size: 0.78rem;\n  font-weight: 500;\n  letter-spacing: 0.4px;\n  text-transform: uppercase;\n  cursor: pointer;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  background: rgba(255, 255, 255, 0.02);\n  color: rgba(255, 255, 255, 0.4);\n  transition: all 0.2s ease;\n  min-width: 56px;\n  text-align: center;\n}\n\n.toggle-btn[_ngcontent-%COMP%]:first-of-type {\n  border-right: none;\n  border-radius: 3px 0 0 3px;\n}\n\n.toggle-btn[_ngcontent-%COMP%]:last-of-type {\n  border-radius: 0 3px 3px 0;\n}\n\n.toggle-group[_ngcontent-%COMP%]   input[type=radio][_ngcontent-%COMP%]:checked    + .toggle-btn[_ngcontent-%COMP%] {\n  background: rgba(255, 157, 47, 0.12);\n  border-color: rgba(255, 157, 47, 0.5);\n  color: #ffb044;\n}\n\n\n.conditional-fields[_ngcontent-%COMP%] {\n  margin-top: 1rem;\n  padding-top: 1.1rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.04);\n}\n\n\n.range-field[_ngcontent-%COMP%] {\n  padding: 0.9rem 0 0.4rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.04);\n  margin-top: 0.5rem;\n}\n\n.range_progress[_ngcontent-%COMP%] {\n  background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);\n  border: none;\n  border-radius: 50vmin;\n  height: 5px;\n  width: 100%;\n  max-width: 320px;\n  outline: none;\n  transition: all 0.3s ease;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-top: 0.5rem;\n}\n\n.range_progress[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 2px 8px rgba(255, 157, 47, 0.35);\n}\n\n.range_progress[_ngcontent-%COMP%]::-webkit-slider-runnable-track {\n  width: 100%;\n  height: 5px;\n  cursor: pointer;\n  border-radius: 50vmin;\n  background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);\n}\n\n.range_progress[_ngcontent-%COMP%]::-webkit-slider-thumb {\n  border: 2px solid var(--orange);\n  height: 18px;\n  width: 18px;\n  border-radius: 50%;\n  background: #1c1b1a;\n  cursor: pointer;\n  -webkit-appearance: none;\n  margin-top: -7px;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n}\n\n.range_progress[_ngcontent-%COMP%]::-webkit-slider-thumb:hover {\n  transform: scale(1.2);\n  box-shadow: 0 3px 10px rgba(255, 157, 47, 0.5);\n}\n\n.range_progress[_ngcontent-%COMP%]::-moz-range-thumb {\n  border: 2px solid var(--orange);\n  height: 18px;\n  width: 18px;\n  border-radius: 50%;\n  background: #1c1b1a;\n  cursor: pointer;\n  -moz-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n}\n\n\n.calculator[_ngcontent-%COMP%]   .buttons-container[_ngcontent-%COMP%] {\n  margin-top: 1.75rem;\n}\n\n\n.overlay[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.82);\n  -webkit-backdrop-filter: blur(6px);\n          backdrop-filter: blur(6px);\n  z-index: 9999;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  animation: _ngcontent-%COMP%_fadeIn 0.25s ease;\n  padding: 1rem;\n}\n\n@keyframes _ngcontent-%COMP%_fadeIn {\n  from { opacity: 0; }\n  to { opacity: 1; }\n}\n\n.result-view[_ngcontent-%COMP%] {\n  width: 100%;\n  max-width: 720px;\n  padding: 2.25rem 2.5rem;\n  background: linear-gradient(180deg, #1e1d1b 0%, #121212 100%);\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 4px;\n  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);\n  position: relative;\n  animation: _ngcontent-%COMP%_slideUp 0.3s ease;\n  max-height: 90vh;\n  overflow-y: auto;\n}\n\n@keyframes _ngcontent-%COMP%_slideUp {\n  from { transform: translateY(24px); opacity: 0; }\n  to { transform: translateY(0); opacity: 1; }\n}\n\n.close[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 1rem;\n  top: 1rem;\n  width: 32px;\n  height: 32px;\n  padding: 0;\n  min-width: auto;\n  min-height: auto;\n  background: transparent;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 3px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  transition: all 0.2s ease;\n}\n\n.close[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.07);\n  border-color: rgba(255, 255, 255, 0.2);\n  color: rgba(255, 255, 255, 0.8);\n  transform: none;\n  box-shadow: none;\n}\n\n\n.result-header[_ngcontent-%COMP%] {\n  margin-bottom: 1.75rem;\n  padding-bottom: 1.25rem;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n\n.result-cat-name[_ngcontent-%COMP%] {\n  font-size: 0.78rem;\n  color: rgba(255, 255, 255, 0.35);\n  text-transform: uppercase;\n  letter-spacing: 0.8px;\n  margin: 0 0 0.5rem;\n}\n\n.result-cat-name[_ngcontent-%COMP%]   strong[_ngcontent-%COMP%] {\n  color: var(--orange);\n  font-weight: 600;\n}\n\n.result-header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: \"Playfair Display\", serif;\n  font-size: 1.5rem;\n  font-weight: 600;\n  color: var(--white);\n  margin: 0 0 0.35rem;\n  -webkit-text-fill-color: var(--white);\n}\n\n.result-subtitle[_ngcontent-%COMP%] {\n  font-size: 0.82rem;\n  color: rgba(255, 255, 255, 0.35);\n  margin: 0;\n}\n\n\n.result-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n}\n\n.result-card[_ngcontent-%COMP%] {\n  padding: 1.1rem 1.25rem;\n  background: rgba(255, 255, 255, 0.025);\n  border: 1px solid rgba(255, 255, 255, 0.06);\n  border-radius: 3px;\n  display: flex;\n  flex-direction: column;\n  gap: 0.25rem;\n}\n\n.result-card.highlighted[_ngcontent-%COMP%] {\n  background: rgba(255, 157, 47, 0.07);\n  border-color: rgba(255, 157, 47, 0.2);\n}\n\n.result-card.water-card[_ngcontent-%COMP%] {\n  grid-column: 1 / -1;\n  flex-direction: row;\n  align-items: center;\n  gap: 1.5rem;\n}\n\n.result-card-label[_ngcontent-%COMP%] {\n  font-size: 0.68rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.9px;\n  color: rgba(255, 255, 255, 0.35);\n}\n\n.result-card.highlighted[_ngcontent-%COMP%]   .result-card-label[_ngcontent-%COMP%] {\n  color: rgba(255, 157, 47, 0.65);\n}\n\n.result-card-value[_ngcontent-%COMP%] {\n  font-size: 2rem;\n  font-weight: 700;\n  color: var(--white);\n  line-height: 1.1;\n  letter-spacing: -0.5px;\n}\n\n.result-card.highlighted[_ngcontent-%COMP%]   .result-card-value[_ngcontent-%COMP%] {\n  color: #ffb044;\n}\n\n.result-card-unit[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  font-weight: 400;\n  color: rgba(255, 255, 255, 0.35);\n  letter-spacing: 0;\n}\n\n.result-card-desc[_ngcontent-%COMP%] {\n  font-size: 0.76rem;\n  color: rgba(255, 255, 255, 0.3);\n  margin-top: 0.15rem;\n  line-height: 1.4;\n}\n\n.water-card[_ngcontent-%COMP%]   .result-card-desc[_ngcontent-%COMP%] {\n  margin-top: 0;\n  flex: 1;\n}\n\n\n.result-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0.875rem;\n  justify-content: center;\n  padding-top: 1.25rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.05);\n}\n\n.result-view[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 4px;\n}\n\n.result-view[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: transparent;\n}\n\n.result-view[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: rgba(255, 157, 47, 0.3);\n  border-radius: 3px;\n}\n\n\n@media (max-width: 650px) {\n  .calculator[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n    padding: 1.25rem 1rem 2rem;\n  }\n\n  .form-section[_ngcontent-%COMP%] {\n    padding: 1.25rem;\n  }\n\n  .form-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n\n  .form-toggle-row[_ngcontent-%COMP%] {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 0.6rem;\n  }\n\n  .result-view[_ngcontent-%COMP%] {\n    padding: 1.75rem 1.25rem;\n  }\n\n  .result-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n\n  .result-card.water-card[_ngcontent-%COMP%] {\n    grid-column: auto;\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 0.25rem;\n  }\n\n  .calculator[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 1.45rem;\n  }\n\n  .calc-hero[_ngcontent-%COMP%] {\n    padding: 2rem 1rem 1.75rem;\n  }\n}\n\n@media (max-width: 480px) {\n  .result-actions[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n\n  .result-actions[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvZmVhdHVyZXMvY2FsY3VsYXRvci9mb29kLWNhbGN1bGF0b3IuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLGdDQUFnQztFQUNoQyxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCOztBQUVBLHdEQUF3RDtBQUN4RDtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixnREFBZ0Q7RUFDaEQsNEZBQTRGO0VBQzVGLG1DQUFtQztBQUNyQzs7QUFFQTtFQUNFLE9BQU8sVUFBVSxFQUFFLDRCQUE0QixFQUFFO0VBQ2pELEtBQUssVUFBVSxFQUFFLHdCQUF3QixFQUFFO0FBQzdDOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLHNCQUFzQjtFQUN0QixxQkFBcUI7RUFDckIsa0RBQWtEO0FBQ3BEOztBQUVBO0VBQ0U7SUFDRSxpQ0FBaUM7SUFDakMsa0RBQWtEO0VBQ3BEO0VBQ0E7SUFDRSx1Q0FBdUM7SUFDdkMscURBQXFEO0VBQ3ZEO0FBQ0Y7O0FBRUE7RUFDRSxzQ0FBc0M7RUFDdEMsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixxQkFBcUI7RUFDckIsZ0JBQWdCO0VBQ2hCLGdCQUFnQjtFQUNoQiwwRUFBMEU7RUFDMUUsNkJBQTZCO0VBQzdCLG9DQUFvQztFQUNwQyxxQkFBcUI7RUFDckIsMEJBQTBCO0VBQzFCLDBDQUEwQztBQUM1Qzs7QUFFQTtFQUNFLFdBQVcsOEJBQThCLEVBQUU7RUFDM0MsTUFBTSxnQ0FBZ0MsRUFBRTtBQUMxQzs7QUFFQTtFQUNFLGdDQUFnQztFQUNoQyxpQkFBaUI7RUFDakIsU0FBUztFQUNULHFCQUFxQjtFQUNyQixnQkFBZ0I7RUFDaEIsbUJBQW1CO0FBQ3JCOztBQUVBLHdEQUF3RDtBQUN4RDtFQUNFLHlCQUF5QjtFQUN6QixnQkFBZ0I7RUFDaEIsY0FBYztBQUNoQjs7QUFF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ckIsZ0NBQWdDO0FBQ2xDOztBQUVBO0VBQ0UsK0JBQStCO0FBQ2pDOztBQUVBO0VBQ0UsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsZ0JBQWdCO0VBQ2hCLGdDQUFnQztFQUNoQyxpQkFBaUI7QUFDbkI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsK0JBQStCO0VBQy9CLG1CQUFtQjtFQUNuQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsT0FBTztBQUNUOztBQUVBLHdEQUF3RDtBQUN4RDtFQUNFLGFBQWE7RUFDYixhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLG9CQUFvQjtFQUNwQiwrQ0FBK0M7QUFDakQ7O0FBRUE7RUFDRSxVQUFVO0FBQ1o7O0FBRUE7RUFDRSx1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxtQ0FBbUM7RUFDbkMsa0JBQWtCO0FBQ3BCOztBQUVBLHdEQUF3RDtBQUN4RDtFQUNFO0lBQ0UsMEJBQTBCO0VBQzVCOztFQUVBO0lBQ0UsZ0JBQWdCO0VBQ2xCOztFQUVBO0lBQ0UsMEJBQTBCO0VBQzVCOztFQUVBO0lBQ0Usc0JBQXNCO0lBQ3RCLHVCQUF1QjtJQUN2QixXQUFXO0VBQ2I7O0VBRUE7SUFDRSx3QkFBd0I7RUFDMUI7O0VBRUE7SUFDRSwwQkFBMEI7RUFDNUI7O0VBRUE7SUFDRSxpQkFBaUI7SUFDakIsc0JBQXNCO0lBQ3RCLHVCQUF1QjtJQUN2QixZQUFZO0VBQ2Q7O0VBRUE7SUFDRSxrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSwwQkFBMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFO0lBQ0Usc0JBQXNCO0VBQ3hCOztFQUVBO0lBQ0UsV0FBVztFQUNiO0FBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FsY3VsYXRvciB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uY2FsY3VsYXRvciAqOmZvY3VzIHtcbiAgb3V0bGluZTogMnB4IHNvbGlkIHZhcigtLW9yYW5nZSk7XG4gIG91dGxpbmUtb2Zmc2V0OiAycHg7XG4gIGJvcmRlci1yYWRpdXM6IDJweDtcbn1cblxuLyogw6LClMKAw6LClMKAIEhlcm8gw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAICovXG4uY2FsYy1oZXJvIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBwYWRkaW5nOiAzcmVtIDJyZW0gMi41cmVtO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDI1NSwgMTU3LCA0NywgMC4xKTtcbiAgYmFja2dyb3VuZDogcmFkaWFsLWdyYWRpZW50KGVsbGlwc2UgYXQgNTAlIDAlLCByZ2JhKDI1NSwgMTU3LCA0NywgMC4wOCkgMCUsIHRyYW5zcGFyZW50IDcwJSk7XG4gIGFuaW1hdGlvbjogaGVyb0ZhZGVJbiAwLjZzIGVhc2Utb3V0O1xufVxuXG5Aa2V5ZnJhbWVzIGhlcm9GYWRlSW4ge1xuICBmcm9tIHsgb3BhY2l0eTogMDsgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC0xMHB4KTsgfVxuICB0byB7IG9wYWNpdHk6IDE7IHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwKTsgfVxufVxuXG4uY2FsYy1oZXJvLWljb24ge1xuICBmb250LXNpemU6IDIuNXJlbTtcbiAgbWFyZ2luLWJvdHRvbTogMC43NXJlbTtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBhbmltYXRpb246IGljb25GbG9hdEdsb3cgMi44cyBlYXNlLWluLW91dCBpbmZpbml0ZTtcbn1cblxuQGtleWZyYW1lcyBpY29uRmxvYXRHbG93IHtcbiAgMCUsIDEwMCUge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwKSBzY2FsZSgxKTtcbiAgICBmaWx0ZXI6IGRyb3Atc2hhZG93KDAgMCAwcHggcmdiYSgyNTUsIDE1NywgNDcsIDApKTtcbiAgfVxuICA1MCUge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtOHB4KSBzY2FsZSgxLjA4KTtcbiAgICBmaWx0ZXI6IGRyb3Atc2hhZG93KDAgMCAxNHB4IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjcpKTtcbiAgfVxufVxuXG4uY2FsY3VsYXRvciBoMSB7XG4gIGZvbnQtZmFtaWx5OiBcIlBsYXlmYWlyIERpc3BsYXlcIiwgc2VyaWY7XG4gIGZvbnQtc2l6ZTogMnJlbTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgbWFyZ2luOiAwIGF1dG8gMC42cmVtO1xuICBtYXgtd2lkdGg6IDU4MHB4O1xuICBsaW5lLWhlaWdodDogMS4zO1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLCAjZmY5ZDJmIDAlLCAjZmZiNzAwIDUwJSwgI2Q0YWE0OCAxMDAlKTtcbiAgLXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6IHRleHQ7XG4gIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgYmFja2dyb3VuZC1jbGlwOiB0ZXh0O1xuICBiYWNrZ3JvdW5kLXNpemU6IDIwMCUgYXV0bztcbiAgYW5pbWF0aW9uOiBzaGltbWVyIDNzIGVhc2UtaW4tb3V0IGluZmluaXRlO1xufVxuXG5Aa2V5ZnJhbWVzIHNoaW1tZXIge1xuICAwJSwgMTAwJSB7IGJhY2tncm91bmQtcG9zaXRpb246IDAlIGNlbnRlcjsgfVxuICA1MCUgeyBiYWNrZ3JvdW5kLXBvc2l0aW9uOiAxMDAlIGNlbnRlcjsgfVxufVxuXG4uY2FsYy1oZXJvLXN1YiB7XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNDUpO1xuICBmb250LXNpemU6IDAuOXJlbTtcbiAgbWFyZ2luOiAwO1xuICBsZXR0ZXItc3BhY2luZzogMC4ycHg7XG4gIG1heC13aWR0aDogNTAwcHg7XG4gIG1hcmdpbi1pbmxpbmU6IGF1dG87XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBGb3JtIHNoZWxsIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLmNhbGN1bGF0b3IgZm9ybSB7XG4gIHBhZGRpbmc6IDJyZW0gMi41cmVtIDNyZW07XG4gIG1heC13aWR0aDogODYwcHg7XG4gIG1hcmdpbjogMCBhdXRvO1xufVxuXG4vKiDDosKUwoDDosKUwoAgU2VjdGlvbiBjYXJkIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLmZvcm0tc2VjdGlvbiB7XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wMik7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNyk7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgcGFkZGluZzogMS41cmVtIDEuNzVyZW07XG4gIG1hcmdpbi1ib3R0b206IDFyZW07XG59XG5cbi5mb3JtLXNlY3Rpb24taGVhZGVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZ2FwOiAwLjc1cmVtO1xuICBtYXJnaW4tYm90dG9tOiAxLjVyZW07XG4gIHBhZGRpbmctYm90dG9tOiAwLjg3NXJlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSk7XG59XG5cbi5mb3JtLXNlY3Rpb24taGVhZGVyIGgyIHtcbiAgZm9udC1mYW1pbHk6IFwiUGxheWZhaXIgRGlzcGxheVwiLCBzZXJpZjtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBmb250LXdlaWdodDogNjAwO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICBtYXJnaW46IDA7XG4gIGJvcmRlcjogbm9uZTtcbiAgcGFkZGluZzogMDtcbiAgbGV0dGVyLXNwYWNpbmc6IDAuM3B4O1xufVxuXG4uc2VjdGlvbi1udW0ge1xuICBmb250LWZhbWlseTogXCJJbnRlclwiLCBzYW5zLXNlcmlmO1xuICBmb250LXNpemU6IDAuNjVyZW07XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIGNvbG9yOiB2YXIoLS1vcmFuZ2UpO1xuICBsZXR0ZXItc3BhY2luZzogMS41cHg7XG4gIG9wYWNpdHk6IDAuNjU7XG4gIHBhZGRpbmctdG9wOiAxcHg7XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBGaWVsZCBncmlkIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLmZvcm0tZ3JpZCB7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KGF1dG8tZmlsbCwgbWlubWF4KDE5MHB4LCAxZnIpKTtcbiAgZ2FwOiAxLjFyZW07XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBJbmRpdmlkdWFsIGZpZWxkIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLmZvcm0tZmllbGQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDAuMzVyZW07XG59XG5cbi5mb3JtLWZpZWxkIGxhYmVsIHtcbiAgZm9udC1zaXplOiAwLjc4cmVtO1xuICBmb250LXdlaWdodDogNTAwO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQ1KTtcbiAgbGV0dGVyLXNwYWNpbmc6IDAuMnB4O1xuICB0ZXh0LXRyYW5zZm9ybTogbm9uZTtcbn1cblxuLmZpZWxkLXVuaXQge1xuICBjb2xvcjogcmdiYSgyNTUsIDE1NywgNDcsIDAuNTUpO1xuICBmb250LXNpemU6IDAuN3JlbTtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbn1cblxuLmZvcm0tZmllbGQgaW5wdXQsXG4uZm9ybS1maWVsZCBzZWxlY3Qge1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogMC42cmVtIDAuOHJlbTtcbiAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA0KTtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjEpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGNvbG9yOiB2YXIoLS13aGl0ZSk7XG4gIGZvbnQtc2l6ZTogMC45cmVtO1xuICBmb250LWZhbWlseTogXCJJbnRlclwiLCBzYW5zLXNlcmlmO1xuICB0cmFuc2l0aW9uOiBib3JkZXItY29sb3IgMC4ycyBlYXNlLCBiYWNrZ3JvdW5kIDAuMnMgZWFzZSwgYm94LXNoYWRvdyAwLjJzIGVhc2U7XG4gIC13ZWJraXQtYXBwZWFyYW5jZTogbm9uZTtcbn1cblxuLmZvcm0tZmllbGQgc2VsZWN0IHtcbiAgYXBwZWFyYW5jZTogbm9uZTtcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKFwiZGF0YTppbWFnZS9zdmcreG1sLCUzQ3N2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PSc2JyB2aWV3Qm94PScwIDAgMTAgNiclM0UlM0NwYXRoIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsMC4zKScgZD0nTTAgMGw1IDYgNS02eicvJTNFJTNDL3N2ZyUzRVwiKTtcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogcmlnaHQgMC43NXJlbSBjZW50ZXI7XG4gIHBhZGRpbmctcmlnaHQ6IDJyZW07XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmZvcm0tZmllbGQgc2VsZWN0IG9wdGlvbiB7XG4gIGJhY2tncm91bmQ6ICMxYzFiMWE7XG4gIGNvbG9yOiB2YXIoLS13aGl0ZSk7XG59XG5cbi5mb3JtLWZpZWxkIGlucHV0OmhvdmVyLFxuLmZvcm0tZmllbGQgc2VsZWN0OmhvdmVyIHtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMTgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDU1KTtcbn1cblxuLmZvcm0tZmllbGQgaW5wdXQ6Zm9jdXMsXG4uZm9ybS1maWVsZCBzZWxlY3Q6Zm9jdXMge1xuICBib3JkZXItY29sb3I6IHZhcigtLW9yYW5nZSk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNik7XG4gIGJveC1zaGFkb3c6IDAgMCAwIDNweCByZ2JhKDI1NSwgMTU3LCA0NywgMC4wOSk7XG4gIG91dGxpbmU6IG5vbmU7XG59XG5cbi5mb3JtLWZpZWxkIGlucHV0OjpwbGFjZWhvbGRlciB7XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMTgpO1xufVxuXG4vKiDDosKUwoDDosKUwoAgVG9nZ2xlIHJvdyDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5mb3JtLXRvZ2dsZS1yb3cge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGdhcDogMXJlbTtcbiAgcGFkZGluZzogMC45cmVtIDA7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDQpO1xufVxuXG4uZm9ybS10b2dnbGUtcm93Omxhc3Qtb2YtdHlwZSB7XG4gIGJvcmRlci1ib3R0b206IG5vbmU7XG4gIHBhZGRpbmctYm90dG9tOiAwO1xufVxuXG4udG9nZ2xlLXF1ZXN0aW9uIHtcbiAgZm9udC1zaXplOiAwLjg4cmVtO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjY1KTtcbiAgZm9udC13ZWlnaHQ6IDQwMDtcbn1cblxuLnRvZ2dsZS1ncm91cCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtc2hyaW5rOiAwO1xufVxuXG4udG9nZ2xlLWdyb3VwIGlucHV0W3R5cGU9cmFkaW9dIHtcbiAgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50O1xufVxuXG4udG9nZ2xlLWJ0biB7XG4gIGRpc3BsYXk6IGlubGluZS1mbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgcGFkZGluZzogMC40MnJlbSAxLjFyZW07XG4gIGZvbnQtc2l6ZTogMC43OHJlbTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgbGV0dGVyLXNwYWNpbmc6IDAuNHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKTtcbiAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjAyKTtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KTtcbiAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcbiAgbWluLXdpZHRoOiA1NnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi50b2dnbGUtYnRuOmZpcnN0LW9mLXR5cGUge1xuICBib3JkZXItcmlnaHQ6IG5vbmU7XG4gIGJvcmRlci1yYWRpdXM6IDNweCAwIDAgM3B4O1xufVxuXG4udG9nZ2xlLWJ0bjpsYXN0LW9mLXR5cGUge1xuICBib3JkZXItcmFkaXVzOiAwIDNweCAzcHggMDtcbn1cblxuLnRvZ2dsZS1ncm91cCBpbnB1dFt0eXBlPXJhZGlvXTpjaGVja2VkICsgLnRvZ2dsZS1idG4ge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMTU3LCA0NywgMC4xMik7XG4gIGJvcmRlci1jb2xvcjogcmdiYSgyNTUsIDE1NywgNDcsIDAuNSk7XG4gIGNvbG9yOiAjZmZiMDQ0O1xufVxuXG4vKiDDosKUwoDDosKUwoAgQ29uZGl0aW9uYWwgZmllbGRzIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLmNvbmRpdGlvbmFsLWZpZWxkcyB7XG4gIG1hcmdpbi10b3A6IDFyZW07XG4gIHBhZGRpbmctdG9wOiAxLjFyZW07XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDQpO1xufVxuXG4vKiDDosKUwoDDosKUwoAgUmFuZ2Ugc2xpZGVyIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLnJhbmdlLWZpZWxkIHtcbiAgcGFkZGluZzogMC45cmVtIDAgMC40cmVtO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA0KTtcbiAgbWFyZ2luLXRvcDogMC41cmVtO1xufVxuXG4ucmFuZ2VfcHJvZ3Jlc3Mge1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICNjYjM3MDEgMCUsICNmZjlkMmYgNTAlLCAjZmZiNzAwIDEwMCUpO1xuICBib3JkZXI6IG5vbmU7XG4gIGJvcmRlci1yYWRpdXM6IDUwdm1pbjtcbiAgaGVpZ2h0OiA1cHg7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXgtd2lkdGg6IDMyMHB4O1xuICBvdXRsaW5lOiBub25lO1xuICB0cmFuc2l0aW9uOiBhbGwgMC4zcyBlYXNlO1xuICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgbWFyZ2luLXRvcDogMC41cmVtO1xufVxuXG4ucmFuZ2VfcHJvZ3Jlc3M6aG92ZXIge1xuICBib3gtc2hhZG93OiAwIDJweCA4cHggcmdiYSgyNTUsIDE1NywgNDcsIDAuMzUpO1xufVxuXG4ucmFuZ2VfcHJvZ3Jlc3M6Oi13ZWJraXQtc2xpZGVyLXJ1bm5hYmxlLXRyYWNrIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogNXB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDUwdm1pbjtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjY2IzNzAxIDAlLCAjZmY5ZDJmIDUwJSwgI2ZmYjcwMCAxMDAlKTtcbn1cblxuLnJhbmdlX3Byb2dyZXNzOjotd2Via2l0LXNsaWRlci10aHVtYiB7XG4gIGJvcmRlcjogMnB4IHNvbGlkIHZhcigtLW9yYW5nZSk7XG4gIGhlaWdodDogMThweDtcbiAgd2lkdGg6IDE4cHg7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgYmFja2dyb3VuZDogIzFjMWIxYTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmU7XG4gIG1hcmdpbi10b3A6IC03cHg7XG4gIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG4gIGJveC1zaGFkb3c6IDAgMnB4IDZweCByZ2JhKDAsIDAsIDAsIDAuNCk7XG59XG5cbi5yYW5nZV9wcm9ncmVzczo6LXdlYmtpdC1zbGlkZXItdGh1bWI6aG92ZXIge1xuICB0cmFuc2Zvcm06IHNjYWxlKDEuMik7XG4gIGJveC1zaGFkb3c6IDAgM3B4IDEwcHggcmdiYSgyNTUsIDE1NywgNDcsIDAuNSk7XG59XG5cbi5yYW5nZV9wcm9ncmVzczo6LW1vei1yYW5nZS10aHVtYiB7XG4gIGJvcmRlcjogMnB4IHNvbGlkIHZhcigtLW9yYW5nZSk7XG4gIGhlaWdodDogMThweDtcbiAgd2lkdGg6IDE4cHg7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgYmFja2dyb3VuZDogIzFjMWIxYTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuICBib3gtc2hhZG93OiAwIDJweCA2cHggcmdiYSgwLCAwLCAwLCAwLjQpO1xufVxuXG4vKiDDosKUwoDDosKUwoAgU3VibWl0IGJ1dHRvbnMgw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAICovXG4uY2FsY3VsYXRvciAuYnV0dG9ucy1jb250YWluZXIge1xuICBtYXJnaW4tdG9wOiAxLjc1cmVtO1xufVxuXG4vKiDDosKUwoDDosKUwoAgT3ZlcmxheSAmIG1vZGFsIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLm92ZXJsYXkge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGluc2V0OiAwO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuODIpO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNnB4KTtcbiAgei1pbmRleDogOTk5OTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFuaW1hdGlvbjogZmFkZUluIDAuMjVzIGVhc2U7XG4gIHBhZGRpbmc6IDFyZW07XG59XG5cbkBrZXlmcmFtZXMgZmFkZUluIHtcbiAgZnJvbSB7IG9wYWNpdHk6IDA7IH1cbiAgdG8geyBvcGFjaXR5OiAxOyB9XG59XG5cbi5yZXN1bHQtdmlldyB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXgtd2lkdGg6IDcyMHB4O1xuICBwYWRkaW5nOiAyLjI1cmVtIDIuNXJlbTtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDE4MGRlZywgIzFlMWQxYiAwJSwgIzEyMTIxMiAxMDAlKTtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA4KTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3gtc2hhZG93OiAwIDMycHggODBweCByZ2JhKDAsIDAsIDAsIDAuNyk7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgYW5pbWF0aW9uOiBzbGlkZVVwIDAuM3MgZWFzZTtcbiAgbWF4LWhlaWdodDogOTB2aDtcbiAgb3ZlcmZsb3cteTogYXV0bztcbn1cblxuQGtleWZyYW1lcyBzbGlkZVVwIHtcbiAgZnJvbSB7IHRyYW5zZm9ybTogdHJhbnNsYXRlWSgyNHB4KTsgb3BhY2l0eTogMDsgfVxuICB0byB7IHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwKTsgb3BhY2l0eTogMTsgfVxufVxuXG4uY2xvc2Uge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAxcmVtO1xuICB0b3A6IDFyZW07XG4gIHdpZHRoOiAzMnB4O1xuICBoZWlnaHQ6IDMycHg7XG4gIHBhZGRpbmc6IDA7XG4gIG1pbi13aWR0aDogYXV0bztcbiAgbWluLWhlaWdodDogYXV0bztcbiAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKTtcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpO1xuICBmb250LXNpemU6IDAuODVyZW07XG4gIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG59XG5cbi5jbG9zZTpob3ZlciB7XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNyk7XG4gIGJvcmRlci1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjIpO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjgpO1xuICB0cmFuc2Zvcm06IG5vbmU7XG4gIGJveC1zaGFkb3c6IG5vbmU7XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBSZXN1bHQgaGVhZGVyIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLnJlc3VsdC1oZWFkZXIge1xuICBtYXJnaW4tYm90dG9tOiAxLjc1cmVtO1xuICBwYWRkaW5nLWJvdHRvbTogMS4yNXJlbTtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNik7XG59XG5cbi5yZXN1bHQtY2F0LW5hbWUge1xuICBmb250LXNpemU6IDAuNzhyZW07XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMzUpO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBsZXR0ZXItc3BhY2luZzogMC44cHg7XG4gIG1hcmdpbjogMCAwIDAuNXJlbTtcbn1cblxuLnJlc3VsdC1jYXQtbmFtZSBzdHJvbmcge1xuICBjb2xvcjogdmFyKC0tb3JhbmdlKTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cblxuLnJlc3VsdC1oZWFkZXIgaDIge1xuICBmb250LWZhbWlseTogXCJQbGF5ZmFpciBEaXNwbGF5XCIsIHNlcmlmO1xuICBmb250LXNpemU6IDEuNXJlbTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgY29sb3I6IHZhcigtLXdoaXRlKTtcbiAgbWFyZ2luOiAwIDAgMC4zNXJlbTtcbiAgLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6IHZhcigtLXdoaXRlKTtcbn1cblxuLnJlc3VsdC1zdWJ0aXRsZSB7XG4gIGZvbnQtc2l6ZTogMC44MnJlbTtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zNSk7XG4gIG1hcmdpbjogMDtcbn1cblxuLyogw6LClMKAw6LClMKAIFJlc3VsdCBncmlkIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLnJlc3VsdC1ncmlkIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyO1xuICBnYXA6IDAuNzVyZW07XG4gIG1hcmdpbi1ib3R0b206IDEuNXJlbTtcbn1cblxuLnJlc3VsdC1jYXJkIHtcbiAgcGFkZGluZzogMS4xcmVtIDEuMjVyZW07XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wMjUpO1xuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDYpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGdhcDogMC4yNXJlbTtcbn1cblxuLnJlc3VsdC1jYXJkLmhpZ2hsaWdodGVkIHtcbiAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDE1NywgNDcsIDAuMDcpO1xuICBib3JkZXItY29sb3I6IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjIpO1xufVxuXG4ucmVzdWx0LWNhcmQud2F0ZXItY2FyZCB7XG4gIGdyaWQtY29sdW1uOiAxIC8gLTE7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGdhcDogMS41cmVtO1xufVxuXG4ucmVzdWx0LWNhcmQtbGFiZWwge1xuICBmb250LXNpemU6IDAuNjhyZW07XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIGxldHRlci1zcGFjaW5nOiAwLjlweDtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zNSk7XG59XG5cbi5yZXN1bHQtY2FyZC5oaWdobGlnaHRlZCAucmVzdWx0LWNhcmQtbGFiZWwge1xuICBjb2xvcjogcmdiYSgyNTUsIDE1NywgNDcsIDAuNjUpO1xufVxuXG4ucmVzdWx0LWNhcmQtdmFsdWUge1xuICBmb250LXNpemU6IDJyZW07XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIGNvbG9yOiB2YXIoLS13aGl0ZSk7XG4gIGxpbmUtaGVpZ2h0OiAxLjE7XG4gIGxldHRlci1zcGFjaW5nOiAtMC41cHg7XG59XG5cbi5yZXN1bHQtY2FyZC5oaWdobGlnaHRlZCAucmVzdWx0LWNhcmQtdmFsdWUge1xuICBjb2xvcjogI2ZmYjA0NDtcbn1cblxuLnJlc3VsdC1jYXJkLXVuaXQge1xuICBmb250LXNpemU6IDAuODVyZW07XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMzUpO1xuICBsZXR0ZXItc3BhY2luZzogMDtcbn1cblxuLnJlc3VsdC1jYXJkLWRlc2Mge1xuICBmb250LXNpemU6IDAuNzZyZW07XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMyk7XG4gIG1hcmdpbi10b3A6IDAuMTVyZW07XG4gIGxpbmUtaGVpZ2h0OiAxLjQ7XG59XG5cbi53YXRlci1jYXJkIC5yZXN1bHQtY2FyZC1kZXNjIHtcbiAgbWFyZ2luLXRvcDogMDtcbiAgZmxleDogMTtcbn1cblxuLyogw6LClMKAw6LClMKAIFJlc3VsdCBhY3Rpb25zIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLnJlc3VsdC1hY3Rpb25zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZ2FwOiAwLjg3NXJlbTtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBhZGRpbmctdG9wOiAxLjI1cmVtO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KTtcbn1cblxuLnJlc3VsdC12aWV3Ojotd2Via2l0LXNjcm9sbGJhciB7XG4gIHdpZHRoOiA0cHg7XG59XG5cbi5yZXN1bHQtdmlldzo6LXdlYmtpdC1zY3JvbGxiYXItdHJhY2sge1xuICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbn1cblxuLnJlc3VsdC12aWV3Ojotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjMpO1xuICBib3JkZXItcmFkaXVzOiAzcHg7XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBSZXNwb25zaXZlIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuQG1lZGlhIChtYXgtd2lkdGg6IDY1MHB4KSB7XG4gIC5jYWxjdWxhdG9yIGZvcm0ge1xuICAgIHBhZGRpbmc6IDEuMjVyZW0gMXJlbSAycmVtO1xuICB9XG5cbiAgLmZvcm0tc2VjdGlvbiB7XG4gICAgcGFkZGluZzogMS4yNXJlbTtcbiAgfVxuXG4gIC5mb3JtLWdyaWQge1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyO1xuICB9XG5cbiAgLmZvcm0tdG9nZ2xlLXJvdyB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcbiAgICBnYXA6IDAuNnJlbTtcbiAgfVxuXG4gIC5yZXN1bHQtdmlldyB7XG4gICAgcGFkZGluZzogMS43NXJlbSAxLjI1cmVtO1xuICB9XG5cbiAgLnJlc3VsdC1ncmlkIHtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbiAgfVxuXG4gIC5yZXN1bHQtY2FyZC53YXRlci1jYXJkIHtcbiAgICBncmlkLWNvbHVtbjogYXV0bztcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xuICAgIGdhcDogMC4yNXJlbTtcbiAgfVxuXG4gIC5jYWxjdWxhdG9yIGgxIHtcbiAgICBmb250LXNpemU6IDEuNDVyZW07XG4gIH1cblxuICAuY2FsYy1oZXJvIHtcbiAgICBwYWRkaW5nOiAycmVtIDFyZW0gMS43NXJlbTtcbiAgfVxufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDgwcHgpIHtcbiAgLnJlc3VsdC1hY3Rpb25zIHtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICB9XG5cbiAgLnJlc3VsdC1hY3Rpb25zIGJ1dHRvbiB7XG4gICAgd2lkdGg6IDEwMCU7XG4gIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
+      styles: [".calculator[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.calculator[_ngcontent-%COMP%]   *[_ngcontent-%COMP%]:focus {\n  outline: 2px solid var(--orange);\n  outline-offset: 2px;\n  border-radius: 2px;\n}\n\n\n.calc-hero[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 3rem 2rem 2.5rem;\n  position: relative;\n  overflow: hidden;\n  border-bottom: 1px solid rgba(255, 157, 47, 0.1);\n  background: radial-gradient(ellipse at 50% 0%, rgba(255, 157, 47, 0.08) 0%, transparent 70%);\n  animation: _ngcontent-%COMP%_heroFadeIn 0.6s ease-out;\n}\n\n@keyframes _ngcontent-%COMP%_heroFadeIn {\n  from { opacity: 0; transform: translateY(-10px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n\n.calc-hero-icon[_ngcontent-%COMP%] {\n  font-size: 2.5rem;\n  margin-bottom: 0.75rem;\n  display: inline-block;\n  animation: _ngcontent-%COMP%_iconFloatGlow 2.8s ease-in-out infinite;\n}\n\n@keyframes _ngcontent-%COMP%_iconFloatGlow {\n  0%, 100% {\n    transform: translateY(0) scale(1);\n    filter: drop-shadow(0 0 0px rgba(255, 157, 47, 0));\n  }\n  50% {\n    transform: translateY(-8px) scale(1.08);\n    filter: drop-shadow(0 0 14px rgba(255, 157, 47, 0.7));\n  }\n}\n\n.calculator[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n  font-family: \"Playfair Display\", serif;\n  font-size: 2rem;\n  font-weight: 600;\n  margin: 0 auto 0.6rem;\n  max-width: 580px;\n  line-height: 1.3;\n  background: linear-gradient(135deg, #ff9d2f 0%, #ffb700 50%, #d4aa48 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  background-size: 200% auto;\n  animation: _ngcontent-%COMP%_shimmer 3s ease-in-out infinite;\n}\n\n@keyframes _ngcontent-%COMP%_shimmer {\n  0%, 100% { background-position: 0% center; }\n  50% { background-position: 100% center; }\n}\n\n.calc-hero-sub[_ngcontent-%COMP%] {\n  color: rgba(255, 255, 255, 0.45);\n  font-size: 0.9rem;\n  margin: 0;\n  letter-spacing: 0.2px;\n  max-width: 500px;\n  margin-inline: auto;\n}\n\n\n.calculator[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  padding: 2rem 2.5rem 3rem;\n  max-width: 860px;\n  margin: 0 auto;\n}\n\n\n.form-section[_ngcontent-%COMP%] {\n  background: rgba(255, 255, 255, 0.02);\n  border: 1px solid rgba(255, 255, 255, 0.07);\n  border-radius: 4px;\n  padding: 1.5rem 1.75rem;\n  margin-bottom: 1rem;\n}\n\n.form-section-header[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n  padding-bottom: 0.875rem;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.05);\n}\n\n.form-section-header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: \"Playfair Display\", serif;\n  font-size: 1rem;\n  font-weight: 600;\n  color: rgba(255, 255, 255, 0.8);\n  margin: 0;\n  border: none;\n  padding: 0;\n  letter-spacing: 0.3px;\n}\n\n.section-num[_ngcontent-%COMP%] {\n  font-family: \"Inter\", sans-serif;\n  font-size: 0.65rem;\n  font-weight: 700;\n  color: var(--orange);\n  letter-spacing: 1.5px;\n  opacity: 0.65;\n  padding-top: 1px;\n}\n\n\n.form-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));\n  gap: 1.1rem;\n}\n\n\n.form-field[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 0.35rem;\n}\n\n.form-field[_ngcontent-%COMP%]   label[_ngcontent-%COMP%] {\n  font-size: 0.78rem;\n  font-weight: 500;\n  color: rgba(255, 255, 255, 0.45);\n  letter-spacing: 0.2px;\n  text-transform: none;\n}\n\n.field-unit[_ngcontent-%COMP%] {\n  color: rgba(255, 157, 47, 0.55);\n  font-size: 0.7rem;\n  font-weight: 400;\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%], \n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%] {\n  width: 100%;\n  padding: 0.6rem 0.8rem;\n  background: rgba(255, 255, 255, 0.04);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 3px;\n  color: var(--white);\n  font-size: 0.9rem;\n  font-family: \"Inter\", sans-serif;\n  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;\n  -webkit-appearance: none;\n}\n\n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%] {\n  appearance: none;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='rgba(255,255,255,0.3)' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E\");\n  background-repeat: no-repeat;\n  background-position: right 0.75rem center;\n  padding-right: 2rem;\n  cursor: pointer;\n}\n\n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]   option[_ngcontent-%COMP%] {\n  background: #1c1b1a;\n  color: var(--white);\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:hover, \n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]:hover {\n  border-color: rgba(255, 255, 255, 0.18);\n  background: rgba(255, 255, 255, 0.055);\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]:focus, \n.form-field[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]:focus {\n  border-color: var(--orange);\n  background: rgba(255, 255, 255, 0.06);\n  box-shadow: 0 0 0 3px rgba(255, 157, 47, 0.09);\n  outline: none;\n}\n\n.form-field[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]::placeholder {\n  color: rgba(255, 255, 255, 0.18);\n}\n\n\n.form-toggle-row[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 1rem;\n  padding: 0.9rem 0;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.04);\n}\n\n.form-toggle-row[_ngcontent-%COMP%]:last-of-type {\n  border-bottom: none;\n  padding-bottom: 0;\n}\n\n.toggle-question[_ngcontent-%COMP%] {\n  font-size: 0.88rem;\n  color: rgba(255, 255, 255, 0.65);\n  font-weight: 400;\n}\n\n.toggle-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-shrink: 0;\n}\n\n.toggle-group[_ngcontent-%COMP%]   input[type=radio][_ngcontent-%COMP%] {\n  display: none !important;\n}\n\n.toggle-btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0.42rem 1.1rem;\n  font-size: 0.78rem;\n  font-weight: 500;\n  letter-spacing: 0.4px;\n  text-transform: uppercase;\n  cursor: pointer;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  background: rgba(255, 255, 255, 0.02);\n  color: rgba(255, 255, 255, 0.4);\n  transition: all 0.2s ease;\n  min-width: 56px;\n  text-align: center;\n}\n\n.toggle-btn[_ngcontent-%COMP%]:first-of-type {\n  border-right: none;\n  border-radius: 3px 0 0 3px;\n}\n\n.toggle-btn[_ngcontent-%COMP%]:last-of-type {\n  border-radius: 0 3px 3px 0;\n}\n\n.toggle-group[_ngcontent-%COMP%]   input[type=radio][_ngcontent-%COMP%]:checked    + .toggle-btn[_ngcontent-%COMP%] {\n  background: rgba(255, 157, 47, 0.12);\n  border-color: rgba(255, 157, 47, 0.5);\n  color: #ffb044;\n}\n\n\n.conditional-fields[_ngcontent-%COMP%] {\n  margin-top: 1rem;\n  padding-top: 1.1rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.04);\n}\n\n\n.range-field[_ngcontent-%COMP%] {\n  padding: 0.9rem 0 0.4rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.04);\n  margin-top: 0.5rem;\n}\n\n.range_progress[_ngcontent-%COMP%] {\n  background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);\n  border: none;\n  border-radius: 50vmin;\n  height: 5px;\n  width: 100%;\n  max-width: 320px;\n  outline: none;\n  transition: all 0.3s ease;\n  -webkit-appearance: none;\n  cursor: pointer;\n  margin-top: 0.5rem;\n}\n\n.range_progress[_ngcontent-%COMP%]:hover {\n  box-shadow: 0 2px 8px rgba(255, 157, 47, 0.35);\n}\n\n.range_progress[_ngcontent-%COMP%]::-webkit-slider-runnable-track {\n  width: 100%;\n  height: 5px;\n  cursor: pointer;\n  border-radius: 50vmin;\n  background: linear-gradient(to right, #cb3701 0%, #ff9d2f 50%, #ffb700 100%);\n}\n\n.range_progress[_ngcontent-%COMP%]::-webkit-slider-thumb {\n  border: 2px solid var(--orange);\n  height: 18px;\n  width: 18px;\n  border-radius: 50%;\n  background: #1c1b1a;\n  cursor: pointer;\n  -webkit-appearance: none;\n  margin-top: -7px;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n}\n\n.range_progress[_ngcontent-%COMP%]::-webkit-slider-thumb:hover {\n  transform: scale(1.2);\n  box-shadow: 0 3px 10px rgba(255, 157, 47, 0.5);\n}\n\n.range_progress[_ngcontent-%COMP%]::-moz-range-thumb {\n  border: 2px solid var(--orange);\n  height: 18px;\n  width: 18px;\n  border-radius: 50%;\n  background: #1c1b1a;\n  cursor: pointer;\n  -moz-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n}\n\n\n.calculator[_ngcontent-%COMP%]   .buttons-container[_ngcontent-%COMP%] {\n  margin-top: 1.75rem;\n}\n\n\n.overlay[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  background: rgba(0, 0, 0, 0.82);\n  -webkit-backdrop-filter: blur(6px);\n          backdrop-filter: blur(6px);\n  z-index: 9999;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  animation: _ngcontent-%COMP%_fadeIn 0.25s ease;\n  padding: 1rem;\n}\n\n@keyframes _ngcontent-%COMP%_fadeIn {\n  from { opacity: 0; }\n  to { opacity: 1; }\n}\n\n.result-view[_ngcontent-%COMP%] {\n  width: 100%;\n  max-width: 720px;\n  padding: 2.25rem 2.5rem;\n  background: linear-gradient(180deg, #1e1d1b 0%, #121212 100%);\n  border: 1px solid rgba(255, 255, 255, 0.08);\n  border-radius: 4px;\n  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);\n  position: relative;\n  animation: _ngcontent-%COMP%_slideUp 0.3s ease;\n  max-height: 90vh;\n  overflow-y: auto;\n}\n\n@keyframes _ngcontent-%COMP%_slideUp {\n  from { transform: translateY(24px); opacity: 0; }\n  to { transform: translateY(0); opacity: 1; }\n}\n\n.close[_ngcontent-%COMP%] {\n  position: absolute;\n  right: 1rem;\n  top: 1rem;\n  width: 32px;\n  height: 32px;\n  padding: 0;\n  min-width: auto;\n  min-height: auto;\n  background: transparent;\n  border: 1px solid rgba(255, 255, 255, 0.1);\n  border-radius: 3px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: rgba(255, 255, 255, 0.4);\n  font-size: 0.85rem;\n  transition: all 0.2s ease;\n}\n\n.close[_ngcontent-%COMP%]:hover {\n  background: rgba(255, 255, 255, 0.07);\n  border-color: rgba(255, 255, 255, 0.2);\n  color: rgba(255, 255, 255, 0.8);\n  transform: none;\n  box-shadow: none;\n}\n\n\n.result-header[_ngcontent-%COMP%] {\n  margin-bottom: 1.75rem;\n  padding-bottom: 1.25rem;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.06);\n}\n\n.result-cat-name[_ngcontent-%COMP%] {\n  font-size: 0.78rem;\n  color: rgba(255, 255, 255, 0.35);\n  text-transform: uppercase;\n  letter-spacing: 0.8px;\n  margin: 0 0 0.5rem;\n}\n\n.result-cat-name[_ngcontent-%COMP%]   strong[_ngcontent-%COMP%] {\n  color: var(--orange);\n  font-weight: 600;\n}\n\n.result-header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-family: \"Playfair Display\", serif;\n  font-size: 1.5rem;\n  font-weight: 600;\n  color: var(--white);\n  margin: 0 0 0.35rem;\n  -webkit-text-fill-color: var(--white);\n}\n\n.result-subtitle[_ngcontent-%COMP%] {\n  font-size: 0.82rem;\n  color: rgba(255, 255, 255, 0.35);\n  margin: 0;\n}\n\n\n.result-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 0.75rem;\n  margin-bottom: 1.5rem;\n}\n\n.result-card[_ngcontent-%COMP%] {\n  padding: 1.1rem 1.25rem;\n  background: rgba(255, 255, 255, 0.025);\n  border: 1px solid rgba(255, 255, 255, 0.06);\n  border-radius: 3px;\n  display: flex;\n  flex-direction: column;\n  gap: 0.25rem;\n}\n\n.result-card.highlighted[_ngcontent-%COMP%] {\n  background: rgba(255, 157, 47, 0.07);\n  border-color: rgba(255, 157, 47, 0.2);\n}\n\n.result-card.water-card[_ngcontent-%COMP%] {\n  grid-column: 1 / -1;\n  flex-direction: row;\n  align-items: center;\n  gap: 1.5rem;\n}\n\n.result-card-label[_ngcontent-%COMP%] {\n  font-size: 0.68rem;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.9px;\n  color: rgba(255, 255, 255, 0.35);\n}\n\n.result-card.highlighted[_ngcontent-%COMP%]   .result-card-label[_ngcontent-%COMP%] {\n  color: rgba(255, 157, 47, 0.65);\n}\n\n.result-card-value[_ngcontent-%COMP%] {\n  font-size: 2rem;\n  font-weight: 700;\n  color: var(--white);\n  line-height: 1.1;\n  letter-spacing: -0.5px;\n}\n\n.result-card.highlighted[_ngcontent-%COMP%]   .result-card-value[_ngcontent-%COMP%] {\n  color: #ffb044;\n}\n\n.result-card-unit[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  font-weight: 400;\n  color: rgba(255, 255, 255, 0.35);\n  letter-spacing: 0;\n}\n\n.result-card-desc[_ngcontent-%COMP%] {\n  font-size: 0.76rem;\n  color: rgba(255, 255, 255, 0.3);\n  margin-top: 0.15rem;\n  line-height: 1.4;\n}\n\n.water-card[_ngcontent-%COMP%]   .result-card-desc[_ngcontent-%COMP%] {\n  margin-top: 0;\n  flex: 1;\n}\n\n\n.result-actions[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0.875rem;\n  justify-content: center;\n  padding-top: 1.25rem;\n  border-top: 1px solid rgba(255, 255, 255, 0.05);\n}\n\n.result-view[_ngcontent-%COMP%]::-webkit-scrollbar {\n  width: 4px;\n}\n\n.result-view[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: transparent;\n}\n\n.result-view[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: rgba(255, 157, 47, 0.3);\n  border-radius: 3px;\n}\n\n\n@media (max-width: 650px) {\n  .calculator[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n    padding: 1.25rem 1rem 2rem;\n  }\n\n  .form-section[_ngcontent-%COMP%] {\n    padding: 1.25rem;\n  }\n\n  .form-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n\n  .form-toggle-row[_ngcontent-%COMP%] {\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 0.6rem;\n  }\n\n  .result-view[_ngcontent-%COMP%] {\n    padding: 1.75rem 1.25rem;\n  }\n\n  .result-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n\n  .result-card.water-card[_ngcontent-%COMP%] {\n    grid-column: auto;\n    flex-direction: column;\n    align-items: flex-start;\n    gap: 0.25rem;\n  }\n\n  .calculator[_ngcontent-%COMP%]   h1[_ngcontent-%COMP%] {\n    font-size: 1.45rem;\n  }\n\n  .calc-hero[_ngcontent-%COMP%] {\n    padding: 2rem 1rem 1.75rem;\n  }\n}\n\n@media (max-width: 480px) {\n  .result-actions[_ngcontent-%COMP%] {\n    flex-direction: column;\n  }\n\n  .result-actions[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvZmVhdHVyZXMvY2FsY3VsYXRvci9mb29kLXJlcXVpcmVtZW50LWNhbGN1bGF0b3IvZm9vZC1jYWxjdWxhdG9yLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0FBQ2I7O0FBRUE7RUFDRSxnQ0FBZ0M7RUFDaEMsbUJBQW1CO0VBQ25CLGtCQUFrQjtBQUNwQjs7QUFFQSx3REFBd0Q7QUFDeEQ7RUFDRSxrQkFBa0I7RUFDbEIseUJBQXlCO0VBQ3pCLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsZ0RBQWdEO0VBQ2hELDRGQUE0RjtFQUM1RixtQ0FBbUM7QUFDckM7O0FBRUE7RUFDRSxPQUFPLFVBQVUsRUFBRSw0QkFBNEIsRUFBRTtFQUNqRCxLQUFLLFVBQVUsRUFBRSx3QkFBd0IsRUFBRTtBQUM3Qzs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixzQkFBc0I7RUFDdEIscUJBQXFCO0VBQ3JCLGtEQUFrRDtBQUNwRDs7QUFFQTtFQUNFO0lBQ0UsaUNBQWlDO0lBQ2pDLGtEQUFrRDtFQUNwRDtFQUNBO0lBQ0UsdUNBQXVDO0lBQ3ZDLHFEQUFxRDtFQUN2RDtBQUNGOztBQUVBO0VBQ0Usc0NBQXNDO0VBQ3RDLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIscUJBQXFCO0VBQ3JCLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsMEVBQTBFO0VBQzFFLDZCQUE2QjtFQUM3QixvQ0FBb0M7RUFDcEMscUJBQXFCO0VBQ3JCLDBCQUEwQjtFQUMxQiwwQ0FBMEM7QUFDNUM7O0FBRUE7RUFDRSxXQUFXLDhCQUE4QixFQUFFO0VBQzNDLE1BQU0sZ0NBQWdDLEVBQUU7QUFDMUM7O0FBRUE7RUFDRSxnQ0FBZ0M7RUFDaEMsaUJBQWlCO0VBQ2pCLFNBQVM7RUFDVCxxQkFBcUI7RUFDckIsZ0JBQWdCO0VBQ2hCLG1CQUFtQjtBQUNyQjs7QUFFQSx3REFBd0Q7QUFDeEQ7RUFDRSx5QkFBeUI7RUFDekIs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bGF0b3IgKjpmb2N1cyB7XG4gIG91dGxpbmU6IDJweCBzb2xpZCB2YXIoLS1vcmFuZ2UpO1xuICBvdXRsaW5lLW9mZnNldDogMnB4O1xuICBib3JkZXItcmFkaXVzOiAycHg7XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBIZXJvIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLmNhbGMtaGVybyB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgcGFkZGluZzogM3JlbSAycmVtIDIuNXJlbTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgyNTUsIDE1NywgNDcsIDAuMSk7XG4gIGJhY2tncm91bmQ6IHJhZGlhbC1ncmFkaWVudChlbGxpcHNlIGF0IDUwJSAwJSwgcmdiYSgyNTUsIDE1NywgNDcsIDAuMDgpIDAlLCB0cmFuc3BhcmVudCA3MCUpO1xuICBhbmltYXRpb246IGhlcm9GYWRlSW4gMC42cyBlYXNlLW91dDtcbn1cblxuQGtleWZyYW1lcyBoZXJvRmFkZUluIHtcbiAgZnJvbSB7IG9wYWNpdHk6IDA7IHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtMTBweCk7IH1cbiAgdG8geyBvcGFjaXR5OiAxOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCk7IH1cbn1cblxuLmNhbGMtaGVyby1pY29uIHtcbiAgZm9udC1zaXplOiAyLjVyZW07XG4gIG1hcmdpbi1ib3R0b206IDAuNzVyZW07XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgYW5pbWF0aW9uOiBpY29uRmxvYXRHbG93IDIuOHMgZWFzZS1pbi1vdXQgaW5maW5pdGU7XG59XG5cbkBrZXlmcmFtZXMgaWNvbkZsb2F0R2xvdyB7XG4gIDAlLCAxMDAlIHtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCkgc2NhbGUoMSk7XG4gICAgZmlsdGVyOiBkcm9wLXNoYWRvdygwIDAgMHB4IHJnYmEoMjU1LCAxNTcsIDQ3LCAwKSk7XG4gIH1cbiAgNTAlIHtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoLThweCkgc2NhbGUoMS4wOCk7XG4gICAgZmlsdGVyOiBkcm9wLXNoYWRvdygwIDAgMTRweCByZ2JhKDI1NSwgMTU3LCA0NywgMC43KSk7XG4gIH1cbn1cblxuLmNhbGN1bGF0b3IgaDEge1xuICBmb250LWZhbWlseTogXCJQbGF5ZmFpciBEaXNwbGF5XCIsIHNlcmlmO1xuICBmb250LXNpemU6IDJyZW07XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIG1hcmdpbjogMCBhdXRvIDAuNnJlbTtcbiAgbWF4LXdpZHRoOiA1ODBweDtcbiAgbGluZS1oZWlnaHQ6IDEuMztcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDEzNWRlZywgI2ZmOWQyZiAwJSwgI2ZmYjcwMCA1MCUsICNkNGFhNDggMTAwJSk7XG4gIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0O1xuICAtd2Via2l0LXRleHQtZmlsbC1jb2xvcjogdHJhbnNwYXJlbnQ7XG4gIGJhY2tncm91bmQtY2xpcDogdGV4dDtcbiAgYmFja2dyb3VuZC1zaXplOiAyMDAlIGF1dG87XG4gIGFuaW1hdGlvbjogc2hpbW1lciAzcyBlYXNlLWluLW91dCBpbmZpbml0ZTtcbn1cblxuQGtleWZyYW1lcyBzaGltbWVyIHtcbiAgMCUsIDEwMCUgeyBiYWNrZ3JvdW5kLXBvc2l0aW9uOiAwJSBjZW50ZXI7IH1cbiAgNTAlIHsgYmFja2dyb3VuZC1wb3NpdGlvbjogMTAwJSBjZW50ZXI7IH1cbn1cblxuLmNhbGMtaGVyby1zdWIge1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQ1KTtcbiAgZm9udC1zaXplOiAwLjlyZW07XG4gIG1hcmdpbjogMDtcbiAgbGV0dGVyLXNwYWNpbmc6IDAuMnB4O1xuICBtYXgtd2lkdGg6IDUwMHB4O1xuICBtYXJnaW4taW5saW5lOiBhdXRvO1xufVxuXG4vKiDDosKUwoDDosKUwoAgRm9ybSBzaGVsbCDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5jYWxjdWxhdG9yIGZvcm0ge1xuICBwYWRkaW5nOiAycmVtIDIuNXJlbSAzcmVtO1xuICBtYXgtd2lkdGg6IDg2MHB4O1xuICBtYXJnaW46IDAgYXV0bztcbn1cblxuLyogw6LClMKAw6LClMKAIFNlY3Rpb24gY2FyZCDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5mb3JtLXNlY3Rpb24ge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDIpO1xuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDcpO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIHBhZGRpbmc6IDEuNXJlbSAxLjc1cmVtO1xuICBtYXJnaW4tYm90dG9tOiAxcmVtO1xufVxuXG4uZm9ybS1zZWN0aW9uLWhlYWRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGdhcDogMC43NXJlbTtcbiAgbWFyZ2luLWJvdHRvbTogMS41cmVtO1xuICBwYWRkaW5nLWJvdHRvbTogMC44NzVyZW07XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpO1xufVxuXG4uZm9ybS1zZWN0aW9uLWhlYWRlciBoMiB7XG4gIGZvbnQtZmFtaWx5OiBcIlBsYXlmYWlyIERpc3BsYXlcIiwgc2VyaWY7XG4gIGZvbnQtc2l6ZTogMXJlbTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcbiAgbWFyZ2luOiAwO1xuICBib3JkZXI6IG5vbmU7XG4gIHBhZGRpbmc6IDA7XG4gIGxldHRlci1zcGFjaW5nOiAwLjNweDtcbn1cblxuLnNlY3Rpb24tbnVtIHtcbiAgZm9udC1mYW1pbHk6IFwiSW50ZXJcIiwgc2Fucy1zZXJpZjtcbiAgZm9udC1zaXplOiAwLjY1cmVtO1xuICBmb250LXdlaWdodDogNzAwO1xuICBjb2xvcjogdmFyKC0tb3JhbmdlKTtcbiAgbGV0dGVyLXNwYWNpbmc6IDEuNXB4O1xuICBvcGFjaXR5OiAwLjY1O1xuICBwYWRkaW5nLXRvcDogMXB4O1xufVxuXG4vKiDDosKUwoDDosKUwoAgRmllbGQgZ3JpZCDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5mb3JtLWdyaWQge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpbGwsIG1pbm1heCgxOTBweCwgMWZyKSk7XG4gIGdhcDogMS4xcmVtO1xufVxuXG4vKiDDosKUwoDDosKUwoAgSW5kaXZpZHVhbCBmaWVsZCDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5mb3JtLWZpZWxkIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgZ2FwOiAwLjM1cmVtO1xufVxuXG4uZm9ybS1maWVsZCBsYWJlbCB7XG4gIGZvbnQtc2l6ZTogMC43OHJlbTtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40NSk7XG4gIGxldHRlci1zcGFjaW5nOiAwLjJweDtcbiAgdGV4dC10cmFuc2Zvcm06IG5vbmU7XG59XG5cbi5maWVsZC11bml0IHtcbiAgY29sb3I6IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjU1KTtcbiAgZm9udC1zaXplOiAwLjdyZW07XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi5mb3JtLWZpZWxkIGlucHV0LFxuLmZvcm0tZmllbGQgc2VsZWN0IHtcbiAgd2lkdGg6IDEwMCU7XG4gIHBhZGRpbmc6IDAuNnJlbSAwLjhyZW07XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4xKTtcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xuICBjb2xvcjogdmFyKC0td2hpdGUpO1xuICBmb250LXNpemU6IDAuOXJlbTtcbiAgZm9udC1mYW1pbHk6IFwiSW50ZXJcIiwgc2Fucy1zZXJpZjtcbiAgdHJhbnNpdGlvbjogYm9yZGVyLWNvbG9yIDAuMnMgZWFzZSwgYmFja2dyb3VuZCAwLjJzIGVhc2UsIGJveC1zaGFkb3cgMC4ycyBlYXNlO1xuICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmU7XG59XG5cbi5mb3JtLWZpZWxkIHNlbGVjdCB7XG4gIGFwcGVhcmFuY2U6IG5vbmU7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybChcImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nMTAnIGhlaWdodD0nNicgdmlld0JveD0nMCAwIDEwIDYnJTNFJTNDcGF0aCBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LDAuMyknIGQ9J00wIDBsNSA2IDUtNnonLyUzRSUzQy9zdmclM0VcIik7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IHJpZ2h0IDAuNzVyZW0gY2VudGVyO1xuICBwYWRkaW5nLXJpZ2h0OiAycmVtO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5mb3JtLWZpZWxkIHNlbGVjdCBvcHRpb24ge1xuICBiYWNrZ3JvdW5kOiAjMWMxYjFhO1xuICBjb2xvcjogdmFyKC0td2hpdGUpO1xufVxuXG4uZm9ybS1maWVsZCBpbnB1dDpob3Zlcixcbi5mb3JtLWZpZWxkIHNlbGVjdDpob3ZlciB7XG4gIGJvcmRlci1jb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjE4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1NSk7XG59XG5cbi5mb3JtLWZpZWxkIGlucHV0OmZvY3VzLFxuLmZvcm0tZmllbGQgc2VsZWN0OmZvY3VzIHtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1vcmFuZ2UpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDYpO1xuICBib3gtc2hhZG93OiAwIDAgMCAzcHggcmdiYSgyNTUsIDE1NywgNDcsIDAuMDkpO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4uZm9ybS1maWVsZCBpbnB1dDo6cGxhY2Vob2xkZXIge1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjE4KTtcbn1cblxuLyogw6LClMKAw6LClMKAIFRvZ2dsZSByb3cgw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAw6LClMKAICovXG4uZm9ybS10b2dnbGUtcm93IHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBnYXA6IDFyZW07XG4gIHBhZGRpbmc6IDAuOXJlbSAwO1xuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA0KTtcbn1cblxuLmZvcm0tdG9nZ2xlLXJvdzpsYXN0LW9mLXR5cGUge1xuICBib3JkZXItYm90dG9tOiBub25lO1xuICBwYWRkaW5nLWJvdHRvbTogMDtcbn1cblxuLnRvZ2dsZS1xdWVzdGlvbiB7XG4gIGZvbnQtc2l6ZTogMC44OHJlbTtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC42NSk7XG4gIGZvbnQtd2VpZ2h0OiA0MDA7XG59XG5cbi50b2dnbGUtZ3JvdXAge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXNocmluazogMDtcbn1cblxuLnRvZ2dsZS1ncm91cCBpbnB1dFt0eXBlPXJhZGlvXSB7XG4gIGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDtcbn1cblxuLnRvZ2dsZS1idG4ge1xuICBkaXNwbGF5OiBpbmxpbmUtZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBhZGRpbmc6IDAuNDJyZW0gMS4xcmVtO1xuICBmb250LXNpemU6IDAuNzhyZW07XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIGxldHRlci1zcGFjaW5nOiAwLjRweDtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wMik7XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNCk7XG4gIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG4gIG1pbi13aWR0aDogNTZweDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4udG9nZ2xlLWJ0bjpmaXJzdC1vZi10eXBlIHtcbiAgYm9yZGVyLXJpZ2h0OiBub25lO1xuICBib3JkZXItcmFkaXVzOiAzcHggMCAwIDNweDtcbn1cblxuLnRvZ2dsZS1idG46bGFzdC1vZi10eXBlIHtcbiAgYm9yZGVyLXJhZGl1czogMCAzcHggM3B4IDA7XG59XG5cbi50b2dnbGUtZ3JvdXAgaW5wdXRbdHlwZT1yYWRpb106Y2hlY2tlZCArIC50b2dnbGUtYnRuIHtcbiAgYmFja2dyb3VuZDogcmdiYSgyNTUsIDE1NywgNDcsIDAuMTIpO1xuICBib3JkZXItY29sb3I6IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjUpO1xuICBjb2xvcjogI2ZmYjA0NDtcbn1cblxuLyogw6LClMKAw6LClMKAIENvbmRpdGlvbmFsIGZpZWxkcyDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5jb25kaXRpb25hbC1maWVsZHMge1xuICBtYXJnaW4tdG9wOiAxcmVtO1xuICBwYWRkaW5nLXRvcDogMS4xcmVtO1xuICBib3JkZXItdG9wOiAxcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA0KTtcbn1cblxuLyogw6LClMKAw6LClMKAIFJhbmdlIHNsaWRlciDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5yYW5nZS1maWVsZCB7XG4gIHBhZGRpbmc6IDAuOXJlbSAwIDAuNHJlbTtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNCk7XG4gIG1hcmdpbi10b3A6IDAuNXJlbTtcbn1cblxuLnJhbmdlX3Byb2dyZXNzIHtcbiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCAjY2IzNzAxIDAlLCAjZmY5ZDJmIDUwJSwgI2ZmYjcwMCAxMDAlKTtcbiAgYm9yZGVyOiBub25lO1xuICBib3JkZXItcmFkaXVzOiA1MHZtaW47XG4gIGhlaWdodDogNXB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWF4LXdpZHRoOiAzMjBweDtcbiAgb3V0bGluZTogbm9uZTtcbiAgdHJhbnNpdGlvbjogYWxsIDAuM3MgZWFzZTtcbiAgLXdlYmtpdC1hcHBlYXJhbmNlOiBub25lO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIG1hcmdpbi10b3A6IDAuNXJlbTtcbn1cblxuLnJhbmdlX3Byb2dyZXNzOmhvdmVyIHtcbiAgYm94LXNoYWRvdzogMCAycHggOHB4IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjM1KTtcbn1cblxuLnJhbmdlX3Byb2dyZXNzOjotd2Via2l0LXNsaWRlci1ydW5uYWJsZS10cmFjayB7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDVweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBib3JkZXItcmFkaXVzOiA1MHZtaW47XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCwgI2NiMzcwMSAwJSwgI2ZmOWQyZiA1MCUsICNmZmI3MDAgMTAwJSk7XG59XG5cbi5yYW5nZV9wcm9ncmVzczo6LXdlYmtpdC1zbGlkZXItdGh1bWIge1xuICBib3JkZXI6IDJweCBzb2xpZCB2YXIoLS1vcmFuZ2UpO1xuICBoZWlnaHQ6IDE4cHg7XG4gIHdpZHRoOiAxOHB4O1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJhY2tncm91bmQ6ICMxYzFiMWE7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgLXdlYmtpdC1hcHBlYXJhbmNlOiBub25lO1xuICBtYXJnaW4tdG9wOiAtN3B4O1xuICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuICBib3gtc2hhZG93OiAwIDJweCA2cHggcmdiYSgwLCAwLCAwLCAwLjQpO1xufVxuXG4ucmFuZ2VfcHJvZ3Jlc3M6Oi13ZWJraXQtc2xpZGVyLXRodW1iOmhvdmVyIHtcbiAgdHJhbnNmb3JtOiBzY2FsZSgxLjIpO1xuICBib3gtc2hhZG93OiAwIDNweCAxMHB4IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjUpO1xufVxuXG4ucmFuZ2VfcHJvZ3Jlc3M6Oi1tb3otcmFuZ2UtdGh1bWIge1xuICBib3JkZXI6IDJweCBzb2xpZCB2YXIoLS1vcmFuZ2UpO1xuICBoZWlnaHQ6IDE4cHg7XG4gIHdpZHRoOiAxOHB4O1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJhY2tncm91bmQ6ICMxYzFiMWE7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcbiAgYm94LXNoYWRvdzogMCAycHggNnB4IHJnYmEoMCwgMCwgMCwgMC40KTtcbn1cblxuLyogw6LClMKAw6LClMKAIFN1Ym1pdCBidXR0b25zIMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgMOiwpTCgCAqL1xuLmNhbGN1bGF0b3IgLmJ1dHRvbnMtY29udGFpbmVyIHtcbiAgbWFyZ2luLXRvcDogMS43NXJlbTtcbn1cblxuLyogw6LClMKAw6LClMKAIE92ZXJsYXkgJiBtb2RhbCDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5vdmVybGF5IHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBpbnNldDogMDtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjgyKTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDZweCk7XG4gIHotaW5kZXg6IDk5OTk7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbmltYXRpb246IGZhZGVJbiAwLjI1cyBlYXNlO1xuICBwYWRkaW5nOiAxcmVtO1xufVxuXG5Aa2V5ZnJhbWVzIGZhZGVJbiB7XG4gIGZyb20geyBvcGFjaXR5OiAwOyB9XG4gIHRvIHsgb3BhY2l0eTogMTsgfVxufVxuXG4ucmVzdWx0LXZpZXcge1xuICB3aWR0aDogMTAwJTtcbiAgbWF4LXdpZHRoOiA3MjBweDtcbiAgcGFkZGluZzogMi4yNXJlbSAyLjVyZW07XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxODBkZWcsICMxZTFkMWIgMCUsICMxMjEyMTIgMTAwJSk7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wOCk7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgYm94LXNoYWRvdzogMCAzMnB4IDgwcHggcmdiYSgwLCAwLCAwLCAwLjcpO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGFuaW1hdGlvbjogc2xpZGVVcCAwLjNzIGVhc2U7XG4gIG1heC1oZWlnaHQ6IDkwdmg7XG4gIG92ZXJmbG93LXk6IGF1dG87XG59XG5cbkBrZXlmcmFtZXMgc2xpZGVVcCB7XG4gIGZyb20geyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMjRweCk7IG9wYWNpdHk6IDA7IH1cbiAgdG8geyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCk7IG9wYWNpdHk6IDE7IH1cbn1cblxuLmNsb3NlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICByaWdodDogMXJlbTtcbiAgdG9wOiAxcmVtO1xuICB3aWR0aDogMzJweDtcbiAgaGVpZ2h0OiAzMnB4O1xuICBwYWRkaW5nOiAwO1xuICBtaW4td2lkdGg6IGF1dG87XG4gIG1pbi1oZWlnaHQ6IGF1dG87XG4gIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSk7XG4gIGJvcmRlci1yYWRpdXM6IDNweDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KTtcbiAgZm9udC1zaXplOiAwLjg1cmVtO1xuICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xufVxuXG4uY2xvc2U6aG92ZXIge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDcpO1xuICBib3JkZXItY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4yKTtcbiAgY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC44KTtcbiAgdHJhbnNmb3JtOiBub25lO1xuICBib3gtc2hhZG93OiBub25lO1xufVxuXG4vKiDDosKUwoDDosKUwoAgUmVzdWx0IGhlYWRlciDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5yZXN1bHQtaGVhZGVyIHtcbiAgbWFyZ2luLWJvdHRvbTogMS43NXJlbTtcbiAgcGFkZGluZy1ib3R0b206IDEuMjVyZW07XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDYpO1xufVxuXG4ucmVzdWx0LWNhdC1uYW1lIHtcbiAgZm9udC1zaXplOiAwLjc4cmVtO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjM1KTtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgbGV0dGVyLXNwYWNpbmc6IDAuOHB4O1xuICBtYXJnaW46IDAgMCAwLjVyZW07XG59XG5cbi5yZXN1bHQtY2F0LW5hbWUgc3Ryb25nIHtcbiAgY29sb3I6IHZhcigtLW9yYW5nZSk7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG59XG5cbi5yZXN1bHQtaGVhZGVyIGgyIHtcbiAgZm9udC1mYW1pbHk6IFwiUGxheWZhaXIgRGlzcGxheVwiLCBzZXJpZjtcbiAgZm9udC1zaXplOiAxLjVyZW07XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGNvbG9yOiB2YXIoLS13aGl0ZSk7XG4gIG1hcmdpbjogMCAwIDAuMzVyZW07XG4gIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB2YXIoLS13aGl0ZSk7XG59XG5cbi5yZXN1bHQtc3VidGl0bGUge1xuICBmb250LXNpemU6IDAuODJyZW07XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMzUpO1xuICBtYXJnaW46IDA7XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBSZXN1bHQgZ3JpZCDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5yZXN1bHQtZ3JpZCB7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyIDFmcjtcbiAgZ2FwOiAwLjc1cmVtO1xuICBtYXJnaW4tYm90dG9tOiAxLjVyZW07XG59XG5cbi5yZXN1bHQtY2FyZCB7XG4gIHBhZGRpbmc6IDEuMXJlbSAxLjI1cmVtO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDI1KTtcbiAgYm9yZGVyOiAxcHggc29saWQgcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA2KTtcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBnYXA6IDAuMjVyZW07XG59XG5cbi5yZXN1bHQtY2FyZC5oaWdobGlnaHRlZCB7XG4gIGJhY2tncm91bmQ6IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjA3KTtcbiAgYm9yZGVyLWNvbG9yOiByZ2JhKDI1NSwgMTU3LCA0NywgMC4yKTtcbn1cblxuLnJlc3VsdC1jYXJkLndhdGVyLWNhcmQge1xuICBncmlkLWNvbHVtbjogMSAvIC0xO1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBnYXA6IDEuNXJlbTtcbn1cblxuLnJlc3VsdC1jYXJkLWxhYmVsIHtcbiAgZm9udC1zaXplOiAwLjY4cmVtO1xuICBmb250LXdlaWdodDogNzAwO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBsZXR0ZXItc3BhY2luZzogMC45cHg7XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMzUpO1xufVxuXG4ucmVzdWx0LWNhcmQuaGlnaGxpZ2h0ZWQgLnJlc3VsdC1jYXJkLWxhYmVsIHtcbiAgY29sb3I6IHJnYmEoMjU1LCAxNTcsIDQ3LCAwLjY1KTtcbn1cblxuLnJlc3VsdC1jYXJkLXZhbHVlIHtcbiAgZm9udC1zaXplOiAycmVtO1xuICBmb250LXdlaWdodDogNzAwO1xuICBjb2xvcjogdmFyKC0td2hpdGUpO1xuICBsaW5lLWhlaWdodDogMS4xO1xuICBsZXR0ZXItc3BhY2luZzogLTAuNXB4O1xufVxuXG4ucmVzdWx0LWNhcmQuaGlnaGxpZ2h0ZWQgLnJlc3VsdC1jYXJkLXZhbHVlIHtcbiAgY29sb3I6ICNmZmIwNDQ7XG59XG5cbi5yZXN1bHQtY2FyZC11bml0IHtcbiAgZm9udC1zaXplOiAwLjg1cmVtO1xuICBmb250LXdlaWdodDogNDAwO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjM1KTtcbiAgbGV0dGVyLXNwYWNpbmc6IDA7XG59XG5cbi5yZXN1bHQtY2FyZC1kZXNjIHtcbiAgZm9udC1zaXplOiAwLjc2cmVtO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjMpO1xuICBtYXJnaW4tdG9wOiAwLjE1cmVtO1xuICBsaW5lLWhlaWdodDogMS40O1xufVxuXG4ud2F0ZXItY2FyZCAucmVzdWx0LWNhcmQtZGVzYyB7XG4gIG1hcmdpbi10b3A6IDA7XG4gIGZsZXg6IDE7XG59XG5cbi8qIMOiwpTCgMOiwpTCgCBSZXN1bHQgYWN0aW9ucyDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbi5yZXN1bHQtYWN0aW9ucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGdhcDogMC44NzVyZW07XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBwYWRkaW5nLXRvcDogMS4yNXJlbTtcbiAgYm9yZGVyLXRvcDogMXB4IHNvbGlkIHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSk7XG59XG5cbi5yZXN1bHQtdmlldzo6LXdlYmtpdC1zY3JvbGxiYXIge1xuICB3aWR0aDogNHB4O1xufVxuXG4ucmVzdWx0LXZpZXc6Oi13ZWJraXQtc2Nyb2xsYmFyLXRyYWNrIHtcbiAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG59XG5cbi5yZXN1bHQtdmlldzo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWIge1xuICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwgMTU3LCA0NywgMC4zKTtcbiAgYm9yZGVyLXJhZGl1czogM3B4O1xufVxuXG4vKiDDosKUwoDDosKUwoAgUmVzcG9uc2l2ZSDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoDDosKUwoAgKi9cbkBtZWRpYSAobWF4LXdpZHRoOiA2NTBweCkge1xuICAuY2FsY3VsYXRvciBmb3JtIHtcbiAgICBwYWRkaW5nOiAxLjI1cmVtIDFyZW0gMnJlbTtcbiAgfVxuXG4gIC5mb3JtLXNlY3Rpb24ge1xuICAgIHBhZGRpbmc6IDEuMjVyZW07XG4gIH1cblxuICAuZm9ybS1ncmlkIHtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmcjtcbiAgfVxuXG4gIC5mb3JtLXRvZ2dsZS1yb3cge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYWxpZ24taXRlbXM6IGZsZXgtc3RhcnQ7XG4gICAgZ2FwOiAwLjZyZW07XG4gIH1cblxuICAucmVzdWx0LXZpZXcge1xuICAgIHBhZGRpbmc6IDEuNzVyZW0gMS4yNXJlbTtcbiAgfVxuXG4gIC5yZXN1bHQtZ3JpZCB7XG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XG4gIH1cblxuICAucmVzdWx0LWNhcmQud2F0ZXItY2FyZCB7XG4gICAgZ3JpZC1jb2x1bW46IGF1dG87XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcbiAgICBnYXA6IDAuMjVyZW07XG4gIH1cblxuICAuY2FsY3VsYXRvciBoMSB7XG4gICAgZm9udC1zaXplOiAxLjQ1cmVtO1xuICB9XG5cbiAgLmNhbGMtaGVybyB7XG4gICAgcGFkZGluZzogMnJlbSAxcmVtIDEuNzVyZW07XG4gIH1cbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDQ4MHB4KSB7XG4gIC5yZXN1bHQtYWN0aW9ucyB7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgfVxuXG4gIC5yZXN1bHQtYWN0aW9ucyBidXR0b24ge1xuICAgIHdpZHRoOiAxMDAlO1xuICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
     });
   }
 }
 
 /***/ },
 
-/***/ 7660
-/*!************************************************************************************************!*\
-  !*** ./src/app/features/calculator/food-requirement-calculator/calority-calculation-result.ts ***!
-  \************************************************************************************************/
+/***/ 2424
+/*!********************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/food-requirement-report.ts ***!
+  \********************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CalorityCalculationResult: () => (/* binding */ CalorityCalculationResult)
+/* harmony export */   FoodRequirementReport: () => (/* binding */ FoodRequirementReport)
 /* harmony export */ });
-class CalorityCalculationResult {
-  constructor(der, rer, calculationMethod) {
-    this._unit = 'kcl';
-    this._der = der;
-    this._rer = rer;
-    this.calculationMethod = calculationMethod;
+class FoodRequirementReport {
+  constructor(footRequirementCalculationResult, calculationParams, currentFoodRequirement, waterRequirement) {
+    this._calorityCalculationResult = footRequirementCalculationResult;
+    this._calculationParams = calculationParams;
+    this._currentFoodRequirement = currentFoodRequirement;
+    this._waterRequirement = waterRequirement;
   }
-  get rer() {
-    return this._rer;
+  get footRequirementCalculationResult() {
+    return this._calorityCalculationResult;
   }
   get der() {
-    return this._der;
+    return this.nonNullAsInt(this._calorityCalculationResult.der);
   }
-  get unit() {
-    return this._unit;
+  get rer() {
+    return this.nonNullAsInt(this._calculationParams.cat.rer());
   }
-}
-
-/***/ },
-
-/***/ 2232
-/*!************************************************************************************************!*\
-  !*** ./src/app/features/calculator/food-requirement-calculator/calority-calculator.service.ts ***!
-  \************************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CalorityCalculatorService: () => (/* binding */ CalorityCalculatorService)
-/* harmony export */ });
-/* harmony import */ var _calority_calculation_result__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./calority-calculation-result */ 7660);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 4363);
-/* harmony import */ var _k_factor_calculator_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./k-factor-calculator.service */ 4536);
-
-
-
-class CalorityCalculatorService {
-  constructor(kFactorStrategy) {
-    this.kFactorStrategy = kFactorStrategy;
+  get catName() {
+    return this._calculationParams.cat.name();
   }
-  calculate(params) {
-    const cat = params.cat;
-    if (params.isCalculationByLactationCycle()) {
-      return this.calculationByLactationWeek(cat);
-    }
-    return this.calculateUsingKFactor(cat);
+  get weightOfCurrentDryFood() {
+    return this.asInt(this._currentFoodRequirement.amountOfDryFood);
   }
-  calculateUsingKFactor(cat) {
-    const kFactor = this.kFactorStrategy.determineFor(cat);
-    const der = kFactor.value * cat.rer();
-    return new _calority_calculation_result__WEBPACK_IMPORTED_MODULE_0__.CalorityCalculationResult(der, cat.rer(), 'kFactor');
+  get weightOfCurrentWetFood() {
+    return this.asInt(this._currentFoodRequirement.amountOfWetFood);
   }
-  calculationByLactationWeek(cat) {
-    const rer = cat.rer();
-    const rarPercentageCalculateForCatNumbers = this.getRerPercentage(cat.feedingWeek) * rer;
-    const der = rer + cat.numberOfKittens * rarPercentageCalculateForCatNumbers;
-    return new _calority_calculation_result__WEBPACK_IMPORTED_MODULE_0__.CalorityCalculationResult(der, cat.rer(), 'lactationWeek');
-  }
-  getRerPercentage(feedingWeek) {
-    switch (feedingWeek) {
-      case 1:
-      case 2:
-        return 0.3;
-      case 3:
-        return 0.45;
-      case 4:
-        return 0.55;
-      case 5:
-        return 0.65;
-      default:
-        return 0.9;
-    }
-  }
-  static {
-    this.ɵfac = function CalorityCalculatorService_Factory(__ngFactoryType__) {
-      return new (__ngFactoryType__ || CalorityCalculatorService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_k_factor_calculator_service__WEBPACK_IMPORTED_MODULE_2__.KFactorCalculatorService));
-    };
-  }
-  static {
-    this.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
-      token: CalorityCalculatorService,
-      factory: CalorityCalculatorService.ɵfac,
-      providedIn: 'root'
-    });
-  }
-}
-
-/***/ },
-
-/***/ 9640
-/*!***********************************************************************************************!*\
-  !*** ./src/app/features/calculator/food-requirement-calculator/cat-calculation-parameters.ts ***!
-  \***********************************************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Cat: () => (/* binding */ Cat),
-/* harmony export */   CatCalculationParameters: () => (/* binding */ CatCalculationParameters),
-/* harmony export */   ConvalescenceInfo: () => (/* binding */ ConvalescenceInfo),
-/* harmony export */   KFactor: () => (/* binding */ KFactor),
-/* harmony export */   ReproductionCycleInfo: () => (/* binding */ ReproductionCycleInfo)
-/* harmony export */ });
-class KFactor {
-  constructor(kValue, kName) {
-    this.kValue = kValue;
-    this.kName = kName;
-  }
-  get value() {
-    return this.kValue;
-  }
-  get name() {
-    return this.kName;
-  }
-}
-class CatCalculationParameters {
-  constructor(_cat, _dryKcl, _wetKcl, _reproductiveCycleCalculationType) {
-    this._cat = _cat;
-    this._dryKcl = _dryKcl;
-    this._wetKcl = _wetKcl;
-    this._reproductiveCycleCalculationType = _reproductiveCycleCalculationType;
-  }
-  isCalculationByLactationCycle() {
-    return this._cat.isInReproductiveCycle() && this._reproductiveCycleCalculationType === 0 /* PostPregnantFeedingStrategy.FEEDING_WEEK */;
+  get foodUnit() {
+    return this._currentFoodRequirement.unit;
   }
   get cat() {
-    return this._cat;
+    return this._calculationParams.cat;
   }
-  get dryKcl() {
-    if (this._dryKcl == null) {
-      return 0;
-    }
-    return this._dryKcl;
+  get waterRequirement() {
+    return this._waterRequirement;
   }
-  get wetKcl() {
-    if (this._wetKcl == null) {
-      return 0;
-    }
-    return this._wetKcl;
+  nonNullAsInt(num) {
+    return parseInt(num.toString(), 10);
   }
-}
-class ConvalescenceInfo {
-  constructor(_progress) {
-    this._progress = _progress;
-  }
-  get isInProcess() {
-    return this._progress > 0;
-  }
-  get progress() {
-    return this._progress;
-  }
-}
-class ReproductionCycleInfo {
-  constructor(_cycleFaze, _numberOfKittens, _feedingWeek) {
-    this._cycleFaze = _cycleFaze;
-    this._numberOfKittens = _numberOfKittens;
-    this._feedingWeek = _feedingWeek;
-  }
-  get cycleFaze() {
-    return this._cycleFaze;
-  }
-  get numberOfKittens() {
-    return this._numberOfKittens;
-  }
-  get feedingWeek() {
-    return this._feedingWeek;
-  }
-  isReproductive() {
-    return this.cycleFaze != null && this.cycleFaze !== 0 /* ReproductiveCycleFaze.NO */;
-  }
-}
-class Cat {
-  constructor(name, convalescenceInfo, age, mature, sex, weight, bodyStructure, sterilized, reproductiveCycleInfo) {
-    this._convalescenceInfo = convalescenceInfo;
-    this._age = age;
-    this._mature = mature;
-    this._sex = sex;
-    this._weight = weight;
-    this._bodyStructure = bodyStructure;
-    this._sterilized = sterilized;
-    this._reproductiveCycleInfo = reproductiveCycleInfo;
-    this._name = name;
-  }
-  get age() {
-    return this._age;
-  }
-  get feedingWeek() {
-    if (!this.isPresent(this._reproductiveCycleInfo)) {
-      throw new Error('Illegal operation');
-    }
-    return this._reproductiveCycleInfo.feedingWeek;
-  }
-  get numberOfKittens() {
-    if (!this.isPresent(this._reproductiveCycleInfo)) {
-      throw new Error('Illegal operation');
-    }
-    return this._reproductiveCycleInfo.numberOfKittens;
-  }
-  get weight() {
-    if (this._weight == null) {
-      return 0;
-    }
-    return this._weight;
-  }
-  get bodyStructure() {
-    return this._bodyStructure;
-  }
-  isSterilized() {
-    return this._sterilized;
-  }
-  isNotSterilized() {
-    return this._sterilized;
-  }
-  isInPregnant() {
-    return this.isInReproductiveCycle() && this._reproductiveCycleInfo.cycleFaze === 1 /* ReproductiveCycleFaze.PREGNANCY */;
-  }
-  isInHeat() {
-    return this.isInReproductiveCycle() && this._reproductiveCycleInfo.cycleFaze === 2 /* ReproductiveCycleFaze.HEAT */;
-  }
-  isFeeding() {
-    return this.isInReproductiveCycle() && this._reproductiveCycleInfo.cycleFaze === 3 /* ReproductiveCycleFaze.FEEDING */;
-  }
-  isInReproductiveCycle() {
-    return this.isPresent(this._reproductiveCycleInfo) && this.isReproductiveCyclePossible() && this._reproductiveCycleInfo.isReproductive();
-  }
-  rer() {
-    return 70 * Math.pow(this._weight, 0.67);
-  }
-  isInConvalescence() {
-    return this.isPresent(this._convalescenceInfo) && this._convalescenceInfo.isInProcess;
-  }
-  getConvalescenceProgress() {
-    if (!this.isPresent(this._convalescenceInfo)) {
-      throw new Error('Illegal operation');
-    }
-    return this._convalescenceInfo.progress / 100;
-  }
-  isAdult() {
-    return this._mature === 0 /* Mature.ADULT */ || this._age.humanAge >= 4;
-  }
-  isKitten() {
-    return !this.isAdult();
-  }
-  isOld() {
-    return this._age.humanAge >= 10;
-  }
-  name() {
-    return this._name;
-  }
-  get sex() {
-    return this._sex;
-  }
-  get reproductiveFaze() {
-    if (this._reproductiveCycleInfo === null) {
+  asInt(num) {
+    if (num === null) {
       return null;
     }
-    return this._reproductiveCycleInfo.cycleFaze;
-  }
-  isReproductiveCyclePossible() {
-    return this._sex === 1 /* Sex.FEMALE */ && !this._sterilized && this.isAdult();
-  }
-  isPresent(obj) {
-    return obj !== null && obj !== undefined;
+    return parseInt(num.toString(), 10);
   }
 }
 
@@ -2769,67 +2826,10 @@ class KFactorCalculatorService {
 
 /***/ },
 
-/***/ 1398
-/*!****************************************************************!*\
-  !*** ./src/app/features/calculator/food-requirement-report.ts ***!
-  \****************************************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   FoodRequirementReport: () => (/* binding */ FoodRequirementReport)
-/* harmony export */ });
-class FoodRequirementReport {
-  constructor(footRequirementCalculationResult, calculationParams, currentFoodRequirement, waterRequirement) {
-    this._calorityCalculationResult = footRequirementCalculationResult;
-    this._calculationParams = calculationParams;
-    this._currentFoodRequirement = currentFoodRequirement;
-    this._waterRequirement = waterRequirement;
-  }
-  get footRequirementCalculationResult() {
-    return this._calorityCalculationResult;
-  }
-  get der() {
-    return this.nonNullAsInt(this._calorityCalculationResult.der);
-  }
-  get rer() {
-    return this.nonNullAsInt(this._calculationParams.cat.rer());
-  }
-  get catName() {
-    return this._calculationParams.cat.name();
-  }
-  get weightOfCurrentDryFood() {
-    return this.asInt(this._currentFoodRequirement.amountOfDryFood);
-  }
-  get weightOfCurrentWetFood() {
-    return this.asInt(this._currentFoodRequirement.amountOfWetFood);
-  }
-  get foodUnit() {
-    return this._currentFoodRequirement.unit;
-  }
-  get cat() {
-    return this._calculationParams.cat;
-  }
-  get waterRequirement() {
-    return this._waterRequirement;
-  }
-  nonNullAsInt(num) {
-    return parseInt(num.toString(), 10);
-  }
-  asInt(num) {
-    if (num === null) {
-      return null;
-    }
-    return parseInt(num.toString(), 10);
-  }
-}
-
-/***/ },
-
-/***/ 2354
-/*!***********************************************************!*\
-  !*** ./src/app/features/calculator/pdf-writer.service.ts ***!
-  \***********************************************************/
+/***/ 4712
+/*!***************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/pdf-writer.service.ts ***!
+  \***************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2837,7 +2837,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   PdfWriterService: () => (/* binding */ PdfWriterService)
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common */ 9748);
-/* harmony import */ var _food_requirement_calculator_cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./food-requirement-calculator/cat-calculation-parameters */ 9640);
+/* harmony import */ var _cat_calculation_parameters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cat-calculation-parameters */ 9640);
 /* harmony import */ var pdfmake_build_pdfmake__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! pdfmake/build/pdfmake */ 7888);
 /* harmony import */ var pdfmake_build_pdfmake__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(pdfmake_build_pdfmake__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var pdfmake_build_vfs_fonts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! pdfmake/build/vfs_fonts */ 5360);
@@ -3055,10 +3055,10 @@ class PdfWriterService {
 
 /***/ },
 
-/***/ 3063
-/*!****************************************************************************!*\
-  !*** ./src/app/features/calculator/print-result/print-result.component.ts ***!
-  \****************************************************************************/
+/***/ 3833
+/*!********************************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/print-result/print-result.component.ts ***!
+  \********************************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3114,17 +3114,17 @@ class PrintResultComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.result);
         }
       },
-      styles: [".result-row[_ngcontent-%COMP%] {\n  margin: 0.75em 1em;\n  font-style: normal;\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 0.95em;\n  display: flex;\n  align-items: baseline;\n  gap: 0.5em;\n  flex-wrap: wrap;\n}\n\n.result-row[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-weight: 600;\n  font-size: 1.15em;\n  font-style: normal;\n  color: var(--lightOrange);\n}\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvZmVhdHVyZXMvY2FsY3VsYXRvci9wcmludC1yZXN1bHQvcHJpbnQtcmVzdWx0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIsa0JBQWtCO0VBQ2xCLCtCQUErQjtFQUMvQixpQkFBaUI7RUFDakIsYUFBYTtFQUNiLHFCQUFxQjtFQUNyQixVQUFVO0VBQ1YsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLHlCQUF5QjtBQUMzQiIsInNvdXJjZXNDb250ZW50IjpbIi5yZXN1bHQtcm93IHtcbiAgbWFyZ2luOiAwLjc1ZW0gMWVtO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGNvbG9yOiByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNik7XG4gIGZvbnQtc2l6ZTogMC45NWVtO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogYmFzZWxpbmU7XG4gIGdhcDogMC41ZW07XG4gIGZsZXgtd3JhcDogd3JhcDtcbn1cblxuLnJlc3VsdC1yb3cgc3BhbiB7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4xNWVtO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG4gIGNvbG9yOiB2YXIoLS1saWdodE9yYW5nZSk7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
+      styles: [".result-row[_ngcontent-%COMP%] {\n  margin: 0.75em 1em;\n  font-style: normal;\n  color: rgba(255, 255, 255, 0.6);\n  font-size: 0.95em;\n  display: flex;\n  align-items: baseline;\n  gap: 0.5em;\n  flex-wrap: wrap;\n}\n\n.result-row[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  font-weight: 600;\n  font-size: 1.15em;\n  font-style: normal;\n  color: var(--lightOrange);\n}\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvZmVhdHVyZXMvY2FsY3VsYXRvci9mb29kLXJlcXVpcmVtZW50LWNhbGN1bGF0b3IvcHJpbnQtcmVzdWx0L3ByaW50LXJlc3VsdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQiwrQkFBK0I7RUFDL0IsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixxQkFBcUI7RUFDckIsVUFBVTtFQUNWLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQix5QkFBeUI7QUFDM0IiLCJzb3VyY2VzQ29udGVudCI6WyIucmVzdWx0LXJvdyB7XG4gIG1hcmdpbjogMC43NWVtIDFlbTtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xuICBjb2xvcjogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjYpO1xuICBmb250LXNpemU6IDAuOTVlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGJhc2VsaW5lO1xuICBnYXA6IDAuNWVtO1xuICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5yZXN1bHQtcm93IHNwYW4ge1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuMTVlbTtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xuICBjb2xvcjogdmFyKC0tbGlnaHRPcmFuZ2UpO1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */"]
     });
   }
 }
 
 /***/ },
 
-/***/ 85
-/*!************************************************************************************!*\
-  !*** ./src/app/features/calculator/validation-error/validation-error.component.ts ***!
-  \************************************************************************************/
+/***/ 5871
+/*!****************************************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/validation-error/validation-error.component.ts ***!
+  \****************************************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3180,17 +3180,17 @@ class ValidationErrorComponent {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵconditional"](ctx.shouldShow() ? 0 : -1);
         }
       },
-      styles: [".validation-error[_ngcontent-%COMP%] {\n  font-style: italic;\n  text-transform: lowercase;\n  color: #f63030;\n}\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvZmVhdHVyZXMvY2FsY3VsYXRvci92YWxpZGF0aW9uLWVycm9yL3ZhbGlkYXRpb24tZXJyb3IuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIsY0FBYztBQUNoQiIsInNvdXJjZXNDb250ZW50IjpbIi52YWxpZGF0aW9uLWVycm9yIHtcbiAgZm9udC1zdHlsZTogaXRhbGljO1xuICB0ZXh0LXRyYW5zZm9ybTogbG93ZXJjYXNlO1xuICBjb2xvcjogI2Y2MzAzMDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
+      styles: [".validation-error[_ngcontent-%COMP%] {\n  font-style: italic;\n  text-transform: lowercase;\n  color: #f63030;\n}\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvZmVhdHVyZXMvY2FsY3VsYXRvci9mb29kLXJlcXVpcmVtZW50LWNhbGN1bGF0b3IvdmFsaWRhdGlvbi1lcnJvci92YWxpZGF0aW9uLWVycm9yLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIseUJBQXlCO0VBQ3pCLGNBQWM7QUFDaEIiLCJzb3VyY2VzQ29udGVudCI6WyIudmFsaWRhdGlvbi1lcnJvciB7XG4gIGZvbnQtc3R5bGU6IGl0YWxpYztcbiAgdGV4dC10cmFuc2Zvcm06IGxvd2VyY2FzZTtcbiAgY29sb3I6ICNmNjMwMzA7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */"]
     });
   }
 }
 
 /***/ },
 
-/***/ 7020
-/*!*****************************************************************************!*\
-  !*** ./src/app/features/calculator/water-requirement-calculator.service.ts ***!
-  \*****************************************************************************/
+/***/ 8526
+/*!*********************************************************************************************************!*\
+  !*** ./src/app/features/calculator/food-requirement-calculator/water-requirement-calculator.service.ts ***!
+  \*********************************************************************************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);

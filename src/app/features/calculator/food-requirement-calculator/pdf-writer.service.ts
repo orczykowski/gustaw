@@ -1,7 +1,7 @@
 import {Injectable, Input} from '@angular/core';
 import {FoodRequirementReport} from './food-requirement-report';
 import {DatePipe} from '@angular/common';
-import {BodyStructure, Cat, ReproductiveCycleFaze, Sex} from './food-requirement-calculator/cat-calculation-parameters';
+import {BodyStructure, Cat, ReproductiveCycleFaze, Sex} from './cat-calculation-parameters';
 import * as pdfMake from 'pdfmake/build/pdfmake';
 import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 

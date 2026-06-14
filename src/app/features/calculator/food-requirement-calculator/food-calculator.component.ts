@@ -1,6 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
-import {CalorityCalculatorService} from './food-requirement-calculator/calority-calculator.service';
+import {CalorityCalculatorService} from './calority-calculator.service';
 import {
   Cat,
   CatCalculationParameters,
@@ -9,14 +9,14 @@ import {
   ReproductionCycleInfo,
   ReproductiveCycleFaze,
   Sex,
-} from './food-requirement-calculator/cat-calculation-parameters';
+} from './cat-calculation-parameters';
 import {FoodRequirementReport} from './food-requirement-report';
 import {CurrentFoodRequirementCalculatorService} from './current-food-requirement-calculator.service';
 import {PdfWriterService} from './pdf-writer.service';
 import {WaterRequirementCalculatorService} from './water-requirement-calculator.service';
 import {CustomValidators} from './custom.validators';
-import {AgeCalculatorService} from "./age-calculator.service";
-import {SeoService} from '../../core/seo.service';
+import {AgeCalculatorService} from '../age-calculator/age-calculator.service';
+import {SeoService} from '../../../core/seo.service';
 
 @Component({
     selector: 'app-food-caloric-calculator',
