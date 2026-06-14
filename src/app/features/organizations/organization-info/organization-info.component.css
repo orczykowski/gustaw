@@ -5,13 +5,19 @@
   padding: 2rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
+  border-radius: 6px;
   color: var(--white);
-  transition: all 0.25s ease;
+  transition: all 0.28s ease;
   position: relative;
   overflow: hidden;
   height: 100%;
   box-sizing: border-box;
+  animation: cardEntrance 0.5s ease-out backwards;
+}
+
+@keyframes cardEntrance {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .organization:visited,
@@ -26,7 +32,7 @@
   margin-bottom: 1.5rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
@@ -43,7 +49,7 @@
   flex-direction: column;
 }
 
-.organization h3 {
+.organization h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
   font-weight: 600;
@@ -104,7 +110,7 @@
   padding: 0.4rem 0.8rem;
   background: rgba(253, 245, 208, 0.1);
   border: 1px solid rgba(253, 245, 208, 0.2);
-  border-radius: 20px;
+  border-radius: 3px;
   font-size: 0.85rem;
   color: var(--yellow);
   transition: all 0.3s ease;
@@ -112,9 +118,9 @@
 
 .organization:hover {
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 157, 47, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 157, 47, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 157, 47, 0.1);
 }
 
 .organization:hover .organization-logo-wrapper {
@@ -125,7 +131,7 @@
   transform: scale(1.05);
 }
 
-.organization:hover h3 {
+.organization:hover h2 {
   color: var(--orange);
 }
 
@@ -148,7 +154,7 @@
     height: 90px;
   }
 
-  .organization h3 {
+  .organization h2 {
     font-size: 1.35rem;
   }
 

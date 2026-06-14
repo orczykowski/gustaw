@@ -4,11 +4,12 @@
   text-decoration: none;
   margin: 0 auto 1rem;
   padding: 1.25rem 1.5rem;
-  border-radius: 10px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid transparent;
   color: var(--yellow);
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
 }
@@ -17,7 +18,7 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 3px;
   margin-right: 1.5rem;
   filter: grayscale(1);
   transition: all 0.3s ease;
@@ -45,11 +46,30 @@
   transition: color 0.3s ease;
 }
 
+.gustaw-article-link .read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--orange);
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s ease;
+}
+
 .gustaw-article-link:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  border-left-color: var(--orange);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), -2px 0 0 var(--orange);
+}
+
+.gustaw-article-link:hover .read-more {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .gustaw-article-link:hover img {

@@ -76,7 +76,7 @@ header nav {
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.8px;
-  border-radius: 6px;
+  border-radius: 3px;
   background: transparent;
   border: 1px solid transparent;
   transition: all 0.2s ease;
@@ -90,7 +90,8 @@ header nav {
 .nav-link.active {
   color: #ffb700;
   background: rgba(255, 157, 47, 0.1);
-  border-color: rgba(255, 157, 47, 0.2);
+  border-color: rgba(255, 157, 47, 0.3);
+  box-shadow: 0 0 10px rgba(255, 157, 47, 0.08);
 }
 
 .nav-icon {
@@ -102,7 +103,7 @@ header nav {
   width: min(75%, 1200px);
   margin: 2em auto;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
+  border-radius: 6px;
   background: linear-gradient(180deg, rgba(28, 27, 26, 0.95) 0%, rgba(14, 14, 14, 0.98) 100%);
   color: var(--orange);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
@@ -139,6 +140,12 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.copyright {
+  color: rgba(255, 255, 255, 0.18);
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
 .footer-dot {
   width: 3px;
   height: 3px;
@@ -157,7 +164,7 @@ footer {
   font-size: 0.75rem;
   letter-spacing: 0.3px;
   border: 1px solid rgba(255, 157, 47, 0.3);
-  border-radius: 6px;
+  border-radius: 3px;
   background: rgba(255, 157, 47, 0.08);
   transition: all 0.2s ease;
 }
@@ -202,20 +209,24 @@ article {
 
   .header-container {
     flex-direction: column;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
   }
 
   header nav {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     gap: 0.25rem;
   }
 
   .nav-link {
-    width: 100%;
+    flex: 1;
+    min-width: 5rem;
     justify-content: center;
-    padding: 0.75rem 1rem;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.72rem;
   }
 
   .logo-text h1 {
