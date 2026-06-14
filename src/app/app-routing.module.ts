@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {BlogComponent} from './features/blog/blog.component';
 import {FoodCalculatorComponent} from './features/calculator/food-calculator.component';
+import {AgeCalculatorComponent} from './features/calculator/age-calculator/age-calculator.component';
 import {OrganizationsComponent} from './features/organizations/organizations.component';
 import {WelcomePageComponent} from './features/welcome-page/welcome-page.component';
 import {SafeBalconyComponent} from './features/blog/articles/safe-balcony/safe-balcony.component';
@@ -16,6 +17,7 @@ import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds
 const routes: Routes = [
   {path: '', component: WelcomePageComponent},
   {path: 'kalkulator', component: FoodCalculatorComponent},
+  {path: 'kalkulator/wiek', component: AgeCalculatorComponent},
   {path: 'warto-wspierac', component: OrganizationsComponent},
   {path: 'blog/kocie-terytorium', component: SafeBalconyComponent},
   {path: 'blog/dieta', component: DietComponent},

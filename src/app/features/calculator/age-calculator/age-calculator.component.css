@@ -1,0 +1,244 @@
+.calculator {
+  width: 100%;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.calc-hero {
+  text-align: center;
+  padding: 3rem 2rem 2.5rem;
+  border-bottom: 1px solid rgba(255, 157, 47, 0.1);
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 157, 47, 0.08) 0%, transparent 70%);
+  animation: heroFadeIn 0.6s ease-out;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.calc-hero-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  animation: iconFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.08); }
+}
+
+.calculator h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto 0.6rem;
+  max-width: 580px;
+  line-height: 1.3;
+  background: linear-gradient(135deg, #ff9d2f 0%, #ffb700 50%, #d4aa48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.calc-hero-sub {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.9rem;
+  margin: 0;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* ── Content shell ────────────────────────────────── */
+.age-content {
+  padding: 2rem 2.5rem 3rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ── Form ─────────────────────────────────────────── */
+.age-form {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 4px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.age-input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 130px;
+}
+
+.form-field label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.2px;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  -webkit-appearance: none;
+}
+
+.form-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='rgba(255,255,255,0.3)' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.form-field select option {
+  background: #1c1b1a;
+  color: var(--white);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  border-color: var(--orange);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 0 3px rgba(255, 157, 47, 0.09);
+  outline: none;
+}
+
+.form-field input::placeholder {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+/* ── Validation error ─────────────────────────────── */
+.field-error {
+  font-size: 0.75rem;
+  color: #ff6b4a;
+  margin-top: 0.2rem;
+}
+
+/* ── Result ───────────────────────────────────────── */
+.age-result {
+  margin-bottom: 2rem;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.age-result-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+}
+
+.age-result-card--human {
+  background: rgba(255, 157, 47, 0.07);
+  border-color: rgba(255, 157, 47, 0.2);
+}
+
+.age-result-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 0.6rem;
+}
+
+.age-result-card--human .age-result-label {
+  color: rgba(255, 157, 47, 0.65);
+}
+
+.age-result-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.2;
+}
+
+.age-result-value--text {
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+
+.age-result-card--human .age-result-value {
+  color: #ffb044;
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.age-result-number-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.age-result-unit {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 650px) {
+  .age-content {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .age-form {
+    padding: 1.25rem;
+  }
+
+  .age-input-row {
+    flex-direction: column;
+  }
+
+  .form-field {
+    min-width: unset;
+  }
+
+  .calculator h1 {
+    font-size: 1.45rem;
+  }
+
+  .calc-hero {
+    padding: 2rem 1rem 1.75rem;
+  }
+
+  .result-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .age-result-card--human .age-result-value {
+    font-size: 2.8rem;
+  }
+}

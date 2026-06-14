@@ -3,6 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {FoodCalculatorComponent} from './features/calculator/food-calculator.component';
+import {AgeCalculatorComponent} from './features/calculator/age-calculator/age-calculator.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {OrganizationsComponent} from './features/organizations/organizations.component';
 import {BlogComponent} from './features/blog/blog.component';
@@ -21,6 +22,7 @@ import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds
   declarations: [
     AppComponent,
     FoodCalculatorComponent,
+    AgeCalculatorComponent,
     BlogComponent,
     OrganizationsComponent,
     PrintResultComponent,

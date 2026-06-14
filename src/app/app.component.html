@@ -8,9 +8,25 @@
       </div>
     </a>
     <nav>
-      <a routerLink="/kalkulator" routerLinkActive="active" class="nav-link">
-        <span class="nav-text">Kalkulator</span>
-      </a>
+      <div class="nav-dropdown"
+           (mouseenter)="openCalcMenu()"
+           (mouseleave)="closeCalcMenu()">
+        <button class="nav-link nav-dropdown-trigger"
+                [class.active]="isCalcActive()"
+                (click)="calcMenuOpen=!calcMenuOpen">
+          <span class="nav-text">Kalkulator</span>
+          <span class="dropdown-caret" [class.open]="calcMenuOpen">▾</span>
+        </button>
+        <div class="nav-dropdown-menu" [class.visible]="calcMenuOpen"
+             (mouseenter)="openCalcMenu()"
+             (mouseleave)="closeCalcMenu()">
+          <a routerLink="/kalkulator" [routerLinkActiveOptions]="{exact:true}"
+             routerLinkActive="active" class="nav-dropdown-item"
+             (click)="calcMenuOpen=false">Zapotrzebowanie na karmę</a>
+          <a routerLink="/kalkulator/wiek" routerLinkActive="active"
+             class="nav-dropdown-item" (click)="calcMenuOpen=false">Wiek</a>
+        </div>
+      </div>
       <a routerLink="/blog" routerLinkActive="active" class="nav-link">
         <span class="nav-text">Do poczytania</span>
       </a>
@@ -27,6 +43,8 @@
 <footer>
   <div class="footer-links">
     <a routerLink="/kalkulator" class="footer-link">Kalkulator kalorii</a>
+    <span class="footer-dot"></span>
+    <a routerLink="/kalkulator/wiek" class="footer-link">Kalkulator wieku</a>
     <span class="footer-dot"></span>
     <a routerLink="/blog" class="footer-link">{{ articleCount }} artykułów</a>
     <span class="footer-dot"></span>
