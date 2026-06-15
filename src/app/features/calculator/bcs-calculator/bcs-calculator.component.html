@@ -1,0 +1,122 @@
+<div class="calculator">
+  <div class="calc-hero">
+    <div class="calc-hero-icon">⚖️</div>
+    <h1>Kalkulator kondycji kota (BCS)</h1>
+    <p class="calc-hero-sub">Oceń wagę swojego kota i oblicz jego idealną masę ciała</p>
+  </div>
+
+  <div class="bcs-content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="bcs-form">
+
+      <!-- Weight -->
+      <div class="form-section-card">
+        <div class="form-section-label">Waga kota <span class="field-unit">kg</span></div>
+        <div class="form-field">
+          <input
+            id="weight"
+            formControlName="weight"
+            type="number"
+            step="0.1"
+            placeholder="np. 5.0"
+            autocomplete="off">
+        </div>
+        <span class="field-error" *ngIf="form.get('weight')?.touched && form.get('weight')?.errors?.['required']">
+          Podaj wagę kota
+        </span>
+        <span class="field-error" *ngIf="form.get('weight')?.touched && form.get('weight')?.errors?.['min']">
+          Waga musi być większa niż 0
+        </span>
+      </div>
+
+      <!-- BCS selector -->
+      <div class="form-section-card">
+        <div class="form-section-label">Kondycja ciała (BCS 1–9)</div>
+        <div class="bcs-buttons">
+          <button
+            *ngFor="let v of bcsValues"
+            type="button"
+            class="bcs-btn"
+            [class.selected]="form.get('bcs')?.value === v"
+            [class.bcs-danger]="(v <= 2 || v >= 8) && form.get('bcs')?.value === v"
+            [class.bcs-warning]="(v === 3 || v === 7) && form.get('bcs')?.value === v"
+            [class.bcs-ideal]="v === 5 && form.get('bcs')?.value === v"
+            (click)="setBcs(v)">
+            {{ v }}
+          </button>
+        </div>
+        <div class="bcs-preview" *ngIf="form.get('bcs')?.value">
+          <span class="bcs-preview-score">{{ form.get('bcs')?.value }}/9</span>
+          <span class="bcs-preview-label">{{ currentBcsInfo()?.label }}</span>
+        </div>
+        <span class="field-error" *ngIf="form.get('bcs')?.touched && form.get('bcs')?.errors?.['required']">
+          Wybierz wskaźnik kondycji
+        </span>
+
+        <div class="bcs-accordion">
+          <div class="bcs-acc-item" *ngFor="let v of bcsValues">
+            <button
+              type="button"
+              class="bcs-acc-trigger"
+              [class.acc-danger]="v <= 2 || v >= 8"
+              [class.acc-warning]="v === 3 || v === 7"
+              [class.acc-ok]="v === 4 || v === 6"
+              [class.acc-ideal]="v === 5"
+              (click)="toggleBcsDetail(v)">
+              <span class="bcs-acc-badge">{{ v }}</span>
+              <span class="bcs-acc-name">{{ infoFor(v).label }}</span>
+              <svg class="bcs-acc-chevron" [class.open]="isBcsExpanded(v)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="bcs-acc-body" *ngIf="isBcsExpanded(v)">
+              <ul class="bcs-detail-list">
+                <li *ngFor="let d of infoFor(v).details">{{ d }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" [disabled]="form.invalid">Oblicz idealną wagę</button>
+    </form>
+
+    <!-- Results -->
+    <div *ngIf="result !== null" class="age-result">
+
+      <!-- Urgent vet warning -->
+      <div *ngIf="result.info.urgentVet" class="vet-warning">
+        <span class="vet-warning-icon">⚠️</span>
+        <span>Zalecana pilna konsultacja z weterynarzem</span>
+      </div>
+
+      <!-- Cards -->
+      <div class="result-cards">
+        <div class="age-result-card">
+          <span class="age-result-label">Aktualna waga</span>
+          <div class="age-result-number-row">
+            <span class="age-result-value">{{ result.currentWeightKg }}</span>
+            <span class="age-result-unit">kg</span>
+          </div>
+          <span class="result-card-sub">BCS {{ result.bcs }}/9 · {{ result.info.label }}</span>
+        </div>
+        <div class="age-result-card age-result-card--human">
+          <span class="age-result-label">Idealna waga</span>
+          <div class="age-result-number-row">
+            <span class="age-result-value">{{ result.idealWeightKg }}</span>
+            <span class="age-result-unit">kg</span>
+          </div>
+          <span class="result-card-sub">{{ weightActionLabel }}</span>
+        </div>
+      </div>
+
+      <!-- Interpretation -->
+      <div class="bcs-interpretation">
+        <p>{{ result.info.interpretation }}</p>
+        <p class="bcs-disclaimer">
+          Wynik ma charakter szacunkowy. Rasa, wiek, masa mięśniowa i ewentualne schorzenia mogą wpływać na idealną wagę. Skonsultuj się z weterynarzem w celu dokładnej oceny.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>

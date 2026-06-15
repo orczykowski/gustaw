@@ -95,8 +95,19 @@ export class FoodCalculatorComponent implements OnInit {
   ngOnInit(): void {
     this.reset();
     this.seo.update({
-      title: 'Kalkulator Karmienia Kota – Kalorie i Porcje',
-      description: 'Oblicz dzienne zapotrzebowanie kaloryczne i porcje jedzenia dla swojego kota. Szybki kalkulator uwzględniający wagę, wiek i tryb życia.',
+      title: 'Kalkulator karmy dla kota – kalorie i porcje',
+      description: 'Oblicz dzienne zapotrzebowanie kaloryczne kota i porcje karmy. Uwzględnia wagę, wiek, płeć, sterylizację i tryb życia.',
+    });
+    this.seo.setJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      'name': 'Kalkulator karmy dla kota',
+      'applicationCategory': 'HealthApplication',
+      'operatingSystem': 'Web',
+      'url': 'https://gorczykowski.github.io/gustaw/kalkulator/karma',
+      'description': 'Oblicz dzienne zapotrzebowanie kaloryczne kota i porcje karmy. Uwzględnia wagę, wiek, płeć, sterylizację i tryb życia.',
+      'inLanguage': 'pl',
+      'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'PLN' },
     });
   }
 

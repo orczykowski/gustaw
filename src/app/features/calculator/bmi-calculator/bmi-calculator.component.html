@@ -1,0 +1,222 @@
+<div class="calculator">
+  <div class="calc-hero">
+    <div class="calc-hero-icon">📏</div>
+    <h1>Kalkulator BMI kota</h1>
+    <p class="calc-hero-sub">Szacunkowa ocena masy ciała kota na podstawie wagi i długości tułowia</p>
+  </div>
+
+  <div class="bmi-content">
+
+    <!-- Measurement guide (expandable) -->
+    <div class="measure-accordion" [class.open]="measureGuideOpen">
+      <button class="measure-accordion-trigger" type="button" (click)="measureGuideOpen = !measureGuideOpen" [attr.aria-expanded]="measureGuideOpen">
+        <span class="measure-accordion-icon">📐</span>
+        <span class="measure-accordion-title">Jak prawidłowo zmierzyć długość kota?</span>
+        <span class="measure-accordion-caret" [class.open]="measureGuideOpen">▾</span>
+      </button>
+
+      <div class="measure-accordion-body">
+        <!-- Measurement diagram photo -->
+        <div class="measure-guide-diagram">
+          <img src="assets/cat_lenght.png" alt="Schemat pomiaru długości kota od czubka nosa do nasady ogona" loading="lazy">
+        </div>
+
+        <div class="measure-guide-steps">
+          <div class="measure-step">
+            <span class="measure-step-num">1</span>
+            <div>
+              <strong>Ustaw kota w naturalnej pozycji stojącej</strong>
+              <p>Kot powinien stać na wszystkich czterech łapach na płaskim podłożu. Głowa ustawiona naturalnie — nie unoszona ani opuszczona. Grzbiet nie powinien być wygięty ani zaokrąglony.</p>
+            </div>
+          </div>
+          <div class="measure-step">
+            <span class="measure-step-num">2</span>
+            <div>
+              <strong>Zlokalizuj punkt początkowy</strong>
+              <p>Punktem początkowym jest <strong>czubek nosa</strong> — najbardziej wysunięta część pyska.</p>
+            </div>
+          </div>
+          <div class="measure-step">
+            <span class="measure-step-num">3</span>
+            <div>
+              <strong>Zlokalizuj punkt końcowy</strong>
+              <p>Punktem końcowym jest <strong>nasada ogona</strong> — miejsce, w którym ogon łączy się z tułowiem. Nie uwzględniaj długości ogona.</p>
+            </div>
+          </div>
+          <div class="measure-step">
+            <span class="measure-step-num">4</span>
+            <div>
+              <strong>Zmierz odległość w linii prostej</strong>
+              <p>Przyłóż miękką miarkę krawiecką od czubka nosa do nasady ogona, równolegle do grzbietu. Nie prowadź pomiaru po łuku ani przez futro.</p>
+            </div>
+          </div>
+          <div class="measure-step">
+            <span class="measure-step-num">5</span>
+            <div>
+              <strong>Odczytaj wynik w centymetrach</strong>
+              <p>Zapisz wartość z dokładnością do 0,5–1 cm. Jeśli kot się porusza, wykonaj pomiar 2–3 razy i oblicz średnią.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="measure-rules">
+          <div class="measure-rules-col measure-rules-do">
+            <div class="measure-rules-header">Ważne zasady</div>
+            <ul>
+              <li>Mierz od czubka nosa do nasady ogona</li>
+              <li>Kot powinien stać swobodnie i prosto</li>
+              <li>Używaj miękkiej miarki lub taśmy krawieckiej</li>
+              <li>Najlepiej poprosić drugą osobę o przytrzymanie kota</li>
+            </ul>
+          </div>
+          <div class="measure-rules-col measure-rules-dont">
+            <div class="measure-rules-header">Czego nie robić</div>
+            <ul>
+              <li>Nie mierz razem z ogonem</li>
+              <li>Nie zaczynaj od czoła, oczu ani szyi</li>
+              <li>Nie wykonuj pomiaru gdy kot siedzi lub jest zwinięty</li>
+              <li>Nie prowadź miarki po zakrzywionym grzbiecie</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="age-form">
+      <div class="age-input-row">
+        <div class="form-field">
+          <label for="weight">Waga kota <span class="field-unit">kg</span></label>
+          <input
+            id="weight"
+            formControlName="weight"
+            type="number"
+            step="0.1"
+            min="0.1"
+            max="30"
+            placeholder="np. 5.0"
+            autocomplete="off">
+          <span class="field-error" *ngIf="form.get('weight')?.touched && form.get('weight')?.errors?.['required']">
+            Podaj wagę kota
+          </span>
+          <span class="field-error" *ngIf="form.get('weight')?.touched && form.get('weight')?.errors?.['min']">
+            Waga musi być większa niż 0
+          </span>
+        </div>
+
+        <div class="form-field">
+          <label for="length">Długość ciała <span class="field-unit">cm</span></label>
+          <input
+            id="length"
+            formControlName="length"
+            type="number"
+            step="1"
+            min="10"
+            max="150"
+            placeholder="np. 50"
+            autocomplete="off">
+          <span class="field-error" *ngIf="form.get('length')?.touched && form.get('length')?.errors?.['required']">
+            Podaj długość ciała
+          </span>
+          <span class="field-error" *ngIf="form.get('length')?.touched && form.get('length')?.errors?.['min']">
+            Długość musi być co najmniej 10 cm
+          </span>
+        </div>
+
+        <button type="submit" class="btn-primary" [disabled]="form.invalid">Oblicz BMI</button>
+      </div>
+    </form>
+
+    <!-- Results -->
+    <div *ngIf="result !== null" class="age-result">
+
+      <div *ngIf="result.urgentVet" class="vet-warning">
+        <span class="vet-warning-icon">⚠️</span>
+        <span>Wynik wskazuje na poważny problem z masą ciała — zalecana konsultacja weterynaryjna</span>
+      </div>
+
+      <!-- Summary cards -->
+      <div class="result-cards">
+        <div class="age-result-card">
+          <span class="age-result-label">Waga</span>
+          <div class="age-result-number-row">
+            <span class="age-result-value">{{ result.weightKg }}</span>
+            <span class="age-result-unit">kg</span>
+          </div>
+          <span class="result-card-sub">Długość: {{ result.lengthCm }} cm</span>
+        </div>
+        <div class="age-result-card age-result-card--bmi" [ngClass]="'bmi-' + result.category">
+          <span class="age-result-label">Feline BMI</span>
+          <div class="age-result-number-row">
+            <span class="age-result-value">{{ result.fBmi }}</span>
+          </div>
+          <span class="result-card-sub">{{ result.label }}</span>
+        </div>
+      </div>
+
+      <!-- Visual scale -->
+      <div class="bmi-scale">
+        <div class="bmi-scale-track">
+          <div class="bmi-scale-zone zone-suw">Poważne<br>niedożywienie</div>
+          <div class="bmi-scale-zone zone-uw">Niedowaga</div>
+          <div class="bmi-scale-zone zone-ideal">Idealna</div>
+          <div class="bmi-scale-zone zone-ow">Nadwaga</div>
+          <div class="bmi-scale-zone zone-ob">Otyłość</div>
+          <div class="bmi-scale-marker" [style.left.%]="result.barPosition">
+            <div class="bmi-scale-marker-pin"></div>
+            <div class="bmi-scale-marker-label">{{ result.fBmi }}</div>
+          </div>
+        </div>
+        <div class="bmi-scale-values">
+          <span>0</span><span>13</span><span>15</span><span>25</span><span>30</span><span>40+</span>
+        </div>
+      </div>
+
+      <!-- Interpretation -->
+      <div class="bcs-interpretation">
+        <p>{{ result.interpretation }}</p>
+        <p class="bcs-disclaimer">
+          Wynik ma charakter szacunkowy i opiera się wyłącznie na masie ciała i długości tułowia.
+          Rasa, wiek, masa mięśniowa i budowa ciała mogą znacząco wpływać na ocenę kondycji.
+        </p>
+      </div>
+    </div>
+
+    <!-- BCS notice -->
+    <div class="bcs-notice">
+      <div class="bcs-notice-icon">🩺</div>
+      <div>
+        <strong>Czym różni się BMI od BCS?</strong>
+        <p>Weterynarze używają przede wszystkim skali BCS (Body Condition Score), która ocenia rozkład tkanki tłuszczowej przez palpację żeber, oceną talii, podciągnięcia brzucha i złogów tłuszczu. BCS jest dokładniejszą metodą niż samo BMI, ponieważ uwzględnia budowę ciała konkretnego kota. Skorzystaj z naszego <a routerLink="/kalkulator/kondycja" class="bcs-notice-link">kalkulatora BCS</a>, aby uzyskać pełniejszy obraz kondycji kota.</p>
+      </div>
+    </div>
+
+    <!-- Educational section -->
+    <div class="edu-section">
+      <h2>Co warto wiedzieć o BMI kota?</h2>
+      <div class="edu-cards">
+        <div class="edu-card">
+          <div class="edu-card-icon">📐</div>
+          <h3>BMI to szacunek</h3>
+          <p>Wskaźnik BMI jest obliczany matematycznie na podstawie wagi i długości ciała. Nie rozróżnia masy mięśniowej od tkanki tłuszczowej — dwa koty o tej samej wadze mogą mieć zupełnie inną kondycję.</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-card-icon">🐈</div>
+          <h3>Rasa i budowa ciała</h3>
+          <p>Koty długonogie i smukłe (np. orientale, syjamskie) mogą mieć naturalnie niższe BMI. Koty o zwartej, mięśnistej budowie (np. maine coon, british shorthair) — wyższe. Zawsze porównuj wynik z oceną weterynarza.</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-card-icon">⚠️</div>
+          <h3>Kiedy do weterynarza?</h3>
+          <p>Skonsultuj się z weterynarzem, gdy wynik wskazuje na poważne niedożywienie lub otyłość, kot szybko traci lub przybiera na wadze, zmienia się apetyt, pojawia się wzmożone pragnienie lub letarg.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer-box">
+      Ten kalkulator dostarcza wyłącznie przybliżonego szacunku na podstawie pomiarów ciała. Rzeczywista kondycja kota zależy od rasy, wieku, masy mięśniowej i ogólnego stanu zdrowia. Dla najbardziej dokładnej oceny połącz wynik BMI z badaniem BCS przeprowadzonym przez weterynarza.
+    </div>
+
+  </div>
+</div>

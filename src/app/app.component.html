@@ -20,13 +20,18 @@
         <div class="nav-dropdown-menu" [class.visible]="calcMenuOpen"
              (mouseenter)="openCalcMenu()"
              (mouseleave)="closeCalcMenu()">
-          <a routerLink="/kalkulator" [routerLinkActiveOptions]="{exact:true}"
-             routerLinkActive="active" class="nav-dropdown-item"
+          <a routerLink="/kalkulator/karma" routerLinkActive="active" class="nav-dropdown-item"
              (click)="calcMenuOpen=false">Zapotrzebowanie na karmę</a>
+          <a routerLink="/kalkulator/woda" routerLinkActive="active"
+             class="nav-dropdown-item" (click)="calcMenuOpen=false">Zapotrzebowanie na wodę</a>
+          <a routerLink="/kalkulator/bmi" routerLinkActive="active"
+             class="nav-dropdown-item" (click)="calcMenuOpen=false">BMI</a>
+          <a routerLink="/kalkulator/kondycja" routerLinkActive="active"
+          class="nav-dropdown-item" (click)="calcMenuOpen=false">Kondycja BCS</a>
           <a routerLink="/kalkulator/wiek" routerLinkActive="active"
-             class="nav-dropdown-item" (click)="calcMenuOpen=false">Wiek</a>
+          class="nav-dropdown-item" (click)="calcMenuOpen=false">Wiek</a>
         </div>
-      </div>
+        </div>
       <a routerLink="/blog" routerLinkActive="active" class="nav-link">
         <span class="nav-text">Do poczytania</span>
       </a>
@@ -42,9 +47,15 @@
 </div>
 <footer>
   <div class="footer-links">
-    <a routerLink="/kalkulator" class="footer-link">Kalkulator kalorii</a>
+    <a routerLink="/kalkulator/karma" class="footer-link">Kalkulator kalorii</a>
     <span class="footer-dot"></span>
     <a routerLink="/kalkulator/wiek" class="footer-link">Kalkulator wieku</a>
+    <span class="footer-dot"></span>
+    <a routerLink="/kalkulator/kondycja" class="footer-link">Kondycja BCS</a>
+    <span class="footer-dot"></span>
+    <a routerLink="/kalkulator/woda" class="footer-link">Nawodnienie</a>
+    <span class="footer-dot"></span>
+    <a routerLink="/kalkulator/bmi" class="footer-link">BMI kota</a>
     <span class="footer-dot"></span>
     <a routerLink="/blog" class="footer-link">{{ articleCount }} artykułów</a>
     <span class="footer-dot"></span>

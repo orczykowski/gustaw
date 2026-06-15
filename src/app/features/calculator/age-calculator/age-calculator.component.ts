@@ -38,6 +38,17 @@ export class AgeCalculatorComponent implements OnInit {
       title: 'Kalkulator wieku kota',
       description: 'Przelicz wiek swojego kota na ludzkie lata. Podaj datę urodzin kota i sprawdź, ile lat miałby, gdyby był człowiekiem.'
     });
+    this.seo.setJsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      'name': 'Kalkulator wieku kota',
+      'applicationCategory': 'HealthApplication',
+      'operatingSystem': 'Web',
+      'url': 'https://gorczykowski.github.io/gustaw/kalkulator/wiek',
+      'description': 'Przelicz wiek swojego kota na ludzkie lata. Podaj datę urodzin kota i sprawdź, ile lat miałby, gdyby był człowiekiem.',
+      'inLanguage': 'pl',
+      'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'PLN' },
+    });
   }
 
   onSubmit(): void {

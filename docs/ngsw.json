@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1781476376441,
+  "timestamp": 1781506253195,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,15 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "/_5206.js",
+        "/809.d16e137526d8cf20.js",
         "/favicon.ico",
         "/index.html",
-        "/main.js",
+        "/main.83eafb68fd6a942d.js",
         "/manifest.webmanifest",
-        "/polyfills.js",
-        "/runtime.js",
-        "/styles.css",
-        "/vendor.js"
+        "/polyfills.fab0c50b02453ee9.js",
+        "/runtime.fd7cb7272a00206d.js",
+        "/styles.dab0daf60af87853.css"
       ],
       "patterns": []
     },
@@ -31,7 +30,7 @@
         "ignoreVary": true
       },
       "urls": [
-        "/TheBredan.woff",
+        "/TheBredan.417985b36ae59aff.woff",
         "/assets/2.jpeg",
         "/assets/3.jpeg",
         "/assets/4.jpeg",
@@ -53,15 +52,15 @@
         "/assets/organizations/logos/poznan.svg",
         "/assets/organizations/logos/promyk.jpg",
         "/assets/organizations/logos/rasowykundel.jpeg",
-        "/bg.jpg"
+        "/bg.e54c60e8b17ab68c.jpg"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/TheBredan.woff": "00eb9bb9ed3d60453cd82b732ffcdc8c50303e33",
-    "/_5206.js": "a85566c305e310d4d77dbb6ea910588da5fe1025",
+    "/809.d16e137526d8cf20.js": "c437cb886c84c4d346690175e0d912ec0be70c59",
+    "/TheBredan.417985b36ae59aff.woff": "00eb9bb9ed3d60453cd82b732ffcdc8c50303e33",
     "/assets/2.jpeg": "77d2ce01800d8c5f78a22c885808b9349c1b3175",
     "/assets/3.jpeg": "e77ff66d9eb2d6193c8a2b66f8442cf1b6621b3d",
     "/assets/4.jpeg": "9d9b50d3c481a917ed65ac1c1f49097f11b87a82",
@@ -83,15 +82,14 @@
     "/assets/organizations/logos/poznan.svg": "3f85f8f1500093cfb7436e551dce6ff35860ce46",
     "/assets/organizations/logos/promyk.jpg": "e4acf483df6125e87ba34a9de9ed9c17fefe93b9",
     "/assets/organizations/logos/rasowykundel.jpeg": "b735a5c3c5f4ccc10b88e9bdc2adcf2acde065a0",
-    "/bg.jpg": "0fccdae2f1fad7f21a9b725efe070d20b58185b7",
+    "/bg.e54c60e8b17ab68c.jpg": "0fccdae2f1fad7f21a9b725efe070d20b58185b7",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "b8f4332031a08e445b9795259186bf2769a30eb1",
-    "/main.js": "fdfb02423c5e5e5071295687a35777fae21d55f3",
+    "/index.html": "d49558046305f44404a908288c9db2230c2f2716",
+    "/main.83eafb68fd6a942d.js": "1af192f3cd2e44debc5a9d8aac30191a3cf03ddb",
     "/manifest.webmanifest": "b31af9bb91434a96990f2a32deca8f85d0885439",
-    "/polyfills.js": "ee163a8e1f0e62812df69dc456b3c52da0fafba9",
-    "/runtime.js": "62b825225f585b10d11b8be375d98919d23afe1d",
-    "/styles.css": "d312c0bfe96f3bafb3ddc97d78d6ecbe9b24c0eb",
-    "/vendor.js": "bc0cbf2d27f15520b8682f98212575b60c7c0365"
+    "/polyfills.fab0c50b02453ee9.js": "b417e83b54119b8b54a49c61d1ab2cb6e3e55995",
+    "/runtime.fd7cb7272a00206d.js": "273a4e124a38d3eef386731683e880860ab3f85b",
+    "/styles.dab0daf60af87853.css": "656a5df7ba1ff44ee380c84d311215128389495e"
   },
   "navigationUrls": [
     {
