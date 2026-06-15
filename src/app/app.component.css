@@ -140,6 +140,7 @@ header nav {
   overflow: hidden;
 }
 
+.nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown-menu.visible {
   opacity: 1;
   pointer-events: auto;

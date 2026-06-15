@@ -8,18 +8,14 @@
       </div>
     </a>
     <nav>
-      <div class="nav-dropdown"
-           (mouseenter)="openCalcMenu()"
-           (mouseleave)="closeCalcMenu()">
+      <div class="nav-dropdown">
         <button class="nav-link nav-dropdown-trigger"
                 [class.active]="isCalcActive()"
                 (click)="calcMenuOpen=!calcMenuOpen">
           <span class="nav-text">Kalkulator</span>
           <span class="dropdown-caret" [class.open]="calcMenuOpen">▾</span>
         </button>
-        <div class="nav-dropdown-menu" [class.visible]="calcMenuOpen"
-             (mouseenter)="openCalcMenu()"
-             (mouseleave)="closeCalcMenu()">
+        <div class="nav-dropdown-menu" [class.visible]="calcMenuOpen">
           <a routerLink="/kalkulator/karma" routerLinkActive="active" class="nav-dropdown-item"
              (click)="calcMenuOpen=false">Zapotrzebowanie na karmę</a>
           <a routerLink="/kalkulator/woda" routerLinkActive="active"
