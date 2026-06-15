@@ -20,6 +20,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { CatAtHomePositivesComponent } from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
 import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds.component';
 import {BmiCalculatorComponent} from './features/calculator/bmi-calculator/bmi-calculator.component';
+import {CalculatorsListComponent} from './features/calculator/calculators-list/calculators-list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {BmiCalculatorComponent} from './features/calculator/bmi-calculator/bmi-c
     BcsCalculatorComponent,
     WaterCalculatorComponent,
     BmiCalculatorComponent,
+    CalculatorsListComponent,
     BlogComponent,
     OrganizationsComponent,
     PrintResultComponent,

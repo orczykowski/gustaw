@@ -1,40 +1,26 @@
 <header>
   <div class="header-container">
     <a routerLink="/" id="logo">
-      <img src="assets/logo.png" alt="logo">
+      <img src="assets/logo.png" alt="Gustaw – portal o kotach" fetchpriority="high" loading="eager">
       <div class="logo-text">
-        <h1>Gustaw</h1>
-        <h2>kocie rzeczy</h2>
+        <span class="logo-name">Gustaw</span>
+        <span class="logo-tagline">kocie rzeczy</span>
       </div>
     </a>
     <nav>
       <div class="nav-dropdown">
-        <button class="nav-link nav-dropdown-trigger"
-                [class.active]="isCalcActive()"
-                (click)="calcMenuOpen=!calcMenuOpen">
-          <span class="nav-text">Kalkulator</span>
-          <span class="dropdown-caret" [class.open]="calcMenuOpen">▾</span>
-        </button>
-        <div class="nav-dropdown-menu" [class.visible]="calcMenuOpen">
-          <a routerLink="/kalkulator/karma" routerLinkActive="active" class="nav-dropdown-item"
-             (click)="calcMenuOpen=false">Zapotrzebowanie na karmę</a>
-          <a routerLink="/kalkulator/woda" routerLinkActive="active"
-             class="nav-dropdown-item" (click)="calcMenuOpen=false">Zapotrzebowanie na wodę</a>
-          <a routerLink="/kalkulator/bmi" routerLinkActive="active"
-             class="nav-dropdown-item" (click)="calcMenuOpen=false">BMI</a>
-          <a routerLink="/kalkulator/kondycja" routerLinkActive="active"
-          class="nav-dropdown-item" (click)="calcMenuOpen=false">Kondycja BCS</a>
-          <a routerLink="/kalkulator/wiek" routerLinkActive="active"
-          class="nav-dropdown-item" (click)="calcMenuOpen=false">Wiek</a>
+        <a routerLink="/kalkulatory" routerLinkActive="active"
+           class="nav-link nav-dropdown-label" [class.active]="isCalcActive()">Kalkulatory</a>
+        <div class="nav-dropdown-menu">
+          <a routerLink="/kalkulator/karma" routerLinkActive="active" class="nav-dropdown-item">Zapotrzebowanie na karmę</a>
+          <a routerLink="/kalkulator/woda" routerLinkActive="active" class="nav-dropdown-item">Zapotrzebowanie na wodę</a>
+          <a routerLink="/kalkulator/bmi" routerLinkActive="active" class="nav-dropdown-item">BMI</a>
+          <a routerLink="/kalkulator/kondycja" routerLinkActive="active" class="nav-dropdown-item">Kondycja BCS</a>
+          <a routerLink="/kalkulator/wiek" routerLinkActive="active" class="nav-dropdown-item">Wiek</a>
         </div>
-        </div>
-      <a routerLink="/blog" routerLinkActive="active" class="nav-link">
-        <span class="nav-text">Do poczytania</span>
-      </a>
-      <a routerLink="/warto-wspierac" routerLinkActive="active" class="nav-link">
-        <span class="nav-icon">❤️</span>
-        <span class="nav-text">Warto wspierać</span>
-      </a>
+      </div>
+      <a routerLink="/blog" routerLinkActive="active" class="nav-link">Do poczytania</a>
+      <a routerLink="/warto-wspierac" routerLinkActive="active" class="nav-link">Warto wspierać</a>
     </nav>
   </div>
 </header>
@@ -57,5 +43,5 @@
     <span class="footer-dot"></span>
     <a routerLink="/warto-wspierac" class="footer-link">Warto wspierać</a>
   </div>
-  <span class="copyright">© Gustaw · kocie rzeczy</span>
+  <span class="copyright">© 2021–2026 Gustaw · kocie rzeczy</span>
 </footer>

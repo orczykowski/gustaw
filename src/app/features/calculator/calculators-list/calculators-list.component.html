@@ -1,0 +1,31 @@
+<div class="calculator">
+  <div class="calc-hero">
+    <div class="calc-hero-bg">
+      <img src="assets/calculator_banner.webp" alt="" aria-hidden="true">
+      <div class="calc-hero-overlay"></div>
+    </div>
+    <div class="calc-hero-content">
+      <h1>Kalkulatory</h1>
+      <p class="calc-hero-sub">Oblicz kalorie, porcje karmy, nawodnienie i wiek kota w ludzkich latach — wszystko w jednym miejscu.</p>
+    </div>
+  </div>
+
+  <div class="list-content">
+    <div class="calc-list">
+      <a *ngFor="let calc of calculators; let i = index"
+         [routerLink]="calc.route"
+         class="calc-entry"
+         [style.animation-delay.ms]="i * 60">
+        <div class="calc-entry-num">{{ i + 1 }}</div>
+        <div class="calc-entry-body">
+          <div class="calc-entry-header">
+            <span class="calc-entry-name">{{ calc.name }}</span>
+            <span class="calc-entry-tag">{{ calc.description }}</span>
+          </div>
+          <p class="calc-entry-detail">{{ calc.detail }}</p>
+        </div>
+        <span class="calc-entry-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>

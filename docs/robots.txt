@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://gorczykowski.github.io/gustaw/sitemap.xml

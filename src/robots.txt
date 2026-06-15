@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gorczykowski.github.io/gustaw/sitemap.xml
+Sitemap: https://orczykowski.github.io/gustaw/sitemap.xml

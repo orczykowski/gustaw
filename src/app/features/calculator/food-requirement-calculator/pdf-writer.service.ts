@@ -2,8 +2,6 @@ import {Injectable, Input} from '@angular/core';
 import {FoodRequirementReport} from './food-requirement-report';
 import {DatePipe} from '@angular/common';
 import {BodyStructure, Cat, ReproductiveCycleFaze, Sex} from './cat-calculation-parameters';
-import * as pdfMake from 'pdfmake/build/pdfmake';
-import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
 @Injectable({
   providedIn: 'root'
@@ -12,14 +10,19 @@ export class PdfWriterService {
 
   private readonly DATE_PIPE: DatePipe = new DatePipe('en-US');
   private readonly NO_DATA_LABEL = 'brak danych';
+  private pdfMake: any = null;
 
   @Input() pdf: any;
 
-  constructor() {
-    (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
-  }
-
-  write = (report: FoodRequirementReport) => {
+  write = async (report: FoodRequirementReport) => {
+    if (!this.pdfMake) {
+      const [pdfMakeModule, pdfFontsModule] = await Promise.all([
+        import('pdfmake/build/pdfmake'),
+        import('pdfmake/build/vfs_fonts'),
+      ]);
+      this.pdfMake = pdfMakeModule;
+      (this.pdfMake as any).vfs = (pdfFontsModule as any).pdfMake.vfs;
+    }
     const date = this.DATE_PIPE.transform(new Date(), 'dd-MM-YYYY');
     const pdf: any = {
       layout: 'lightHorizontalLines',
@@ -52,7 +55,7 @@ export class PdfWriterService {
 
     };
 
-    pdfMake.createPdf(pdf).download(this.fileName(report.cat, date));
+    this.pdfMake.createPdf(pdf).download(this.fileName(report.cat, date));
   }
 
   private foodRequirementInfo(report: FoodRequirementReport): any {

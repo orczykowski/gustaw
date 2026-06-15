@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AbstractControl, UntypedFormControl, UntypedFormGroup, ValidationErrors, Validators} from '@angular/forms';
 import {AGE_UNIT, AgeCalculatorService} from './age-calculator.service';
-import {SeoService} from '../../../core/seo.service';
 
 export interface CatAgeResult {
   years: number;
@@ -22,7 +21,7 @@ function notInFuture(control: AbstractControl): ValidationErrors | null {
   styleUrls: ['./age-calculator.component.css'],
   standalone: false
 })
-export class AgeCalculatorComponent implements OnInit {
+export class AgeCalculatorComponent {
   catAgeResult: CatAgeResult | null = null;
   humanAge: number | null = null;
   readonly todayStr = new Date().toISOString().split('T')[0];
@@ -31,25 +30,7 @@ export class AgeCalculatorComponent implements OnInit {
     birthDate: new UntypedFormControl(null, [Validators.required, notInFuture])
   });
 
-  constructor(private ageCalculator: AgeCalculatorService, private seo: SeoService) {}
-
-  ngOnInit(): void {
-    this.seo.update({
-      title: 'Kalkulator wieku kota',
-      description: 'Przelicz wiek swojego kota na ludzkie lata. Podaj datę urodzin kota i sprawdź, ile lat miałby, gdyby był człowiekiem.'
-    });
-    this.seo.setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      'name': 'Kalkulator wieku kota',
-      'applicationCategory': 'HealthApplication',
-      'operatingSystem': 'Web',
-      'url': 'https://gorczykowski.github.io/gustaw/kalkulator/wiek',
-      'description': 'Przelicz wiek swojego kota na ludzkie lata. Podaj datę urodzin kota i sprawdź, ile lat miałby, gdyby był człowiekiem.',
-      'inLanguage': 'pl',
-      'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'PLN' },
-    });
-  }
+  constructor(private ageCalculator: AgeCalculatorService) {}
 
   onSubmit(): void {
     if (this.form.invalid) return;

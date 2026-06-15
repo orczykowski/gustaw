@@ -1,0 +1,13 @@
+/
+/kalkulatory
+/kalkulator/karma
+/kalkulator/wiek
+/kalkulator/kondycja
+/kalkulator/woda
+/kalkulator/bmi
+/warto-wspierac
+/blog
+/blog/kocie-terytorium
+/blog/dieta
+/blog/kot-idealny-wspolokator
+/blog/dlaczego-koty-mrucza

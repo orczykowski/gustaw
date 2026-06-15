@@ -1,176 +1,157 @@
-.gustaw-article-link {
+.article-card {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   text-decoration: none;
-  margin: 0 auto 1rem;
-  padding: 1.25rem 1.5rem;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-left: 3px solid transparent;
-  color: var(--yellow);
-  transition: all 0.25s ease;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  animation: cardIn 0.5s ease-out backwards;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.article-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 157, 47, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 157, 47, 0.08);
+}
+
+/* Image panel */
+.article-card-img {
+  flex: 0 0 220px;
   position: relative;
   overflow: hidden;
 }
 
-.gustaw-article-link img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 3px;
-  margin-right: 1.5rem;
-  filter: grayscale(1);
-  transition: all 0.3s ease;
-  flex-shrink: 0;
+.article-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 55%, rgba(18, 17, 16, 0.88) 100%);
+  pointer-events: none;
 }
 
-.gustaw-article-link div {
+.article-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.65) saturate(0.4);
+  transition: all 0.5s ease;
+}
+
+.article-card:hover .article-card-img img {
+  filter: brightness(0.85) saturate(0.9);
+  transform: scale(1.06);
+}
+
+/* Body */
+.article-card-body {
   flex: 1;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
   min-width: 0;
 }
 
-.gustaw-article-link div h2 {
-  margin: 0 0 0.5rem 0;
+.article-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255, 183, 0, 0.7);
+}
+
+.article-badge--soon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.article-card-body h2 {
+  font-family: "Playfair Display", serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--white);
+  color: #f0e6c8;
+  margin: 0;
+  line-height: 1.3;
   transition: color 0.3s ease;
 }
 
-.gustaw-article-link div span {
-  display: block;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1rem;
-  line-height: 1.5;
-  transition: color 0.3s ease;
+.article-card:hover .article-card-body h2 {
+  color: #ffb700;
 }
 
-.gustaw-article-link .read-more {
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: var(--orange);
+.article-card-body p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.article-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: all 0.3s ease;
-}
-
-.gustaw-article-link:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
-  border-left-color: var(--orange);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), -2px 0 0 var(--orange);
-}
-
-.gustaw-article-link:hover .read-more {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.gustaw-article-link:hover img {
-  filter: grayscale(0);
-  transform: scale(1.05);
-}
-
-.gustaw-article-link:hover div h2 {
   color: var(--orange);
+  margin-top: 0.4rem;
 }
 
-.gustaw-article-link:hover div span {
-  color: rgba(255, 255, 255, 0.9);
+.cta-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
 }
 
-.gustaw-article-link.placeholder {
+.article-card:hover .cta-arrow {
+  transform: translateX(5px);
+}
+
+/* Placeholder */
+.article-card--placeholder {
+  opacity: 0.4;
   cursor: default;
-  opacity: 0.5;
+  pointer-events: none;
 }
 
-.gustaw-article-link.placeholder:hover {
-  transform: none;
-  box-shadow: none;
-  background: rgba(255, 255, 255, 0.02);
-  border-color: rgba(255, 255, 255, 0.06);
-}
-
-.gustaw-article-link.placeholder:hover img {
-  filter: grayscale(1);
-  transform: none;
-}
-
-.gustaw-article-link.placeholder:hover div h2 {
-  color: var(--white);
-}
-
-.gustaw-article-link.placeholder:hover div span {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-@media only screen and (max-width: 1024px) {
-  .gustaw-article-link {
-    padding: 1.25rem;
-  }
-
-  .gustaw-article-link img {
-    width: 80px;
-    height: 80px;
-    margin-right: 1rem;
-  }
-
-  .gustaw-article-link div h2 {
-    font-size: 1.25rem;
-  }
-
-  .gustaw-article-link div span {
-    font-size: 0.95rem;
+/* Responsive */
+@media only screen and (max-width: 860px) {
+  .article-card-img {
+    flex: 0 0 160px;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .gustaw-article-link {
+@media only screen and (max-width: 600px) {
+  .article-card {
     flex-direction: column;
-    text-align: center;
+  }
+
+  .article-card-img {
+    flex: 0 0 auto;
+    height: 160px;
+    width: 100%;
+  }
+
+  .article-card-img::after {
+    background: linear-gradient(to bottom, transparent 50%, rgba(18, 17, 16, 0.85) 100%);
+  }
+
+  .article-card-body {
     padding: 1.25rem;
-    margin-bottom: 1.5rem;
   }
 
-  .gustaw-article-link img {
-    width: 100px;
-    height: 100px;
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-
-  .gustaw-article-link div h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .gustaw-article-link div span {
-    font-size: 0.9rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .gustaw-article-link {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .gustaw-article-link img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .gustaw-article-link div h2 {
-    font-size: 1.15rem;
-  }
-
-  .gustaw-article-link div span {
-    font-size: 0.85rem;
+  .article-card-body h2 {
+    font-size: 1.2rem;
   }
 }

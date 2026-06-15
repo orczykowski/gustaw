@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {SeoService} from '../../../../core/seo.service';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-cat-at-home-positives',
@@ -7,23 +6,7 @@ import {SeoService} from '../../../../core/seo.service';
     styleUrls: ['./cat-at-home-positives.component.css'],
     standalone: false
 })
-export class CatAtHomePositivesComponent implements OnInit {
-
-  constructor(private seo: SeoService) {}
-
-  ngOnInit(): void {
-    this.seo.update({
-      title: 'Kot jako Współlokator – Korzyści dla Zdrowia',
-      description: 'Dlaczego kot to idealny współlokator? Poznaj korzyści zdrowotne i emocjonalne płynące z posiadania kota w domu.',
-      type: 'article',
-    });
-    this.seo.setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      'headline': 'Kot jako Współlokator – Korzyści dla Zdrowia',
-      'description': 'Dlaczego kot to idealny współlokator? Poznaj korzyści zdrowotne i emocjonalne.',
-      'inLanguage': 'pl',
-      'publisher': { '@type': 'Organization', 'name': 'Gustaw' },
-    });
-  }
+export class CatAtHomePositivesComponent {
+  readonly publishedDate = '2023-06-18';
+  readonly formattedDate = '18 czerwca 2023';
 }

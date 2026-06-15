@@ -44,48 +44,6 @@
   50% { transform: scale(1.2) translate(-35px, -20px); }
 }
 
-.hero-decoration {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.deco-paw {
-  position: absolute;
-  opacity: 0.07;
-  animation: pawDrift 7s ease-in-out infinite;
-  user-select: none;
-}
-
-.deco-1 {
-  font-size: 3.5rem;
-  top: 12%;
-  left: 7%;
-  animation-delay: 0s;
-}
-
-.deco-2 {
-  font-size: 2rem;
-  top: 55%;
-  right: 6%;
-  animation-delay: 2.5s;
-  animation-duration: 8s;
-}
-
-.deco-3 {
-  font-size: 1.6rem;
-  bottom: 8%;
-  left: 28%;
-  animation-delay: 5s;
-  animation-duration: 6.5s;
-}
-
-@keyframes pawDrift {
-  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.07; }
-  50% { transform: translateY(-14px) rotate(12deg); opacity: 0.13; }
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -327,6 +285,16 @@
   transform: translateX(0);
 }
 
+@media only screen and (max-width: 860px) {
+  .calc-card-photo-col {
+    flex: 0 0 200px;
+  }
+
+  .calc-link-name {
+    flex: 0 0 100px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .title-main {
     font-size: 1.8rem;
@@ -344,6 +312,48 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1rem;
+  }
+
+  .section-card--calc {
+    grid-column: 1;
+  }
+
+  .calc-card-inner {
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  .calc-card-photo-col {
+    flex: unset;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .section-card-img-wrapper {
+    flex: 0 0 140px;
+    min-height: 120px;
+  }
+
+  .calc-card-intro {
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .calc-links {
+    flex-direction: column;
+  }
+
+  .calc-link {
+    padding: 0.75rem 1rem;
+    flex: unset;
+  }
+
+  .calc-link-name {
+    flex: 0 0 90px;
   }
 
   .card-image-wrapper {

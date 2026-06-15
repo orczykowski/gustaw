@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {SeoService} from '../../../../core/seo.service';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-safe-balcony',
@@ -7,23 +6,7 @@ import {SeoService} from '../../../../core/seo.service';
     styleUrls: ['./safe-balcony.component.css'],
     standalone: false
 })
-export class SafeBalconyComponent implements OnInit {
-
-  constructor(private seo: SeoService) {}
-
-  ngOnInit(): void {
-    this.seo.update({
-      title: 'Bezpieczne Kocie Terytorium – Balkon i Okna',
-      description: 'Jak bezpiecznie powiększyć kocie terytorium w mieszkaniu? Porady dotyczące balkonów, okien i aranżacji przestrzeni dla kota.',
-      type: 'article',
-    });
-    this.seo.setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      'headline': 'Bezpieczne Kocie Terytorium – Balkon i Okna',
-      'description': 'Jak bezpiecznie powiększyć kocie terytorium w mieszkaniu?',
-      'inLanguage': 'pl',
-      'publisher': { '@type': 'Organization', 'name': 'Gustaw' },
-    });
-  }
+export class SafeBalconyComponent {
+  readonly publishedDate = '2021-11-21';
+  readonly formattedDate = '21 listopada 2021';
 }

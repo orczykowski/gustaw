@@ -1,18 +1,24 @@
 @if (data?.url) {
-  <a class="gustaw-article-link" routerLink="{{data?.url}}">
-    <img src="assets/{{ data?.icon }}" alt="NO IMAGE">
-    <div>
+  <a class="article-card" routerLink="{{data?.url}}">
+    <div class="article-card-img">
+      <img src="assets/{{ data?.icon }}" alt="{{ data?.title }}">
+    </div>
+    <div class="article-card-body">
+      <span class="article-badge">Artykuł</span>
       <h2>{{data?.title}}</h2>
-      <span>{{data?.description}}</span>
-      <span class="read-more">Czytaj →</span>
+      <p>{{data?.description}}</p>
+      <span class="article-cta">Czytaj artykuł <span class="cta-arrow">→</span></span>
     </div>
   </a>
 } @else {
-  <div class="gustaw-article-link placeholder">
-    <img src="assets/{{ data?.icon }}" alt="NO IMAGE">
-    <div>
+  <div class="article-card article-card--placeholder">
+    <div class="article-card-img">
+      <img src="assets/{{ data?.icon }}" alt="{{ data?.title }}">
+    </div>
+    <div class="article-card-body">
+      <span class="article-badge article-badge--soon">Wkrótce</span>
       <h2>{{data?.title}}</h2>
-      <span>{{data?.description}}</span>
+      <p>{{data?.description}}</p>
     </div>
   </div>
 }

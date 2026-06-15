@@ -16,7 +16,6 @@ import {PdfWriterService} from './pdf-writer.service';
 import {WaterRequirementCalculatorService} from './water-requirement-calculator.service';
 import {CustomValidators} from './custom.validators';
 import {AgeCalculatorService} from '../age-calculator/age-calculator.service';
-import {SeoService} from '../../../core/seo.service';
 
 @Component({
     selector: 'app-food-caloric-calculator',
@@ -88,27 +87,11 @@ export class FoodCalculatorComponent implements OnInit {
               private catAgeCalculator: AgeCalculatorService,
               private currentFoodRequirementCalculator: CurrentFoodRequirementCalculatorService,
               private waterRequirementCalculator: WaterRequirementCalculatorService,
-              private pdfWriter: PdfWriterService,
-              private seo: SeoService) {
+              private pdfWriter: PdfWriterService) {
   }
 
   ngOnInit(): void {
     this.reset();
-    this.seo.update({
-      title: 'Kalkulator karmy dla kota – kalorie i porcje',
-      description: 'Oblicz dzienne zapotrzebowanie kaloryczne kota i porcje karmy. Uwzględnia wagę, wiek, płeć, sterylizację i tryb życia.',
-    });
-    this.seo.setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      'name': 'Kalkulator karmy dla kota',
-      'applicationCategory': 'HealthApplication',
-      'operatingSystem': 'Web',
-      'url': 'https://gorczykowski.github.io/gustaw/kalkulator/karma',
-      'description': 'Oblicz dzienne zapotrzebowanie kaloryczne kota i porcje karmy. Uwzględnia wagę, wiek, płeć, sterylizację i tryb życia.',
-      'inLanguage': 'pl',
-      'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'PLN' },
-    });
   }
 
   onSubmit(): void {
@@ -144,7 +127,7 @@ export class FoodCalculatorComponent implements OnInit {
 
   generatePdf = () => {
     if (this.report !== null) {
-      this.pdfWriter.write(this.report);
+      void this.pdfWriter.write(this.report);
     }
   }
 

@@ -1,7 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import {BcsCalculatorService, BcsInfo, BcsResult} from './bcs-calculator.service';
-import {SeoService} from '../../../core/seo.service';
 
 @Component({
   selector: 'app-bcs-calculator',
@@ -9,7 +8,7 @@ import {SeoService} from '../../../core/seo.service';
   styleUrls: ['./bcs-calculator.component.css'],
   standalone: false
 })
-export class BcsCalculatorComponent implements OnInit {
+export class BcsCalculatorComponent {
   result: BcsResult | null = null;
   readonly bcsValues = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   readonly expandedBcs = new Set<number>();
@@ -19,25 +18,7 @@ export class BcsCalculatorComponent implements OnInit {
     bcs: new UntypedFormControl(null, [Validators.required]),
   });
 
-  constructor(private service: BcsCalculatorService, private seo: SeoService) {}
-
-  ngOnInit(): void {
-    this.seo.update({
-      title: 'Kalkulator kondycji kota (BCS)',
-      description: 'Oceń kondycję swojego kota i oblicz jego idealną masę ciała na podstawie wskaźnika BCS (Body Condition Score).'
-    });
-    this.seo.setJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      'name': 'Kalkulator kondycji kota (BCS)',
-      'applicationCategory': 'HealthApplication',
-      'operatingSystem': 'Web',
-      'url': 'https://gorczykowski.github.io/gustaw/kalkulator/kondycja',
-      'description': 'Oceń kondycję swojego kota i oblicz jego idealną masę ciała na podstawie wskaźnika BCS (Body Condition Score).',
-      'inLanguage': 'pl',
-      'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'PLN' },
-    });
-  }
+  constructor(private service: BcsCalculatorService) {}
 
   setBcs(bcs: number): void {
     this.form.patchValue({bcs});
