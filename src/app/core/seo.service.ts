@@ -22,7 +22,7 @@ export class SeoService {
       const description: string = data['description'] ?? 'Gustaw – wszystko o kotach. Kalkulator karmienia, artykuły o zdrowiu i diecie oraz polskie organizacje pomocowe dla zwierząt.';
       const canonical: string = data['canonical'] ?? 'https://orczykowski.github.io/gustaw/';
       const type: string = data['type'] ?? 'website';
-      const image: string = data['image'] ?? 'https://orczykowski.github.io/gustaw/assets/2.jpeg';
+      const image: string = data['image'] ?? 'https://orczykowski.github.io/gustaw/assets/2.webp';
 
       this.title.setTitle(title);
       this.meta.updateTag({ name: 'description', content: description });

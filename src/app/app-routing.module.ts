@@ -13,6 +13,7 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment.prod';
 import {CatAtHomePositivesComponent} from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
 import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds.component';
+import {DogAndCatComponent} from './features/blog/articles/dog-and-cat/dog-and-cat.component';
 import {BmiCalculatorComponent} from './features/calculator/bmi-calculator/bmi-calculator.component';
 import {CalculatorsListComponent} from './features/calculator/calculators-list/calculators-list.component';
 
@@ -180,7 +181,7 @@ const routes: Routes = [
       description: 'Jak bezpiecznie powiększyć kocie terytorium w mieszkaniu? Porady dotyczące balkonów, okien i aranżacji przestrzeni dla kota.',
       canonical: `${BASE}/blog/kocie-terytorium`,
       type: 'article',
-      image: `${BASE}/assets/articles/kocie-terytoritum-header.jpeg`,
+      image: `${BASE}/assets/articles/kocie-terytoritum-header.webp`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@graph': [
@@ -191,7 +192,7 @@ const routes: Routes = [
             'inLanguage': 'pl',
             'datePublished': '2021-11-21',
             'dateModified': '2021-11-21',
-            'image': `${BASE}/assets/articles/kocie-terytoritum-header.jpeg`,
+            'image': `${BASE}/assets/articles/kocie-terytoritum-header.webp`,
             'mainEntityOfPage': `${BASE}/blog/kocie-terytorium`,
             'author': {'@type': 'Organization', 'name': 'Gustaw'},
             'publisher': {'@type': 'Organization', 'name': 'Gustaw', 'logo': {'@type': 'ImageObject', 'url': `${BASE}/assets/logo.png`}},
@@ -216,7 +217,7 @@ const routes: Routes = [
       description: 'Przewodnik po kocich dietach: sucha karma, mokra karma, BARF i dieta weterynaryjna. Jak wybrać najlepsze żywienie dla kota?',
       canonical: `${BASE}/blog/dieta`,
       type: 'article',
-      image: `${BASE}/assets/articles/kocia-dieta-header.jpeg`,
+      image: `${BASE}/assets/articles/kocia-dieta-header.webp`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@graph': [
@@ -227,7 +228,7 @@ const routes: Routes = [
             'inLanguage': 'pl',
             'datePublished': '2021-11-21',
             'dateModified': '2021-11-21',
-            'image': `${BASE}/assets/articles/kocia-dieta-header.jpeg`,
+            'image': `${BASE}/assets/articles/kocia-dieta-header.webp`,
             'mainEntityOfPage': `${BASE}/blog/dieta`,
             'author': {'@type': 'Organization', 'name': 'Gustaw'},
             'publisher': {'@type': 'Organization', 'name': 'Gustaw', 'logo': {'@type': 'ImageObject', 'url': `${BASE}/assets/logo.png`}},
@@ -252,7 +253,7 @@ const routes: Routes = [
       description: 'Dlaczego kot to idealny współlokator? Poznaj korzyści zdrowotne i emocjonalne płynące z posiadania kota w domu.',
       canonical: `${BASE}/blog/kot-idealny-wspolokator`,
       type: 'article',
-      image: `${BASE}/assets/articles/kot-w-domu-header.jpeg`,
+      image: `${BASE}/assets/articles/kot-w-domu-header.webp`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@graph': [
@@ -263,7 +264,7 @@ const routes: Routes = [
             'inLanguage': 'pl',
             'datePublished': '2023-06-18',
             'dateModified': '2023-06-18',
-            'image': `${BASE}/assets/articles/kot-w-domu-header.jpeg`,
+            'image': `${BASE}/assets/articles/kot-w-domu-header.webp`,
             'mainEntityOfPage': `${BASE}/blog/kot-idealny-wspolokator`,
             'author': {'@type': 'Organization', 'name': 'Gustaw'},
             'publisher': {'@type': 'Organization', 'name': 'Gustaw', 'logo': {'@type': 'ImageObject', 'url': `${BASE}/assets/logo.png`}},
@@ -281,6 +282,42 @@ const routes: Routes = [
     },
   },
   {
+    path: 'blog/pies-i-kot',
+    component: DogAndCatComponent,
+    title: 'Jak pies z kotem – Czy pies i kot mogą żyć razem? | Gustaw',
+    data: {
+      description: 'Czy pies i kot mogą żyć razem w zgodzie? Praktyczny przewodnik po integracji krok po kroku – komunikacja, przygotowanie domu i praca behawioralna.',
+      canonical: `${BASE}/blog/pies-i-kot`,
+      type: 'article',
+      image: `${BASE}/assets/articles/cat_and_dog.webp`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Article',
+            'headline': 'Jak pies z kotem – Czy pies i kot mogą żyć razem?',
+            'description': 'Praktyczny przewodnik po integracji psa i kota: komunikacja, przygotowanie domu i praca behawioralna krok po kroku.',
+            'inLanguage': 'pl',
+            'datePublished': '2026-06-24',
+            'dateModified': '2026-06-24',
+            'image': `${BASE}/assets/articles/cat_and_dog.webp`,
+            'mainEntityOfPage': `${BASE}/blog/pies-i-kot`,
+            'author': {'@type': 'Organization', 'name': 'Gustaw'},
+            'publisher': {'@type': 'Organization', 'name': 'Gustaw', 'logo': {'@type': 'ImageObject', 'url': `${BASE}/assets/logo.png`}},
+          },
+          {
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+              {'@type': 'ListItem', 'position': 1, 'name': 'Gustaw', 'item': `${BASE}/`},
+              {'@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': `${BASE}/blog`},
+              {'@type': 'ListItem', 'position': 3, 'name': 'Jak pies z kotem', 'item': `${BASE}/blog/pies-i-kot`},
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
     path: 'blog/dlaczego-koty-mrucza',
     component: CatSoundsComponent,
     title: 'Dlaczego Koty Mruczą? | Gustaw',
@@ -288,7 +325,7 @@ const routes: Routes = [
       description: 'Dlaczego koty mruczą? Odkryj mechanizm mruczenia i co tak naprawdę oznacza, gdy Twój kot mruczy.',
       canonical: `${BASE}/blog/dlaczego-koty-mrucza`,
       type: 'article',
-      image: `${BASE}/assets/articles/cat-sounds-header.jpeg`,
+      image: `${BASE}/assets/articles/cat-sounds-header.webp`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@graph': [
@@ -299,7 +336,7 @@ const routes: Routes = [
             'inLanguage': 'pl',
             'datePublished': '2024-09-16',
             'dateModified': '2024-09-16',
-            'image': `${BASE}/assets/articles/cat-sounds-header.jpeg`,
+            'image': `${BASE}/assets/articles/cat-sounds-header.webp`,
             'mainEntityOfPage': `${BASE}/blog/dlaczego-koty-mrucza`,
             'author': {'@type': 'Organization', 'name': 'Gustaw'},
             'publisher': {'@type': 'Organization', 'name': 'Gustaw', 'logo': {'@type': 'ImageObject', 'url': `${BASE}/assets/logo.png`}},

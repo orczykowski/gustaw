@@ -72,10 +72,10 @@ Mruczenie czyli dokładnie co? Mruczenie kotów powstaje przez rytmiczne napinan
 Dlaczego koty mruczą? Zadowolenie i relaks koty często mruczą gdy czują się szczęśliwe i bezpieczne na przykład podczas głaskania lub leżenia w słońcu. Samoleczenie ukojenie bólu mruczenie kota nie zawsze oznacza zadowolenie może być także sygnałem stresu bólu lub choroby. Częstotliwość dźwięku mruczenia około 25-150 Hz może wspomagać regenerację kości i tkanek. Komunikacja mruczenie jest formą komunikacji zarówno z innymi kotami jak i z ludźmi mogą sygnalizować swoje potrzeby głód prośbę o uwagę sympatię. Zabezpieczenie i bezpieczeństwo kocięta zaczynają mruczeć już w wieku kilku dni co pomaga im w komunikacji z matką. Potrzeba uwagi koty mogą mruczeć celowo aby zwrócić na siebie uwagę swojego opiekuna prosząc o jedzenie lub zabawę.`
       },
       {
-        icon: ArticleRepositoryService.DEFAULT_ICON,
+        icon: 'articles/cat_and_dog.webp',
         title: 'Jak pies z kotem. Czyli jak?',
-        description: 'Już niebawem',
-        url: '',
+        description: 'Czy pies i kot mogą żyć razem w zgodzie? Praktyczny przewodnik po integracji krok po kroku.',
+        url: 'pies-i-kot',
         content: ''
       },
     ];
