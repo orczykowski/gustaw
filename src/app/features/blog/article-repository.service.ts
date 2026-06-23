@@ -5,13 +5,11 @@ import {ArticleLinkModel} from './article-link/article-link.model';
   providedIn: 'root'
 })
 export class ArticleRepositoryService {
-  private static DEFAULT_ICON = 'default-article-icon.jpeg';
-
   fetchAllLinks(): Array<ArticleLinkModel> {
 
     return [
       {
-        icon: ArticleRepositoryService.DEFAULT_ICON,
+        icon: 'articles/kocie-terytoritum-header.webp',
         title: 'Kocie terytorium',
         description: 'Jak bezpiecznie zwiekszyć powierzchnie kociego terytorium ?',
         url: 'kocie-terytorium',
@@ -33,7 +31,7 @@ Siatka zabezpieczająca. Siatka powinna być specjalnie przeznaczona do tego cel
 Montaż siatki przyklejając do elewacji specjalne haczyki wkręcając specjalne haczyki w elewację budynku ramę okna konstrukcja stelaż przykręcana do balustrady balkonu.`
       },
       {
-        icon: ArticleRepositoryService.DEFAULT_ICON,
+        icon: 'articles/kocia-dieta-header.webp',
         title: 'Kocia dieta',
         description: 'Sucha karma, mokra karma, BARF czy dieta weterynaryjna – jak wybrać najlepsze żywienie dla swojego kota?',
         url: 'dieta',
@@ -49,7 +47,7 @@ Dieta weterynaryjna diety weterynaryjne są dostępne dla kotów z różnymi sch
 O czym warto pamiętać przy wyborze diety wiek kocięta wymagają wyższej kaloryczności alergie przebyte choroby wartości odżywcze składniki i jakość diety.`
       },
       {
-        icon: ArticleRepositoryService.DEFAULT_ICON,
+        icon: 'articles/kot-w-domu-header.webp',
         title: 'Kot idealny współokator',
         description: 'Pozytywny wpływ posiadania kota w domu',
         url: 'kot-idealny-wspolokator',
@@ -63,7 +61,7 @@ Koty są mało wymagające. Samodzielność czystość niezależność niski poz
 Kot to też obowiązki. Regularnie karmić kota dostarczając odpowiednią i zrównoważoną dietę. Utrzymanie świeżej wody pitnej. Codzienne czyszczenie kuwety. Regularne szczotkowanie futra. Regularne wizyty u weterynarza szczepienia kontrole zdrowotne profilaktyczne leczenie przeciw pasożytom. Zapewnienie aktywności i zabawy zabawki laserowe wskaźniki drapaki. Bezpieczne i komfortowe środowisko życia.`
       },
       {
-        icon: ArticleRepositoryService.DEFAULT_ICON,
+        icon: 'articles/cat-sounds-header.webp',
         title: 'Dlaczego koty mruczą?',
         description: 'Poznaj mechanizm mruczenia kota – skąd pochodzi ten dźwięk i co oznacza dla właściciela.',
         url: 'dlaczego-koty-mrucza',
