@@ -16,15 +16,22 @@
       }
     },
     {
-      "name": "assets",
+      "name": "images",
       "installMode": "lazy",
-      "updateMode": "prefetch",
-
+      "updateMode": "lazy",
       "resources": {
         "files": [
-          "/assets/**",
-          "/assets/organizations/**",
-          "/*.(svg|jpg|jpeg|png|ttf|woff|woff2)"
+          "/assets/**.(png|jpg|jpeg|gif|webp|svg)"
+        ]
+      }
+    },
+    {
+      "name": "fonts",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**.(ttf|woff|woff2)"
         ]
       }
     }
