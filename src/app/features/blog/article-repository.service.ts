@@ -9,6 +9,60 @@ export class ArticleRepositoryService {
 
     return [
       {
+        icon: 'articles/koty-w-upale-header.webp',
+        title: 'Upał... nie zapominaj o swoim kocie',
+        description: 'Jak chronić kota w upały? Objawy przegrzania, pierwsza pomoc i lista kontrolna na falę upałów.',
+        url: 'koty-w-upale',
+        content: `Upał i koty przegrzanie kota udar cieplny pierwsza pomoc
+Zmiany klimatyczne sprawiają że fale ekstremalnych upałów stają się zagrożeniem nie tylko dla nas ale i dla naszych kotów. Koty w przeciwieństwie do ludzi mają bardzo ograniczone możliwości radzenia sobie z wysokimi temperaturami. Dlaczego kotom jest tak ciężko w upały Koty mają niewiele gruczołów potowych znajdują się one praktycznie tylko na opuszkach ich łap. Wylizywanie futra śliną parującą z sierści delikatnie obniża temperaturę ciała. Zianie u kotów jest sygnałem alarmowym. Najbardziej narażone rasy brachycefaliczne persy egzotyki brytyjczyki koty otyłe chore i starsze. Jak rozpoznać przegrzanie silne dyszenie czerwone sine dziąsła ślinotok ospałość wymioty biegunka. Lista kontrolna świeża woda fontanna dla kota nie zamykaj kota w nagrzewających się miejscach chłodne strefy płytki ceramiczne maty chłodzące pielęgnacja sierści ochrona przeciwsłoneczna. Pierwsza pomoc przy przegrzaniu przenieś w chłodne miejsce chłódź letnią wodą nie lodowatą wilgotny ręcznik sprawdzaj temperaturę 39,5 stopni jedź do weterynarza udar cieplny.`
+      },
+      {
+        icon: 'articles/cat_and_dog.webp',
+        title: 'Jak pies z kotem. Czyli jak?',
+        description: 'Czy pies i kot mogą żyć razem w zgodzie? Praktyczny przewodnik po integracji krok po kroku.',
+        url: 'pies-i-kot',
+        content: ''
+      },
+      {
+        icon: 'articles/cat-sounds-header.webp',
+        title: 'Dlaczego koty mruczą?',
+        description: 'Poznaj mechanizm mruczenia kota – skąd pochodzi ten dźwięk i co oznacza dla właściciela.',
+        url: 'dlaczego-koty-mrucza',
+        content: `Dlaczego koty mruczą? To dźwięk który kojarzy się z przyjemnością i spokojem. Mruczenie to znacznie bardziej złożone zjawisko które może wpływać na zdrowie zarówno kotów jak i ich opiekunów.
+Mruczenie czyli dokładnie co? Mruczenie kotów powstaje przez rytmiczne napinanie i rozluźnianie mięśni krtani co powoduje drgania strun głosowych podczas przepływu powietrza. To wibracje mięśni a nie same struny głosowe są odpowiedzialne za charakterystyczny dźwięk. Mruczenie może pojawiać się zarówno na wdechu jak i wydechu. Mechanizm ten jest kontrolowany przez sygnały nerwowe wysyłane z mózgu kota szczególnie z regionu zwanego ośrodkiem rezonansu krtaniowego. Koty potrafią mruczeć niezależnie od swojego stanu emocjonalnego mogą to robić zarówno z zadowolenia jak i w sytuacjach stresowych.
+Dlaczego koty mruczą? Zadowolenie i relaks koty często mruczą gdy czują się szczęśliwe i bezpieczne na przykład podczas głaskania lub leżenia w słońcu. Samoleczenie ukojenie bólu mruczenie kota nie zawsze oznacza zadowolenie może być także sygnałem stresu bólu lub choroby. Częstotliwość dźwięku mruczenia około 25-150 Hz może wspomagać regenerację kości i tkanek. Komunikacja mruczenie jest formą komunikacji zarówno z innymi kotami jak i z ludźmi mogą sygnalizować swoje potrzeby głód prośbę o uwagę sympatię. Zabezpieczenie i bezpieczeństwo kocięta zaczynają mruczeć już w wieku kilku dni co pomaga im w komunikacji z matką. Potrzeba uwagi koty mogą mruczeć celowo aby zwrócić na siebie uwagę swojego opiekuna prosząc o jedzenie lub zabawę.`
+      },
+      {
+        icon: 'articles/kot-w-domu-header.webp',
+        title: 'Kot idealny współokator',
+        description: 'Pozytywny wpływ posiadania kota w domu',
+        url: 'kot-idealny-wspolokator',
+        content: `Korzyści dla zdrowia i samopoczucia wynikające z posiadania w domu kota
+Posiadanie kota w domu to nie tylko przyjemność ale również ma liczne korzyści dla naszego zdrowia i samopoczucia. Koty są wspaniałymi towarzyszami którzy mogą przynieść wiele radości i ukojenia.
+Źródło towarzystwa koty są niezwykle przyjacielskie i oddane. Ich obecność w domu pozwala nam poczuć się kochanym i zapewnia towarzystwo.
+Redukcja stresu terapia emocjonalna. Badania wykazały że interakcja z kotem może pomóc w redukcji stresu. Pieszczoty i przytulanie kota wyzwalają w nas hormony szczęścia takie jak endorfiny i oksytocyna które mają działanie relaksujące. Mruczenie ciepło i przytulanie może działać uspokajająco.
+Nauka odpowiedzialności i uporządkowanie dnia. Codzienne zadania takie jak karmienie czesanie czy dbanie o kuwetę mogą pomóc nam utrzymać rutynę.
+Wspomaganie zdrowia obniżenie ryzyka chorób serca i nadciśnienia tętniczego poprawa układu odpornościowego zmniejszenie ryzyka alergii i astmy u dzieci.
+Koty są mało wymagające. Samodzielność czystość niezależność niski poziom aktywności fizycznej.
+Kot to też obowiązki. Regularnie karmić kota dostarczając odpowiednią i zrównoważoną dietę. Utrzymanie świeżej wody pitnej. Codzienne czyszczenie kuwety. Regularne szczotkowanie futra. Regularne wizyty u weterynarza szczepienia kontrole zdrowotne profilaktyczne leczenie przeciw pasożytom. Zapewnienie aktywności i zabawy zabawki laserowe wskaźniki drapaki. Bezpieczne i komfortowe środowisko życia.`
+      },
+      {
+        icon: 'articles/kocia-dieta-header.webp',
+        title: 'Kocia dieta',
+        description: 'Sucha karma, mokra karma, BARF czy dieta weterynaryjna – jak wybrać najlepsze żywienie dla swojego kota?',
+        url: 'dieta',
+        content: `Wpływ i różnorodność diet na zdrowie i rozwój kota
+Dieta ma bezpośredni wpływ na zdrowie każdego żywego organizmu w tym oczywiście naszych kotów. Odpowiednio dobrane składniki odżywcze są niezbędne do utrzymania prawidłowej masy ciała zdrowych zębów sierści mocnych kości oraz dobrego funkcjonowania układu trawiennego.
+Źle zbilansowana dieta może prowadzić do otyłości choroby serca cukrzyca problemy z układem trawiennym problemy z układem moczowym.
+Rodzaje najpopularniejszych kocich diet
+Dieta oparta o karmy suche to najpopularniejszy rodzaj diety dla kotów. Łatwość przechowywania długoterminowa trwałość wspieranie zdrowia jamy ustnej. Wady niskie nawodnienie ryzyko otyłości problemy trawienne brak różnorodności smaków i tekstur.
+Dieta oparta o karmy mokre składające się głównie z wilgotnych kawałków mięsa lub ryb w sosie lub galaretce. Zalety nawodnienie smak i apetyt urozmaicenie diety lepsze trawienie. Wady krótszy okres przydatności wyższy koszt wpływ na zęby.
+Dieta mieszana z karmy mokrej i suchej optymalne żywienie kota często obejmuje różnorodność w diecie.
+BARF Biologically Appropriate Raw Food dieta oparta na podawaniu surowego mięsa niektórych owoców warzyw oraz dodatków takich jak specjalistyczne suplementy czy oleje rybne. Składniki surowe mięso kości skóra chrząstki dodatki suplementy. Pozytywy naturalność zróżnicowanie składników odżywczych poprawa stanu sierści i zdrowia jamy ustnej. Negatywy bakterie i zakażenia salmonella e.coli niedobory żywieniowe trudności w przygotowaniu i przechowywaniu.
+Dieta weterynaryjna diety weterynaryjne są dostępne dla kotów z różnymi schorzeniami takimi jak choroby nerek alergie pokarmowe problemy z wagą.
+O czym warto pamiętać przy wyborze diety wiek kocięta wymagają wyższej kaloryczności alergie przebyte choroby wartości odżywcze składniki i jakość diety.`
+      },
+      {
         icon: 'articles/kocie-terytoritum-header.webp',
         title: 'Kocie terytorium',
         description: 'Jak bezpiecznie zwiekszyć powierzchnie kociego terytorium ?',
@@ -29,52 +83,6 @@ Aranżacja balkonu parapetu tarasu
 Jednak by nasz kociak mógł spędzić czas na nowym terytorium obserwując świat podglądając życie ptaków czy wygrzewając się na słońcu musimy zapewnić mu bezpieczeństwo. Niestety to mit że kot ma 9 żyć i że zawsze spada na cztery łapy.
 Siatka zabezpieczająca. Siatka powinna być specjalnie przeznaczona do tego celu. Powinna być zamontowana w sposób stabilny solidny.
 Montaż siatki przyklejając do elewacji specjalne haczyki wkręcając specjalne haczyki w elewację budynku ramę okna konstrukcja stelaż przykręcana do balustrady balkonu.`
-      },
-      {
-        icon: 'articles/kocia-dieta-header.webp',
-        title: 'Kocia dieta',
-        description: 'Sucha karma, mokra karma, BARF czy dieta weterynaryjna – jak wybrać najlepsze żywienie dla swojego kota?',
-        url: 'dieta',
-        content: `Wpływ i różnorodność diet na zdrowie i rozwój kota
-Dieta ma bezpośredni wpływ na zdrowie każdego żywego organizmu w tym oczywiście naszych kotów. Odpowiednio dobrane składniki odżywcze są niezbędne do utrzymania prawidłowej masy ciała zdrowych zębów sierści mocnych kości oraz dobrego funkcjonowania układu trawiennego.
-Źle zbilansowana dieta może prowadzić do otyłości choroby serca cukrzyca problemy z układem trawiennym problemy z układem moczowym.
-Rodzaje najpopularniejszych kocich diet
-Dieta oparta o karmy suche to najpopularniejszy rodzaj diety dla kotów. Łatwość przechowywania długoterminowa trwałość wspieranie zdrowia jamy ustnej. Wady niskie nawodnienie ryzyko otyłości problemy trawienne brak różnorodności smaków i tekstur.
-Dieta oparta o karmy mokre składające się głównie z wilgotnych kawałków mięsa lub ryb w sosie lub galaretce. Zalety nawodnienie smak i apetyt urozmaicenie diety lepsze trawienie. Wady krótszy okres przydatności wyższy koszt wpływ na zęby.
-Dieta mieszana z karmy mokrej i suchej optymalne żywienie kota często obejmuje różnorodność w diecie.
-BARF Biologically Appropriate Raw Food dieta oparta na podawaniu surowego mięsa niektórych owoców warzyw oraz dodatków takich jak specjalistyczne suplementy czy oleje rybne. Składniki surowe mięso kości skóra chrząstki dodatki suplementy. Pozytywy naturalność zróżnicowanie składników odżywczych poprawa stanu sierści i zdrowia jamy ustnej. Negatywy bakterie i zakażenia salmonella e.coli niedobory żywieniowe trudności w przygotowaniu i przechowywaniu.
-Dieta weterynaryjna diety weterynaryjne są dostępne dla kotów z różnymi schorzeniami takimi jak choroby nerek alergie pokarmowe problemy z wagą.
-O czym warto pamiętać przy wyborze diety wiek kocięta wymagają wyższej kaloryczności alergie przebyte choroby wartości odżywcze składniki i jakość diety.`
-      },
-      {
-        icon: 'articles/kot-w-domu-header.webp',
-        title: 'Kot idealny współokator',
-        description: 'Pozytywny wpływ posiadania kota w domu',
-        url: 'kot-idealny-wspolokator',
-        content: `Korzyści dla zdrowia i samopoczucia wynikające z posiadania w domu kota
-Posiadanie kota w domu to nie tylko przyjemność ale również ma liczne korzyści dla naszego zdrowia i samopoczucia. Koty są wspaniałymi towarzyszami którzy mogą przynieść wiele radości i ukojenia.
-Źródło towarzystwa koty są niezwykle przyjacielskie i oddane. Ich obecność w domu pozwala nam poczuć się kochanym i zapewnia towarzystwo.
-Redukcja stresu terapia emocjonalna. Badania wykazały że interakcja z kotem może pomóc w redukcji stresu. Pieszczoty i przytulanie kota wyzwalają w nas hormony szczęścia takie jak endorfiny i oksytocyna które mają działanie relaksujące. Mruczenie ciepło i przytulanie może działać uspokajająco.
-Nauka odpowiedzialności i uporządkowanie dnia. Codzienne zadania takie jak karmienie czesanie czy dbanie o kuwetę mogą pomóc nam utrzymać rutynę.
-Wspomaganie zdrowia obniżenie ryzyka chorób serca i nadciśnienia tętniczego poprawa układu odpornościowego zmniejszenie ryzyka alergii i astmy u dzieci.
-Koty są mało wymagające. Samodzielność czystość niezależność niski poziom aktywności fizycznej.
-Kot to też obowiązki. Regularnie karmić kota dostarczając odpowiednią i zrównoważoną dietę. Utrzymanie świeżej wody pitnej. Codzienne czyszczenie kuwety. Regularne szczotkowanie futra. Regularne wizyty u weterynarza szczepienia kontrole zdrowotne profilaktyczne leczenie przeciw pasożytom. Zapewnienie aktywności i zabawy zabawki laserowe wskaźniki drapaki. Bezpieczne i komfortowe środowisko życia.`
-      },
-      {
-        icon: 'articles/cat-sounds-header.webp',
-        title: 'Dlaczego koty mruczą?',
-        description: 'Poznaj mechanizm mruczenia kota – skąd pochodzi ten dźwięk i co oznacza dla właściciela.',
-        url: 'dlaczego-koty-mrucza',
-        content: `Dlaczego koty mruczą? To dźwięk który kojarzy się z przyjemnością i spokojem. Mruczenie to znacznie bardziej złożone zjawisko które może wpływać na zdrowie zarówno kotów jak i ich opiekunów.
-Mruczenie czyli dokładnie co? Mruczenie kotów powstaje przez rytmiczne napinanie i rozluźnianie mięśni krtani co powoduje drgania strun głosowych podczas przepływu powietrza. To wibracje mięśni a nie same struny głosowe są odpowiedzialne za charakterystyczny dźwięk. Mruczenie może pojawiać się zarówno na wdechu jak i wydechu. Mechanizm ten jest kontrolowany przez sygnały nerwowe wysyłane z mózgu kota szczególnie z regionu zwanego ośrodkiem rezonansu krtaniowego. Koty potrafią mruczeć niezależnie od swojego stanu emocjonalnego mogą to robić zarówno z zadowolenia jak i w sytuacjach stresowych.
-Dlaczego koty mruczą? Zadowolenie i relaks koty często mruczą gdy czują się szczęśliwe i bezpieczne na przykład podczas głaskania lub leżenia w słońcu. Samoleczenie ukojenie bólu mruczenie kota nie zawsze oznacza zadowolenie może być także sygnałem stresu bólu lub choroby. Częstotliwość dźwięku mruczenia około 25-150 Hz może wspomagać regenerację kości i tkanek. Komunikacja mruczenie jest formą komunikacji zarówno z innymi kotami jak i z ludźmi mogą sygnalizować swoje potrzeby głód prośbę o uwagę sympatię. Zabezpieczenie i bezpieczeństwo kocięta zaczynają mruczeć już w wieku kilku dni co pomaga im w komunikacji z matką. Potrzeba uwagi koty mogą mruczeć celowo aby zwrócić na siebie uwagę swojego opiekuna prosząc o jedzenie lub zabawę.`
-      },
-      {
-        icon: 'articles/cat_and_dog.webp',
-        title: 'Jak pies z kotem. Czyli jak?',
-        description: 'Czy pies i kot mogą żyć razem w zgodzie? Praktyczny przewodnik po integracji krok po kroku.',
-        url: 'pies-i-kot',
-        content: ''
       },
     ];
   }

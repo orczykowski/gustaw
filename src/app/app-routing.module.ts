@@ -14,6 +14,7 @@ import {environment} from '../environments/environment.prod';
 import {CatAtHomePositivesComponent} from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
 import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds.component';
 import {DogAndCatComponent} from './features/blog/articles/dog-and-cat/dog-and-cat.component';
+import {HeatWaveComponent} from './features/blog/articles/heat-wave/heat-wave.component';
 import {BmiCalculatorComponent} from './features/calculator/bmi-calculator/bmi-calculator.component';
 import {CalculatorsListComponent} from './features/calculator/calculators-list/calculators-list.component';
 
@@ -347,6 +348,42 @@ const routes: Routes = [
               {'@type': 'ListItem', 'position': 1, 'name': 'Gustaw', 'item': `${BASE}/`},
               {'@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': `${BASE}/blog`},
               {'@type': 'ListItem', 'position': 3, 'name': 'Dlaczego Koty Mruczą', 'item': `${BASE}/blog/dlaczego-koty-mrucza`},
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    path: 'blog/koty-w-upale',
+    component: HeatWaveComponent,
+    title: 'Upał a kot – jak chronić kota w czasie fali upałów | Gustaw',
+    data: {
+      description: 'Jak chronić kota w upały? Poznaj objawy przegrzania, pierwszą pomoc przy udarze cieplnym i praktyczną listę kontrolną na falę upałów.',
+      canonical: `${BASE}/blog/koty-w-upale`,
+      type: 'article',
+      image: `${BASE}/assets/articles/koty-w-upale-header.webp`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Article',
+            'headline': 'Upał... nie zapominaj o swoim kocie',
+            'description': 'Jak chronić kota w upały? Objawy przegrzania, pierwsza pomoc i lista kontrolna na falę upałów.',
+            'inLanguage': 'pl',
+            'datePublished': '2026-06-27',
+            'dateModified': '2026-06-27',
+            'image': `${BASE}/assets/articles/koty-w-upale-header.webp`,
+            'mainEntityOfPage': `${BASE}/blog/koty-w-upale`,
+            'author': {'@type': 'Organization', 'name': 'Gustaw'},
+            'publisher': {'@type': 'Organization', 'name': 'Gustaw', 'logo': {'@type': 'ImageObject', 'url': `${BASE}/assets/logo.png`}},
+          },
+          {
+            '@type': 'BreadcrumbList',
+            'itemListElement': [
+              {'@type': 'ListItem', 'position': 1, 'name': 'Gustaw', 'item': `${BASE}/`},
+              {'@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': `${BASE}/blog`},
+              {'@type': 'ListItem', 'position': 3, 'name': 'Upał a kot', 'item': `${BASE}/blog/koty-w-upale`},
             ],
           },
         ],

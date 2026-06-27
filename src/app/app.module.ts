@@ -20,6 +20,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { CatAtHomePositivesComponent } from './features/blog/articles/cat-at-home-positives/cat-at-home-positives.component';
 import {CatSoundsComponent} from './features/blog/articles/cat-sounds/cat-sounds.component';
 import {DogAndCatComponent} from './features/blog/articles/dog-and-cat/dog-and-cat.component';
+import {HeatWaveComponent} from './features/blog/articles/heat-wave/heat-wave.component';
 import {BmiCalculatorComponent} from './features/calculator/bmi-calculator/bmi-calculator.component';
 import {CalculatorsListComponent} from './features/calculator/calculators-list/calculators-list.component';
 
@@ -44,6 +45,7 @@ import {CalculatorsListComponent} from './features/calculator/calculators-list/c
     CatAtHomePositivesComponent,
     CatSoundsComponent,
     DogAndCatComponent,
+    HeatWaveComponent,
   ],
   imports: [
     BrowserModule,

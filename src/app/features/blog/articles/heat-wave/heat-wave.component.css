@@ -1,0 +1,41 @@
+h2 {
+  text-align: center;
+  color: var(--yellow);
+}
+
+.warning-box {
+  border-left: 4px solid rgba(220, 60, 60, 0.8);
+  background: rgba(200, 50, 50, 0.12);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+
+.checklist {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+.checklist input[type="checkbox"] {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  accent-color: var(--orange);
+}
