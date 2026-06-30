@@ -279,7 +279,6 @@ footer {
     font-size: 0.7rem;
   }
 
-  /* Dropdown always visible on mobile, stacked vertically */
   .nav-dropdown {
     width: 100%;
   }
@@ -300,12 +299,16 @@ footer {
     max-height: none;
     overflow: visible;
     transition: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     box-shadow: none;
     border: none;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.03);
+  }
+
+  .nav-dropdown.open .nav-dropdown-menu {
+    display: flex;
   }
 
   .nav-dropdown-item {

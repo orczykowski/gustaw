@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {ArticleRepositoryService} from './features/blog/article-repository.service';
 import {Router} from '@angular/router';
 import {SeoService} from './core/seo.service';
@@ -11,6 +11,7 @@ import {SeoService} from './core/seo.service';
 })
 export class AppComponent {
   articleCount: number;
+  calcMenuOpen = false;
 
   constructor(private articleRepository: ArticleRepositoryService, public router: Router, seo: SeoService) {
     this.articleCount = this.articleRepository.fetchAllLinks().filter(a => !!a.url).length;
@@ -19,5 +20,18 @@ export class AppComponent {
 
   isCalcActive(): boolean {
     return this.router.url.startsWith('/kalkulator');
+  }
+
+  toggleCalcMenu(event: Event): void {
+    if (window.innerWidth <= 900) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.calcMenuOpen = !this.calcMenuOpen;
+    }
+  }
+
+  @HostListener('document:click')
+  onDocumentClick(): void {
+    this.calcMenuOpen = false;
   }
 }

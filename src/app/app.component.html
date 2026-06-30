@@ -8,9 +8,10 @@
       </div>
     </a>
     <nav>
-      <div class="nav-dropdown">
+      <div class="nav-dropdown" [class.open]="calcMenuOpen">
         <a routerLink="/kalkulatory" routerLinkActive="active"
-           class="nav-link nav-dropdown-label" [class.active]="isCalcActive()">Kalkulatory</a>
+           class="nav-link nav-dropdown-label" [class.active]="isCalcActive()"
+           (click)="toggleCalcMenu($event)">Kalkulatory</a>
         <div class="nav-dropdown-menu">
           <a routerLink="/kalkulator/karma" routerLinkActive="active" class="nav-dropdown-item">Zapotrzebowanie na karmę</a>
           <a routerLink="/kalkulator/woda" routerLinkActive="active" class="nav-dropdown-item">Zapotrzebowanie na wodę</a>
